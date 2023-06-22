@@ -7,6 +7,7 @@
 :root {
   --black-text: #15171b;
   --white-text: #f3f4ff;
+  --accent: #5ca7ff;
 }
 
 /* General styling */
@@ -14,6 +15,7 @@
 body {
   max-width: 1440px;
   margin-inline: auto;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -26,10 +28,18 @@ a:hover {
   text-underline-offset: 3px;
 }
 
+.btn-contact-us {
+  font-family: "Nunito";
+  padding: 6px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+}
+
 /* Header */
 
 header {
-  padding: 3rem 8rem 5rem;
+  padding: 3rem 5rem 5rem;
   height: 600px;
   background-image: url("/assets/hero.png");
   background-size: cover;
@@ -81,8 +91,77 @@ header {
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 1050px) {
-  header {
-    padding: 2rem 4rem;
+main {
+  margin-top: 7.5rem;
+}
+
+/* Services */
+
+#services {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2rem;
+  background-color: var(--white-text);
+  padding: 3rem 5rem 5rem;
+}
+
+.services-title {
+  font-family: "Lato";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-tag {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--black, #15171b);
+  font-family: "Nunito";
+  font-size: 0.875rem;
+}
+
+.services-tags:first-child {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.services-tags:nth-child(2) {
+  display: flex;
+  gap: 1rem;
+  margin-left: 9rem;
+}
+
+.services-tags:nth-child(3) {
+  display: flex;
+  gap: 1rem;
+  margin-left: 4rem;
+}
+
+.services-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.services-text {
+  width: 275px;
+  font-family: "Lato";
+  margin-top: 3rem;
+  font-size: 1.125rem;
+}
+
+.services-btn {
+  margin-right: 10rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--black-text);
   }
 }
