@@ -9,6 +9,25 @@
   --white-text: #f3f4ff;
 }
 
+/* General styling */
+
+body {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Header */
+
 header {
   padding: 3rem 8rem 5rem;
   height: 600px;
@@ -18,7 +37,6 @@ header {
   background-position: center;
   display: flex;
   flex-direction: column;
-  /* min-width: 1200px; */
 }
 
 .img-logo {
@@ -32,19 +50,25 @@ header {
 
 .nav-links {
   gap: 2rem;
-  padding: 10px 12px;
+  padding: 6px 20px;
   border-radius: 100px;
   list-style: none;
   display: flex;
+  align-items: center;
   color: var(--black-text);
   font-family: "Nunito", sans-serif;
-
-  border-radius: 100px;
   background: linear-gradient(90deg, #e5e6f1 0%, rgba(229, 230, 241, 0) 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.nav-links li:last-child {
+.contact-link {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: var(--black, #15171b);
+  color: var(--white-text);
   margin-left: 30px;
 }
 
@@ -57,7 +81,7 @@ header {
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   header {
     padding: 2rem 4rem;
   }
