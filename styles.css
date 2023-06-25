@@ -29,26 +29,30 @@ a:hover {
   text-underline-offset: 3px;
 }
 
-.btn-contact-us {
-  width: auto;
+.btn {
   font-family: "Nunito";
   padding: 6px 24px;
-  background: var(--accent);
-  border: none;
   border-radius: 50px;
+  cursor: pointer;
 }
 
-.btn-development {
-  font-family: "Nunito";
-  padding: 6px 24px;
+.btn:active {
+  scale: 0.98;
+}
+
+.btn--contact-us {
+  background: var(--accent);
   border: none;
+}
+
+.btn--development {
   background-color: transparent;
   border-radius: 50px;
   border: 1px solid var(--black, #15171b);
 }
 
 .container {
-  padding: 3rem 5rem;
+  padding: 2rem 1rem;
 }
 
 /* Typography */
@@ -78,10 +82,13 @@ a:hover {
 .text--sm {
   font-size: 0.875rem;
 }
+
+.text--black {
+  color: var(--black-text);
+}
 /* Header */
 
 header {
-  padding: 3rem 5rem 5rem;
   height: 600px;
   background-image: url("/assets/hero.png");
   background-size: cover;
@@ -140,7 +147,7 @@ header {
 }
 
 .services-wrapper {
-  padding: 3rem 5rem;
+  /* padding: 3rem 5rem; */
   background-color: var(--bg-white);
   display: flex;
   gap: 2rem;
@@ -204,7 +211,7 @@ header {
 .services-description {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 5rem;
+  /* padding: 3rem 5rem; */
   color: var(--white-text);
   font-family: "Nunito";
 }
@@ -263,7 +270,7 @@ header {
 
 #projects {
   background-color: var(--bg-white);
-  padding: 3rem 5rem;
+  /* padding: 3rem 5rem; */
 }
 
 .projects-title {
@@ -285,6 +292,8 @@ header {
   background: url("/assets/project.png") center / cover no-repeat;
   background-position: center;
   flex: 1 1 420px;
+  max-width: 600px;
+  margin-inline: auto;
   aspect-ratio: 1/1;
 
   padding: 2rem 3rem 4rem;
@@ -299,12 +308,10 @@ header {
 #process {
   margin-top: 2rem;
   background-color: var(--bg-white);
-  padding: 3rem 5rem;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .process-title {
@@ -319,20 +326,15 @@ header {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* width: 30%; */
 }
 
 .process-rect {
   width: 250px;
-  /* height: 268.516px; */
 }
 
 .process-item-wrapper {
-  /* width: 60%; */
-  /* min-width: 00px; */
   flex: 1 0 400px;
   max-width: 750px;
-  /* justify-self: center; */
 }
 
 .process-item {
@@ -354,6 +356,100 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.25rem;
+}
+
+/* Why Us */
+
+#why-us {
+  margin-top: 2rem;
+  color: var(--white-text);
+}
+
+.why-us--grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 200px 300px;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.why-us--card {
+  border-radius: 16px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.why-us--card > p {
+  width: 75%;
+  margin-inline: auto;
+}
+
+.card1 {
+  background: url("/assets/why-us1.png") center / cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  grid-column: 1 / 4;
+}
+
+.card2 {
+  background-image: url("/assets/why-us2.png");
+  background-color: rgba(21, 23, 27, 0.4);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  grid-column: 4 / 7;
+}
+
+.card3 {
+  background-color: #323741;
+  grid-column: 1 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card3 > div {
+  width: 75%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3vw;
+  margin-top: 2rem;
+}
+
+.card4 {
+  background: url("/assets/why-us4.png") center / cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  grid-column: 5 / 7;
+}
+
+.card5 {
+  background-color: var(--accent);
+  grid-column: 7 / 10;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card5 > img {
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .container {
+    padding: 3rem 5rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
