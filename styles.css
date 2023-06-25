@@ -86,14 +86,12 @@ a:hover {
 .text--black {
   color: var(--black-text);
 }
+
 /* Header */
 
 header {
   height: 600px;
-  background-image: url("/assets/hero.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("/assets/hero.png") center / cover no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -103,7 +101,7 @@ header {
 }
 
 .navbar {
-  display: flex;
+  display: none; /* TODO Mobile resolution navbar */
   justify-content: space-between;
 }
 
@@ -133,7 +131,7 @@ header {
 
 .promo-text {
   margin-top: auto;
-  width: 400px;
+  max-width: 400px;
   color: var(--white-text);
   font-size: 1rem;
   font-family: "Lato", sans-serif;
@@ -147,10 +145,7 @@ header {
 }
 
 .services-wrapper {
-  /* padding: 3rem 5rem; */
   background-color: var(--bg-white);
-  display: flex;
-  gap: 2rem;
 }
 
 .services-title {
@@ -179,19 +174,19 @@ header {
 .services-tags:nth-child(2) {
   display: flex;
   gap: 1rem;
-  margin-left: 9rem;
+  margin-left: 3rem;
 }
 
 .services-tags:nth-child(3) {
   display: flex;
   gap: 1rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
 }
 
 .services-aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
   justify-content: space-between;
   width: 100%;
 }
@@ -206,12 +201,10 @@ header {
 .services-btn {
   margin-right: 10rem;
   margin-bottom: 0.75rem;
+  align-self: start;
 }
 
 .services-description {
-  display: flex;
-  justify-content: space-between;
-  /* padding: 3rem 5rem; */
   color: var(--white-text);
   font-family: "Nunito";
 }
@@ -226,7 +219,6 @@ header {
 .services-items {
   display: flex;
   align-items: center;
-  width: 250px;
   justify-content: space-between;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--white-text);
@@ -237,11 +229,10 @@ header {
 }
 
 .services-img-wrapper {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 1rem; */
 }
 
 .services-img-group {
@@ -254,8 +245,8 @@ header {
 }
 
 .service-description {
+  display: none;
   width: 30%;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
@@ -270,7 +261,6 @@ header {
 
 #projects {
   background-color: var(--bg-white);
-  /* padding: 3rem 5rem; */
 }
 
 .projects-title {
@@ -291,8 +281,7 @@ header {
   border-radius: 24px;
   background: url("/assets/project.png") center / cover no-repeat;
   background-position: center;
-  flex: 1 1 420px;
-  max-width: 600px;
+  flex: 1 1 300px;
   margin-inline: auto;
   aspect-ratio: 1/1;
 
@@ -333,7 +322,7 @@ header {
 }
 
 .process-item-wrapper {
-  flex: 1 0 400px;
+  flex: 1 0 300px;
   max-width: 750px;
 }
 
@@ -363,12 +352,13 @@ header {
 #why-us {
   margin-top: 2rem;
   color: var(--white-text);
+  margin-bottom: 3rem;
 }
 
 .why-us--grid-wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 200px 300px;
+  grid-template-rows: repeat(4, 200px), 400px;
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -376,9 +366,9 @@ header {
 .why-us--card {
   border-radius: 16px;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  padding: 3rem 0;
+  align-items: center;
+  height: 200px;
 }
 
 .why-us--card > p {
@@ -390,24 +380,22 @@ header {
   background: url("/assets/why-us1.png") center / cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
-  grid-column: 1 / 4;
+  grid-column: 1 / 10;
 }
 
 .card2 {
-  background-image: url("/assets/why-us2.png");
+  background: url("/assets/why-us2.png") center / cover;
   background-color: rgba(21, 23, 27, 0.4);
   background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  grid-column: 4 / 7;
+  grid-column: 1 / 10;
 }
 
 .card3 {
   background-color: #323741;
-  grid-column: 1 / 5;
-  display: flex;
+  grid-column: 1 / 10;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
+  gap: 0.25rem;
 }
 
 .card3 > div {
@@ -417,38 +405,135 @@ header {
   justify-content: end;
   align-items: center;
   gap: 3vw;
-  margin-top: 2rem;
 }
 
 .card4 {
   background: url("/assets/why-us4.png") center / cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
-  grid-column: 5 / 7;
+  grid-column: 1 / 10;
 }
 
 .card5 {
   background-color: var(--accent);
-  grid-column: 7 / 10;
-  grid-row: 1 / 3;
-  display: flex;
+  grid-column: 1 / 10;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-around;
+  height: 400px;
 }
 
 .card5 > img {
-  margin-top: 3rem;
+  width: 75%;
+  margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    display: flex;
+  }
+  .card1 {
+    grid-column: 1 / 6;
+  }
+  .card2 {
+    grid-column: 6 / 10;
+  }
+  .card3 {
+    grid-column: 1 / 7;
+  }
+  .card4 {
+    grid-column: 7 / 10;
+  }
+  .card5 > img {
+    width: 50%;
+  }
+
+  .services-tags:nth-child(2) {
+    margin-left: 9rem;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     padding: 2rem;
   }
+
+  .why-us--grid-wrapper {
+    grid-template-rows: 200px 200px;
+  }
+  .card1 {
+    grid-column: 1 / 4;
+  }
+  .card2 {
+    grid-column: 4 / 7;
+  }
+  .card3 {
+    grid-column: 1 / 5;
+  }
+  .card4 {
+    grid-column: 5 / 7;
+  }
+  .card5 {
+    grid-column: 7 / 10;
+    grid-row: 1 / 3;
+    height: auto;
+  }
+  .card5 > img {
+    width: 75%;
+  }
+
+  .services-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .services-aside {
+    align-items: center;
+  }
+
+  .services-btn {
+    align-self: center;
+  }
+
+  .services-description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services-img-wrapper {
+    display: flex;
+  }
+
+  .service-description {
+    display: flex;
+  }
+}
+
+@media (min-width: 920px) {
+  .projects-item {
+    flex-basis: 420px;
+  }
 }
 
 @media (min-width: 1020px) {
   .container {
     padding: 3rem 5rem;
+  }
+  .card1 {
+    grid-column: 1 / 4;
+  }
+  .card2 {
+    grid-column: 4 / 7;
+  }
+  .card3 {
+    grid-column: 1 / 5;
+  }
+  .card4 {
+    grid-column: 5 / 7;
+  }
+  .card5 {
+    grid-column: 7 / 10;
+    grid-row: 1 / 3;
+    height: auto;
   }
 }
 
