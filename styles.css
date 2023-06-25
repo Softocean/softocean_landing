@@ -9,6 +9,7 @@
   --white-text: #f3f4ff;
   --accent: #5ca7ff;
   --bg-white: #d4dde5;
+  --bg-blue: #5884c7;
 }
 
 /* General styling */
@@ -46,7 +47,7 @@ a:hover {
 }
 
 .btn--development {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   border: 1px solid var(--black, #15171b);
 }
@@ -85,6 +86,10 @@ a:hover {
 
 .text--black {
   color: var(--black-text);
+}
+
+.text--white {
+  color: var(--white-text);
 }
 
 /* Header */
@@ -142,6 +147,7 @@ header {
 
 #services {
   margin-top: 7.5rem;
+  color: var(--black-text);
 }
 
 .services-wrapper {
@@ -205,6 +211,7 @@ header {
 }
 
 .services-description {
+  background-color: var(--black-text);
   color: var(--white-text);
   font-family: "Nunito";
 }
@@ -246,9 +253,9 @@ header {
 
 .service-description {
   display: none;
-  width: 30%;
+  width: 33%;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: start;
 }
 
@@ -290,6 +297,11 @@ header {
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
+}
+
+.projects-item:hover {
+  box-shadow: 0px 0px 15px black;
+  /* scale: 1.1; */
 }
 
 /* Our process */
@@ -351,6 +363,7 @@ header {
 
 #why-us {
   margin-top: 2rem;
+  background-color: var(--black-text);
   color: var(--white-text);
   margin-bottom: 3rem;
 }
@@ -424,12 +437,57 @@ header {
 
 .card5 > img {
   width: 75%;
-  margin-inline: auto;
+}
+
+/* Our Team */
+
+#team {
+  background-color: var(--bg-white);
+}
+
+.team--title {
+  margin-bottom: 2rem;
+}
+
+.team--member-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.team--member {
+  display: inline-flex;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.team--member > img {
+  border-radius: 20px 0 0 20px;
+  flex: 1;
+  width: 50%;
+}
+
+.team--member-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0rem 2rem;
+  background-color: var(--bg-blue);
+  border-radius: 0 20px 20px 0;
+  width: 50%;
+}
+
+.btn--team {
+  margin-top: 1rem;
 }
 
 @media (min-width: 600px) {
   .navbar {
     display: flex;
+  }
+
+  .process-item-wrapper {
+    flex-basis: 425px;
   }
   .card1 {
     grid-column: 1 / 6;
@@ -506,11 +564,26 @@ header {
   .service-description {
     display: flex;
   }
+
+  .team--member-wrapper {
+    flex-direction: row;
+  }
+
+  .team--member:nth-child(1) {
+    margin-bottom: 7rem;
+  }
+
+  .team--member:nth-child(2) {
+    margin-top: 7rem;
+  }
 }
 
 @media (min-width: 920px) {
   .projects-item {
     flex-basis: 420px;
+  }
+  .service-description {
+    justify-content: space-evenly;
   }
 }
 
