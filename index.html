@@ -22,7 +22,12 @@
   <body>
     <header class="container">
       <div class="navbar">
-        <img src="/assets/logo.png" alt="SoftOcean logo" class="img-logo" />
+        <a
+          href="#
+        "
+        >
+          <img src="/assets/logo.png" alt="SoftOcean logo" class="img-logo" />
+        </a>
         <nav>
           <ul class="nav-links">
             <li>
@@ -333,6 +338,7 @@
       </section>
 
       <section id="contacts" class="container">
+        <h2 class="contacts--title text--nunito">Contact Us</h2>
         <form action="" class="contact-form">
           <div class="contact-form-wrapper">
             <div class="contact-form-col1">
@@ -348,9 +354,27 @@
               ></span>
             </p>
           </div>
-          <button class="btn btn--contact-us">knock, knock</button>
+          <button class="btn btn--contact-us text--md">knock, knock</button>
         </form>
       </section>
     </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const nav = document.querySelector(".navbar");
+      let navTop = nav.offsetTop + nav.offsetHeight;
+
+      function fixedNav() {
+        if (window.scrollY >= navTop) {
+          header.classList.add("fixed");
+          // header.classList.remove("container");
+        } else {
+          header.classList.remove("fixed");
+          // header.classList.add("container");
+        }
+      }
+
+      window.addEventListener("scroll", fixedNav);
+    </script>
   </body>
 </html>

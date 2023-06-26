@@ -14,20 +14,18 @@
 
 /* General styling */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1440px;
   margin-inline: auto;
-  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .btn {
@@ -109,30 +107,75 @@ header {
 .navbar {
   display: none; /* TODO Mobile resolution navbar */
   justify-content: space-between;
+  transition: all 0.4s;
 }
 
 .nav-links {
-  gap: 2rem;
-  padding: 6px 20px;
+  padding: 14px 20px;
   border-radius: 100px;
   list-style: none;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   color: var(--black-text);
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(90deg, #e5e6f1 0%, rgba(229, 230, 241, 0) 100%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    90deg,
+    #e5e6f1 0%,
+    rgba(229, 230, 241, 0.25) 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
 }
 
-.contact-link {
-  display: flex;
+.nav-links a {
+  padding: 0 20px;
+}
+
+.nav-links a:hover {
   padding: 8px 20px;
-  justify-content: center;
-  align-items: center;
   border-radius: 50px;
   background: var(--black, #15171b);
   color: var(--white-text);
+}
+
+.contact-link {
   margin-left: 30px;
+}
+
+header.fixed {
+  padding: 0;
+}
+
+header.fixed .navbar {
+  position: fixed;
+  margin-top: 0;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(229, 230, 241, 0.8) 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 1440px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0rem 0.25rem 1rem;
+}
+
+header.fixed .nav-links {
+  background: none;
+  box-shadow: none;
+}
+
+header.fixed img {
+  width: 75px;
+}
+
+header.fixed .promo-text {
+  padding: 0 0 2rem 1rem;
+  max-width: 500px;
 }
 
 .promo-text {
@@ -483,17 +526,35 @@ header {
 /* Contact form */
 
 #contacts {
-  margin-top: 3rem;
+  margin-top: 1rem;
+  background-color: var(--black-text);
+  color: var(--white-text);
+}
+
+.contacts--title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  word-spacing: 0rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .contact-form input,
 .contact-form-message {
   background-color: transparent;
   border: none;
+  -webkit-border-radius: 0;
   border-bottom: 1px solid var(--white-text);
   outline: none;
   color: var(--white-text);
   padding-bottom: 0.25rem;
+}
+
+.contact-form input::placeholder {
+  color: gray;
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
 }
 
 .contact-form-col1 {
@@ -519,6 +580,8 @@ input[name="email"] {
 .textarea {
   outline: none;
   display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
 }
 
 .contact-form button {
@@ -526,7 +589,7 @@ input[name="email"] {
   display: block;
   width: 100%;
   border-radius: 15px;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
 }
 
 @media (min-width: 600px) {
@@ -565,11 +628,21 @@ input[name="email"] {
     margin-inline: auto;
     width: auto;
   }
+
+  .contacts--title {
+    font-size: 4rem;
+    word-spacing: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     padding: 2rem;
+  }
+
+  header.fixed .promo-text {
+    padding: 2rem;
+    max-width: 475px;
   }
 
   .why-us--grid-wrapper {
@@ -636,18 +709,18 @@ input[name="email"] {
 }
 
 @media (min-width: 800px) {
-  .contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
   .contact-form-wrapper {
     width: 70%;
   }
   .contact-form button {
     margin-top: 1rem;
     margin-inline: 0;
+  }
+  .contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
   }
 }
 
@@ -663,6 +736,10 @@ input[name="email"] {
 @media (min-width: 1020px) {
   .container {
     padding: 3rem 5rem;
+  }
+  header.fixed .promo-text {
+    padding: 0 0 3rem 5rem;
+    max-width: 500px;
   }
   .card1 {
     grid-column: 1 / 4;
