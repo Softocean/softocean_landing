@@ -20,34 +20,35 @@
     />
   </head>
   <body>
-    <header class="container">
-      <div class="navbar">
-        <a
-          href="#
-        "
-        >
-          <img src="/assets/logo.png" alt="SoftOcean logo" class="img-logo" />
-        </a>
-        <nav>
-          <ul class="nav-links">
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#process">Process</a>
-            </li>
-            <li>
-              <a href="#team">Our Team</a>
-            </li>
-            <li class="contact-link">
-              <a href="#contacts">Contact us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <section class="top-nav">
+        <div>
+          <a href="#">
+            <img src="/assets/logo.png" alt="SoftOcean logo" class="img-logo" />
+          </a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li class="nav-links">
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#process">Process</a>
+          </li>
+          <li>
+            <a href="#team">Our Team</a>
+          </li>
+          <li>
+            <a href="#contacts" class="contact-link">Contact us</a>
+          </li>
+        </ul>
+      </section>
       <div class="promo-text">
         <h2>
           Welcome to Softocean - your partner for high quality software
@@ -87,7 +88,6 @@
         </div>
 
         <div class="services-description container">
-          <!-- <div class="services-list-wrapper"> -->
           <div class="services-list">
             <div class="services-items">
               <p>Software development</p>
@@ -361,20 +361,27 @@
 
     <script>
       const header = document.querySelector("header");
-      const nav = document.querySelector(".navbar");
+      const nav = document.querySelector(".top-nav");
+      const navLinks = document.querySelector(".nav-links");
       let navTop = nav.offsetTop + nav.offsetHeight;
 
       function fixedNav() {
         if (window.scrollY >= navTop) {
           header.classList.add("fixed");
-          // header.classList.remove("container");
         } else {
           header.classList.remove("fixed");
-          // header.classList.add("container");
         }
       }
 
       window.addEventListener("scroll", fixedNav);
+
+      function showMenu() {
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+        } else {
+          navLinks.style.display = "flex";
+        }
+      }
     </script>
   </body>
 </html>
