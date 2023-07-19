@@ -95,7 +95,7 @@ a {
 
 header {
   height: 600px;
-  background: url("/assets/hero.png") center / cover no-repeat;
+  background: url("./assets/hero.png") center / cover no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -482,7 +482,7 @@ header.fixed img {
 
 .projects-item {
   border-radius: 24px;
-  background: url("/assets/project.png") center / cover no-repeat;
+  background: url("./assets/project.png") center / cover no-repeat;
   background-position: center;
   flex: 1 1 300px;
   margin-inline: auto;
@@ -585,14 +585,14 @@ header.fixed img {
 }
 
 .card1 {
-  background: url("/assets/why-us1.png") center / cover;
+  background: url("./assets/why-us1.png") center / cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   grid-column: 1 / 10;
 }
 
 .card2 {
-  background: url("/assets/why-us2.png") center / cover;
+  background: url("./assets/why-us2.png") center / cover;
   background-color: rgba(21, 23, 27, 0.4);
   background-blend-mode: multiply;
   grid-column: 1 / 10;
@@ -616,7 +616,7 @@ header.fixed img {
 }
 
 .card4 {
-  background: url("/assets/why-us4.png") center / cover;
+  background: url("./assets/why-us4.png") center / cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   grid-column: 1 / 10;
