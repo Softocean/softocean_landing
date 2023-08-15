@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -7,14 +7,31 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      'deep-sky-blue': '#0B96B4',
+      'rebecca-purple': '#551DB0',
+    },
+    fontFamily: {
+      manrope: ['Manrope'],
+    },
+    fontSize: {
+      'sm-10': ['10px', '18px'],
+      'sm-12': ['12px', '20px'],
+      sm: ['14px', '20px'],
+      'sm-16': ['16px', '22px'],
+      base: ['18px', '26px'],
+      'base-21': ['21px', '30px'],
+      'base-24': ['24px', '31px'],
+      lg: ['36px', '48px'],
+      xl: ['48px', '60px'],
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
