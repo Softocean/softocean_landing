@@ -1,16 +1,15 @@
 'use client';
 import React from 'react';
-import Button from '@/components/button';
-import Link from 'next/link';
-import SmallFormInput from './input';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MainPageFormDataType } from '@/types/types';
-import { MainPageFormValidationScheme } from '@/utils/validationSchemes/main-page-form';
-
-import PhoneIcon from '@/../assets/icons/phone.svg';
+import Link from 'next/link';
 import MailIcon from '@/../assets/icons/email.svg';
 import PersonIcon from '@/../assets/icons/person.svg';
+import PhoneIcon from '@/../assets/icons/phone.svg';
+import Button from '@/components/button';
+import { MainPageFormDataType } from '@/types/types';
+import { MainPageFormValidationScheme } from '@/utils/validationSchemes/main-page-form';
+import SmallFormInput from './input';
 
 function SmallForm() {
   const {

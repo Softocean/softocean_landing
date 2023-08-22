@@ -1,5 +1,5 @@
-import { MainPageFormDataType } from '@/types/types';
 import z from 'zod';
+import { MainPageFormDataType } from '@/types/types';
 
 export const MainPageFormValidationScheme = z.object({
   name: z.string().min(1, { message: 'Name is required field' }),
