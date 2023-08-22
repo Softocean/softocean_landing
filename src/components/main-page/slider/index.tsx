@@ -43,7 +43,7 @@ function Swiper({ slides }: SwiperProps) {
     swiperEl.initialize();
   }, []);
   return (
-    <div className="flex flex-row gap-6 justify-center">
+    <div className="flex flex-row justify-center gap-6">
       <button className="rotate-180" onClick={() => swiperElRef.current.swiper.slidePrev()}>
         <SwiperArrowSvg />
       </button>
@@ -53,8 +53,7 @@ function Swiper({ slides }: SwiperProps) {
           slides-per-view="2"
           pagination="true"
           init="false"
-          space-between="120"
-        >
+          space-between="120">
           {slides.map((slide, i) => (
             <swiper-slide key={`slide-${i}`}>
               <Slide {...slide} />

@@ -4,6 +4,8 @@
   "trailingComma": "es5",
   "semi": true,
   "bracketSpacing": true,
-  "endOfLine": "auto",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "bracketSameLine": true,
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindcss/prettier": true
 }

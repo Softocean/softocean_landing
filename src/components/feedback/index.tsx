@@ -6,7 +6,7 @@ import lowqualityTempCHEL from '@/../assets/low-quality/main-page/feedbackCHEL-l
 
 function Feedback() {
   return (
-    <div className="flex flex-row gap-[140px] w-fit mx-auto items-center mt-[32px]">
+    <div className="mx-auto mt-[32px] flex w-fit flex-row items-center gap-[140px]">
       <Avatar
         type="temp"
         name="Кирилл Кириллов"
@@ -15,7 +15,7 @@ function Feedback() {
         blurDataURL={lowqualityTempCHEL.src}
       />
       <div className="py-10">
-        <p className="text-base leading-[125%] w-[784px]">
+        <p className="w-[784px] text-base leading-[125%]">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
           been the industry&lsquo;s standard dummy text ever since the 1500s, when an unknown
           printer took a galley of type and scrambled it to make a type specimen book.

@@ -42,7 +42,7 @@ export default function Home() {
         <p className="text-center text-xl font-bold text-lightdark">Портфолио</p>
         <Slider slides={slides} />
       </section>
-      <section className="mt-[150px] mb-[100px]">
+      <section className="mb-[100px] mt-[150px]">
         <SmallForm />
       </section>
     </main>
