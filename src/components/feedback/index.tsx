@@ -1,8 +1,7 @@
-import Avatar from '@/components/avatar';
 import React from 'react';
-
-import tempCHEL from '@/../assets/main-page/feedbackCHEL.jpg';
 import lowqualityTempCHEL from '@/../assets/low-quality/main-page/feedbackCHEL-low.jpg';
+import tempCHEL from '@/../assets/main-page/feedbackCHEL.jpg';
+import Avatar from '@/components/avatar';
 
 function Feedback() {
   return (

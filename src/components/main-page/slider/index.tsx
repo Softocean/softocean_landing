@@ -2,10 +2,8 @@
 'use client';
 
 import React from 'react';
-
-import SwiperArrowSvg from '@/../assets/icons/swiper-arrow.svg';
-
 import { register } from 'swiper/element/bundle';
+import SwiperArrowSvg from '@/../assets/icons/swiper-arrow.svg';
 import { Slide, SlideProps } from './slide';
 
 interface SwiperProps {
