@@ -16,6 +16,8 @@ const config: Config = {
       white: '#ffffff',
       transparent: 'transparent',
       lightgray: 'lightgray',
+      silver: '#C4C4C4',
+      'brainstem-grey': '#b6b6b6',
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
     },
