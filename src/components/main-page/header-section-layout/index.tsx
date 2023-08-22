@@ -31,7 +31,9 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
   React.useEffect(() => {
     let observer: IntersectionObserver;
     if (sectionRef.current) {
-      observer = new IntersectionObserver(scrollCallback, { threshold: thresholds });
+      observer = new IntersectionObserver(scrollCallback, {
+        threshold: thresholds,
+      });
       observer.observe(sectionRef.current);
     }
   }, [sectionRef.current]);
@@ -47,8 +49,7 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
       </div>
       <div
         ref={imageLayoutRef}
-        className="absolute top-[-290px] z-[1] transition-all duration-[250ms] ease-linear"
-      >
+        className="absolute top-[-290px] z-[1] transition-all duration-[250ms] ease-linear">
         <Image
           src={layoutImage}
           placeholder="blur"

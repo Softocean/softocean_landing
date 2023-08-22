@@ -34,8 +34,7 @@ function SmallForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       action="submit"
-      className="mx-auto flex min-h-[387px] w-[59%] flex-col items-center rounded-[10px] pb-6 pt-10 shadow-[0_4px_45px_0_rgba(0,0,0,0.07)]"
-    >
+      className="mx-auto flex min-h-[387px] w-[59%] flex-col items-center rounded-[10px] pb-6 pt-10 shadow-[0_4px_45px_0_rgba(0,0,0,0.07)]">
       <p className="w-[380px] text-center text-lg text-dark-as-night">
         Оставте заявку, и мы с вами свяжемся и вы от нас не отделаетесь
       </p>
@@ -94,8 +93,7 @@ function SmallForm() {
         Нажимая на кнопку &quot;Отправить&quot; вы соглашаетесь с нашей{' '}
         <Link
           href="#"
-          className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent"
-        >
+          className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent">
           Политикой конфиденциальности
         </Link>
       </p>

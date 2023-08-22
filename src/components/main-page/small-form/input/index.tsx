@@ -42,8 +42,7 @@ const SmallFormInput = React.forwardRef<HTMLInputElement, InputProps>(
               { 'translate-y-[-160%] transform': value !== '' },
               { 'text-error-color': !!error },
               { 'text-lightdark': !error }
-            )}
-          >
+            )}>
             <div>{icon}</div>
             <span>{placeholder}</span>
           </label>
