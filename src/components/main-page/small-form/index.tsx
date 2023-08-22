@@ -97,7 +97,7 @@ function SmallForm() {
           Политикой конфиденциальности
         </Link>
       </p>
-      <Button className="mt-10" type="submit" text="Отправить" />
+      <Button className="mt-10" type="submit">Отправить</Button>
     </form>
   );
 }

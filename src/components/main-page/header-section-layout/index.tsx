@@ -45,7 +45,7 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
           <p className="w-[627px] text-xl font-bold">{title}</p>
           <p className="mt-4 w-[716px] font-semibold">{subText}</p>
         </div>
-        <Button type="button" text="Связаться с нами" />
+        <Button type="button">Связаться с нами</Button>
       </div>
       <div
         ref={imageLayoutRef}

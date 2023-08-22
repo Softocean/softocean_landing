@@ -39,7 +39,7 @@ function PortfolioSlide({
           </p>
           <p className="text-base leading-[125%]">{subText}</p>
         </div>
-        <Button type="button" text="Смотреть" />
+        <Button type="button">Смотреть</Button>
       </div>
     </div>
   );
