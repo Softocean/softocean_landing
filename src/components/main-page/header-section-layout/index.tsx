@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
-
-import Button from '@/components/button';
+import Image from 'next/image';
 import layoutImageLow from '@/../assets/low-quality/main-page/main-layout-low.jpg';
 import layoutImage from '@/../assets/main-page/main-layout.jpg';
+import Button from '@/components/button';
 
 interface HeaderSectionLayoutProps {
   title: string;

@@ -1,8 +1,8 @@
-import Button from '@/components/button';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
-import PortfolioPlaceholder from '@/../assets/main-page/portfolio-placeholder.png';
 import PortfolioPlaceholderLow from '@/../assets/low-quality/main-page/portfolio-placeholder-low.jpg';
+import PortfolioPlaceholder from '@/../assets/main-page/portfolio-placeholder.png';
+import Button from '@/components/button';
 
 interface PortfolioSlideProps {
   typeOfProject: string;
