@@ -1,25 +1,32 @@
+'use client';
 
-import Button from '@/components/button'
+import Button from '@/components/button';
 import Link from 'next/link';
-import React from 'react'
-import { SegmentsDataType } from '../title';
+import React from 'react';
 import SkipButton from '../skip-button';
+import { BriefingRoutesType } from '@/constants';
 
 interface BriefNavButtonsProps {
-    isActive?: boolean;
-    nextHref: (keyof SegmentsDataType);
+  onNext?: () => void;
+  isActive?: boolean;
+  nextHref: BriefingRoutesType;
 }
 
-function BriefNavButtons({nextHref}: BriefNavButtonsProps) {
+function BriefNavButtons({ nextHref, onNext }: BriefNavButtonsProps) {
+  const linkHref = `/briefing/${nextHref === 'index' ? '' : nextHref}`;
   return (
-    <div className='flex flex-row flex-nowrap content-between'>
-        <Button className='font-normal text-sm-16'>Заполнить бриф вместо вас</Button>
-        <div className='flex flex-row flex-nowrap'>
-            <SkipButton />
-            <Button><Link href={`/briefing/${nextHref}`}>Продолжить</Link></Button>
-        </div>
+    <div className="w-[95%] flex flex-row justify-between">
+      <Button className="font-normal text-sm-16">Заполнить бриф вместо вас</Button>
+      <div className="flex flex-row flex-nowrap gap-6 items-center">
+        <Link href={linkHref} passHref legacyBehavior>
+          <SkipButton />
+        </Link>
+        <Button onClick={onNext} className="font-normal text-sm-16">
+          Продолжить
+        </Button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default BriefNavButtons
+export default BriefNavButtons;

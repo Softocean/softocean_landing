@@ -36,6 +36,9 @@ const config: Config = {
       backgroundImage: {
         'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
       },
+      width: {
+        'label-small': '50px',
+      },
     },
   },
   plugins: [],

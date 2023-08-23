@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="site-map" clip-path="url(#clip0_260_158)">
+<g id="surface1">
+<path id="Vector" d="M48 34.5916V23.5334H41.703V18.3706H25.4062V16.4019H35.5983V0H12.4017V16.4019H22.5938V18.3706H6.297V23.5334H0V34.5916H6.297V36.9419H0V48H15.4065V36.9419H9.1095V34.5916H15.4065V23.5334H9.1095V21.1831H38.8905V23.5334H32.5935V34.5916H38.8905V36.9419H32.5935V48H48V36.9419H41.703V34.5916H48ZM15.2142 2.8125H32.7858V13.5894H15.2142V2.8125ZM12.594 45.1875H2.8125V39.7544H12.594V45.1875ZM12.594 31.7791H2.8125V26.3459H12.594V31.7791ZM45.1875 45.1875H35.406V39.7544H45.1875V45.1875ZM35.406 26.3459H45.1875V31.7791H35.406V26.3459Z" fill="url(#paint0_linear_260_158)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_260_158" x1="38.8861" y1="-32.4324" x2="3.29242" y2="-21.8858" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0B96B4"/>
+<stop offset="1" stop-color="#551DB0"/>
+</linearGradient>
+<clipPath id="clip0_260_158">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

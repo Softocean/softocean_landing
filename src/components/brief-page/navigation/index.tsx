@@ -3,10 +3,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { BriefingRoutesType } from '@/constants';
 
 interface BriefNavLink {
   name: string;
-  href: string;
+  href: BriefingRoutesType;
 }
 
 interface BriefNavigationProps {
@@ -20,7 +21,8 @@ function BriefNavigation({ links }: BriefNavigationProps) {
       <p className="mb-[21px] text-base font-medium text-dark-as-night">Ваш продукт</p>
       <nav className="flex flex-col gap-4">
         {links.map((link, i) => {
-          const isActive = pathname === link.href;
+          const linkHref = `/briefing${link.href === 'index' ? '' : '/'.concat(link.href)}`;
+          const isActive = pathname === linkHref;
           return (
             <li className="h-auto list-none" key={`brief-link-${i}`}>
               <Link
@@ -29,7 +31,7 @@ function BriefNavigation({ links }: BriefNavigationProps) {
                     isActive,
                 })}
                 scroll={false}
-                href={link.href}>
+                href={linkHref}>
                 {link.name}
               </Link>
             </li>
