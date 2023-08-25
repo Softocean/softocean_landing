@@ -1,6 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-//Variable font (не нужно указывать веса)
 import { Manrope } from 'next/font/google';
 
 const manrope = Manrope({ subsets: ['latin', 'cyrillic'] });
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={manrope.className}>{children}</body>
+      <body className={`${manrope.className} bg-white`}>{children}</body>
     </html>
   );
 }
