@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
+import Footer from '@/components/footer';
 
 const manrope = Manrope({ subsets: ['latin', 'cyrillic'] });
 
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-white`}>{children}</body>
+      <body className={`${manrope.className} bg-white`}>{children}
+        <section className="mb-10 mt-[90px]">
+          <Footer />
+        </section>
+      </body>
     </html>
   );
 }
