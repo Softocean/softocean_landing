@@ -15,7 +15,7 @@ export default function PartnersContent({ title, description, textButton }: Part
       <h2 className="ml-[25px] text-xl font-bold text-dark-as-night max-w-[1192px] whitespace-pre-line">
         {title}
       </h2>
-      <p className="text-grey text-lg-18 max-w-[900px]">{description}</p>
+      <p className="text-grey text-base max-w-[900px]">{description}</p>
       <Button className="text-sm-16" type="button" text={textButton} />
     </div>
   );

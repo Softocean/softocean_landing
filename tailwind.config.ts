@@ -19,6 +19,7 @@ const config: Config = {
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
       grey: '#B6B6B6',
+      greyDark: '#727377',
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],
@@ -31,6 +32,9 @@ const config: Config = {
       'lg-18': ['18px', 'normal'],
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
+    },
+    fontFamily: {
+      coreSansN: ['coreSansN'],
     },
     extend: {
       backgroundImage: {

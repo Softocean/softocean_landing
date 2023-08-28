@@ -82,8 +82,7 @@ export default function Partners() {
             : ''
         }`}
         key={i}
-        onClick={() => onSelectedTab(i)}
-      >
+        onClick={() => onSelectedTab(i)}>
         <p className="my-[5px]">{name.title}</p>
       </li>
     );
@@ -95,7 +94,7 @@ export default function Partners() {
         <h2 className="ml-[25px] text-xl font-bold text-dark-as-night max-w-[1192px] whitespace-pre-line">
           {info.title}
         </h2>
-        <p className="text-grey text-lg-18 max-w-[900px]">{info.description}</p>
+        <p className="text-grey text-base max-w-[900px]">{info.description}</p>
         <Button className="text-sm-16" type="button" text={info.textButton} />
       </div>
     );
