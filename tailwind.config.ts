@@ -33,9 +33,6 @@ const config: Config = {
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
     },
-    fontFamily: {
-      coreSansN: ['coreSansN'],
-    },
     extend: {
       backgroundImage: {
         'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',

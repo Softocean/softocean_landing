@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: CoreSansN;
-    font-weight: 400;
-    src:
-      local('Roboto'),
-      url(/vendor/fonts/CoreSansN65Bold.ttf) format('ttf');
-  }
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
