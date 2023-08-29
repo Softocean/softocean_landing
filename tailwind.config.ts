@@ -19,6 +19,8 @@ const config: Config = {
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
       'grey-as-stone': '#767575',
+      greyDark: '#727377',
+
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],
