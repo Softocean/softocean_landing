@@ -15,7 +15,7 @@ export default function About() {
         <h1 className="text-[center] text-[24px] font-bold md:text-[36px] lg:text-[48px]">
           <span className="text-[#551DB0]">Sonus space</span> - Мир без копирайта
         </h1>
-        <h3 className="text-[center] mt-[10px] text-[9px] font-light text-[#4C4C4C] md:text-[12px] lg:text=[18px] max-w-[450px] md:max-w-[900px]">
+        <h3 className="text-[center] mt-[10px] text-[9px] font-light text-[#4C4C4C] md:text-[12px] lg:text-[18px] max-w-[450px] md:max-w-[900px]">
           Авторское право препятствует развитию общества, потому что юридически ограничивает
           желающих улучшить или усовершенствовать продукт.
         </h3>
@@ -35,7 +35,7 @@ export default function About() {
         <h2 className="text-[center] text-[18px] font-bold text-[#4E4E4E] md:text-[24px] lg:text-[36px]">
           Наше отношение к проблеме
         </h2>
-        <div className="text-[9px] font-light text-[center] text-[#4C4C4C] flex flex-col max-w-[450px] gap-6 md:gap-3 md:text-[12px] lg:text=[18px] md:max-w-[768px] lg:max-w-[950px]">
+        <div className="text-[9px] font-light text-[center] text-[#4C4C4C] flex flex-col max-w-[450px] gap-6 md:gap-3 md:text-[12px] lg:text-[18px] md:max-w-[768px] lg:max-w-[950px]">
           <p>
             Следует разграничивать авторское право и копирайт. Любая интеллектуальная собственность
             с момента создания защищена авторским правом. Но тот, кто желает заявить о своих
@@ -60,7 +60,7 @@ export default function About() {
           {' '}
           Решение:{' '}
         </span>
-        <p className="text-[#4C4C4C] font-light text-[9px] max-w-[450px] md:text-[12px] lg:text=[18px] md:max-w-[768px] lg:max-w-[950px]">
+        <p className="text-[#4C4C4C] font-light text-[9px] max-w-[450px] md:text-[12px] lg:text-[18px] md:max-w-[768px] lg:max-w-[950px]">
           Мы заявляем об отрицательном влиянии копирайта на развитие общества в наших медиа каналах,
           информируя читателей о существующей проблеме.{' '}
           <span className="font-bold">На данный момент в наших силах только информирование.</span>
@@ -80,10 +80,10 @@ export default function About() {
             Наши медиа каналы отражают следующие принципы:
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
-            - свободное распространение информации; - копирайт
+            - свободное распространение информации;
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
-            - это тотальное ограничение, и мы хотим, чтобы все об этом знали;
+          - копирайт - это тотальное ограничение, и мы хотим, чтобы все об этом знали;
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
             - воспитание культуры человечности в наших читателях.
