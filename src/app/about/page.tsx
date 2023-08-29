@@ -15,7 +15,7 @@ export default function About() {
         <h1 className="text-[center] text-[24px] font-bold md:text-[36px] lg:text-[48px]">
           <span className="text-[#551DB0]">Sonus space</span> - Мир без копирайта
         </h1>
-        <h3 className="text-[center] mt-[10px] text-[9px] font-light text-[#4C4C4C] md:text-[12px] lg:text-[18px] max-w-[450px] md:max-w-[900px]">
+        <h3 className="text-[center] mt-[10px] text-[9px] font-light text-[#4C4C4C] md:text-[12px] lg:text-[18px] max-w-[450px] lg:max-w-[950px] md:max-w-[768px]">
           Авторское право препятствует развитию общества, потому что юридически ограничивает
           желающих улучшить или усовершенствовать продукт.
         </h3>
