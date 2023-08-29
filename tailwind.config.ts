@@ -18,7 +18,7 @@ const config: Config = {
       lightgray: 'lightgray',
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
-      grey: '#B6B6B6',
+      'grey-as-stone': '#767575',
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],
