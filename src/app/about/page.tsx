@@ -94,7 +94,7 @@ export default function About() {
             Мы используем следующие каналы
           </h2>
           <div className="flex flex-row gap-[5px] items-center justify-between md:gap-[15px]">
-            <div className="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <div className=" flex items-center w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
               <Image
                 src={vk}
                 alt="логотип"
