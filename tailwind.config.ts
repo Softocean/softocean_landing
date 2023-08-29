@@ -28,6 +28,7 @@ const config: Config = {
       base: ['18px', 'normal'],
       'base-21': ['21px', 'normal'],
       'base-24': ['24px', 'normal'],
+      'lg-18': ['18px', 'normal'],
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
     },
