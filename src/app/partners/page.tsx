@@ -16,8 +16,8 @@ export default function Partners() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === '/partners2') {
-      router.push('/partners2/events');
+    if (pathname === '/partners') {
+      router.push('/partners/events');
     }
   }, []);
 
