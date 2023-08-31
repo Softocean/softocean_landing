@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client';
 
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import SwiperArrowSvg from '@/../assets/icons/swiper-arrow.svg';
 import { Slide, SlideProps } from './slide';
@@ -12,9 +12,10 @@ interface SwiperProps {
 
 register();
 
-function Swiper({ slides }: SwiperProps) {
-  const swiperElRef = React.useRef(null);
-  React.useEffect(() => {
+function CustomSwiper({ slides }: SwiperProps) {
+  const swiperElRef = useRef(null);
+
+  useEffect(() => {
     const swiperEl = swiperElRef.current;
     const params = {
       injectStyles: [
@@ -35,23 +36,51 @@ function Swiper({ slides }: SwiperProps) {
           }
         `,
       ],
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 125,
+        },
+      },
+      watchOverflow: true,
+      pagination: {
+        clickable: true,
+      },
+      on: {
+        slideChange: () => {
+          const swiper = swiperEl.swiper;
+          const prevButton = document.querySelector('.left');
+          if (swiper?.isBeginning) {
+            prevButton.style.visibility = 'hidden';
+          } else {
+            prevButton.style.visibility = 'initial';
+          }
+          const nextButton = document.querySelector('.right');
+          if (swiper?.isEnd) {
+            nextButton.style.visibility = 'hidden';
+          } else {
+            nextButton.style.visibility = 'initial';
+          }
+        },
+      },
     };
 
     Object.assign(swiperEl, params);
     swiperEl.initialize();
   }, []);
+
   return (
-    <div className="flex flex-row justify-center gap-6">
-      <button className="rotate-180" onClick={() => swiperElRef.current.swiper.slidePrev()}>
+    <div className="relative flex flex-row justify-center gap-6">
+      <button
+        className="rotate-180 invisible left"
+        onClick={() => swiperElRef.current.swiper.slidePrev()}>
         <SwiperArrowSvg />
       </button>
       <div className="w-[75%]">
-        <swiper-container
-          ref={swiperElRef}
-          slides-per-view="2"
-          pagination="true"
-          init="false"
-          space-between="120">
+        <swiper-container ref={swiperElRef} pagination="true" init="false">
           {slides.map((slide, i) => (
             <swiper-slide key={`slide-${i}`}>
               <Slide {...slide} />
@@ -60,11 +89,11 @@ function Swiper({ slides }: SwiperProps) {
         </swiper-container>
       </div>
 
-      <button onClick={() => swiperElRef.current.swiper.slideNext()}>
+      <button className="right" onClick={() => swiperElRef.current.swiper.slideNext()}>
         <SwiperArrowSvg />
       </button>
     </div>
   );
 }
 
-export default Swiper;
+export default CustomSwiper;
