@@ -14,8 +14,8 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
   const pathname = usePathname();
   const navButtonsData = useNavButtonsData();
   const tabsRef = useRef<(HTMLElement | null)[]>([]);
-  const [tabUnderlineWidth, setTabUnderlineWidth] = useState<number>(0);
-  const [tabUnderlineLeft, setTabUnderlineLeft] = useState<number>(0);
+  const [tabBackgroundWidth, setTabBackgroundWidth] = useState<number>(0);
+  const [tabBackgroundLeft, setTabBackgroundLeft] = useState<number>(0);
 
   const onSelectedTab = (href: string) => {
     router.push(href);
@@ -24,8 +24,8 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     const setTabPosition = () => {
       const currentTab = tabsRef.current.find((tab) => tab?.getAttribute('href') === pathname);
-      setTabUnderlineLeft(currentTab?.offsetLeft ?? 0);
-      setTabUnderlineWidth(currentTab?.clientWidth ?? 0);
+      setTabBackgroundLeft(currentTab?.offsetLeft ?? 0);
+      setTabBackgroundWidth(currentTab?.clientWidth ?? 0);
     };
 
     setTabPosition();
@@ -51,7 +51,7 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
                 }}>
                 <span
                   className="absolute z-10 bottom-0 top-0 flex overflow-hidden rounded-2xl cursor-pointer transition-all duration-300"
-                  style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}>
+                  style={{ left: tabBackgroundLeft, width: tabBackgroundWidth }}>
                   <span className="h-full w-full rounded-2xl bg-gradient-main from-deep-sky-blue from-0% to-rebecca-purple to-100%" />
                 </span>
                 <li
