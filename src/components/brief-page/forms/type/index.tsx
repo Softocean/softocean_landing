@@ -10,6 +10,7 @@ import AggregatorIcon from '@/../assets/icons/site-map.svg';
 import RocketIcon from '@/../assets/icons/rocket.svg';
 import SmartPhoneIcon from '@/../assets/icons/smartphone.svg';
 import OtherIcon from '@/../assets/icons/more.svg';
+import BriefFormContainer from '../form-container';
 
 const selectItems: Array<SelectItemType> = [
   { icon: <BusinessCardIcon />, name: 'Сайт-визитка' },
@@ -24,15 +25,10 @@ const selectItems: Array<SelectItemType> = [
 
 function BriefTypeForm() {
   return (
-    <div>
-      <div className="mt-10 w-[100%] min-h-[320px]">
-        <p className="mb-10 text-base text-lightdark">Выберите тип Вашего продукта</p>
-        <BriefSelect items={selectItems} />
-      </div>
-      <div className="mt-12">
-        <BriefNavButtons nextHref="platform" />
-      </div>
-    </div>
+    <BriefFormContainer type={'button'} nextStepHref="platform">
+      <p className="mb-10 text-base text-lightdark">Выберите тип Вашего продукта</p>
+      <BriefSelect items={selectItems} />
+    </BriefFormContainer>
   );
 }
 

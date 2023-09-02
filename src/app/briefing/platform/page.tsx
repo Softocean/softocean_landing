@@ -1,7 +1,12 @@
+import { BriefPlatformForm } from '@/components/brief-page';
 import React from 'react';
 
 function Platform() {
-  return <div>Platform</div>;
+  return (
+    <div className="mt-11">
+      <BriefPlatformForm />
+    </div>
+  );
 }
 
 export default Platform;

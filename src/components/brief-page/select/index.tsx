@@ -14,7 +14,7 @@ function BriefSelect({ items }: BriefSelectProps) {
   return (
     <div className="flex flex-row w-full gap-10 flex-wrap">
       {items.map((item) => (
-        <div className="flex flex-col gap-4 items-center">
+        <div key={item.name} className="flex flex-col gap-4 items-center">
           <div>{item.icon}</div>
           <p className="text-black text-sm-16">{item.name}</p>
         </div>
