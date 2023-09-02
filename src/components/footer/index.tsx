@@ -5,7 +5,7 @@ import logo from '../../../assets/logo-footer.png';
 
 function Footer() {
   return (
-    <div className="mx-auto mt-[32px] flex w-fit flex-col">
+    <div className="mx-auto flex w-fit flex-col ">
       <div className="mx-auto flex justify-between w-[390px] xl:w-[1280px] lg:w-[950px] ">
         <Image
           src={logo}
@@ -31,13 +31,13 @@ function Footer() {
       </div>
       <div className="w-[380px] flex justify-around items-center mx-auto mt-10 flex-col md:flex-row md:w-[640px] lg:w-[790px]">
         <Link
-          href="/"
+          href="/team"
           className="text-[28px] md:text-[18px] ease-in duration-300 font-normal
                                          text-black hover:opacity-50">
           Кто мы
         </Link>
         <Link
-          href="/"
+          href="/about"
           className="text-[28px] md:text-[18px] ease-in duration-300 font-normal 
                                         text-black hover:opacity-50">
           Чем занимаемся
@@ -49,7 +49,7 @@ function Footer() {
           Блог
         </Link>
         <Link
-          href="/"
+          href="/partners"
           className="text-[28px] md:text-[18px] ease-in duration-300 font-normal
                                          text-black hover:opacity-50">
           Партнерам
