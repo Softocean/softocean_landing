@@ -1,8 +1,9 @@
 import React from 'react';
 import BriefInput from '../../input';
 import BriefFormContainer from '../form-container';
+import FileInput from '../../file-input';
 
-function BriefIndexForm() {
+function BriefDescriptionForm() {
   return (
     <BriefFormContainer type="button" nextStepHref="type">
       <div className="flex flex-col gap-[34px] w-[80%] min-h-[320px]">
@@ -17,9 +18,10 @@ function BriefIndexForm() {
             на которые будет сделан основной акцент."
           />
         </div>
+        <FileInput />
       </div>
     </BriefFormContainer>
   );
 }
 
-export default BriefIndexForm;
+export default BriefDescriptionForm;

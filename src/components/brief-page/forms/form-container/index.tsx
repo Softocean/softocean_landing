@@ -18,7 +18,7 @@ function BriefFormContainer({
 }: BriefFormContainerProps) {
   return (
     <div>
-      <div className={`mt-10 w-[100%] min-h-[320px]`}>
+      <div className={`mt-10 w-[100%] min-h-[428px]`}>
         <div className={wrapperClassName}>{children}</div>
       </div>
       <div className="mt-12">

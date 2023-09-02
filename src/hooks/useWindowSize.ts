@@ -1,7 +1,9 @@
 import { useSyncExternalStore } from 'react';
 
 export function useWindowSize() {
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const width = useSyncExternalStore(subscribe, () => getWidth());
+  const height = useSyncExternalStore(subscribe, () => getHeight());
+  return { width, height };
 }
 
 function subscribe(callback: any) {
@@ -9,13 +11,10 @@ function subscribe(callback: any) {
   return () => window.removeEventListener('resize', callback);
 }
 
-function getSnapshot() {
-  return { width: window.innerWidth, height: window.innerHeight };
+function getWidth() {
+  return window.innerWidth;
 }
 
-function getServerSnapshot() {
-  return {
-    width: 0,
-    height: 0,
-  };
+function getHeight() {
+  return window.innerHeight;
 }

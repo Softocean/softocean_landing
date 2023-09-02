@@ -5,7 +5,7 @@ import BriefFormContainer from '../form-container';
 function BriefIndexForm() {
   return (
     <BriefFormContainer type="button" nextStepHref="type">
-      <div className="flex flex-col gap-[34px] w-[85%] min-h-[320px]">
+      <div className="flex flex-col gap-12 w-[85%]">
         <div className="grid grid-cols-2 grid-rows-1 gap-12">
           <BriefInput
             value={'test'}

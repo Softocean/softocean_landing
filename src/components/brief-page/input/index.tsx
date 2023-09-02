@@ -18,43 +18,27 @@ interface BriefInputProps {
 }
 
 function BriefInput(props: BriefInputProps) {
-  /* const { width } = useWindowSize(); */
-  const [inputHeight, setInputHeight] = React.useState(0);
-  const labelRef = React.useRef<HTMLLabelElement>(null);
   const [value, setValue] = React.useState(''); //remove after integration of react-hook-form
   const { label, placeholder, multline, name, id } = props;
-
-  React.useEffect(() => {
-    setInputHeight(labelRef.current?.clientHeight ?? 0);
-  }, [labelRef.current]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     console.log(e.target.value);
     setValue(e.target.value);
   };
 
-  const className = clsx(
-    'peer block relative bottom-0 pt-4 pb-2 h-full z-10 w-full resize-none appearance-none border-b-[1px] border-border-gray text-sm-16 focus:outline-none focus:border-lightdark'
-  );
+  const className =
+    'peer block relative placeholder:text-sm placeholder:text-silver bottom-0 pt-4 pb-2 h-full z-10 w-full resize-none appearance-none border-b-[1px] border-border-gray text-sm-16 focus:outline-none focus:border-lightdark';
   const inputProps = { value, onChange: handleChange, name, id, className };
 
   return (
     <div className="flex flex-col">
       <p className="text-sm-16 text-dark-as-night">{label}</p>
-      <div className="relative flex items-end" style={{ height: `${inputHeight}px` }}>
-        {multline ? <TextareaAutosize {...inputProps} /> : <input {...inputProps} />}
-        <label
-          ref={labelRef}
-          className={clsx(
-            `absolute block cursor-text w-full pt-4 pb-2 top-0 left-0 text-sm text-silver peer-focus:z-0`,
-            {
-              'z-0': !!value,
-            },
-            { 'z-20': !value }
-          )}
-          htmlFor={id}>
-          {placeholder}
-        </label>
+      <div className="relative flex items-end">
+        {multline ? (
+          <TextareaAutosize {...inputProps} placeholder={placeholder} />
+        ) : (
+          <input {...inputProps} placeholder={placeholder} />
+        )}
       </div>
     </div>
   );

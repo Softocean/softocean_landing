@@ -36,8 +36,8 @@ const config: Config = {
       backgroundImage: {
         'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
       },
-      width: {
-        'label-small': '50px',
+      boxShadow: {
+        card: '0px 3px 16px 0px rgba(0, 0, 0, 0.1)',
       },
     },
   },
