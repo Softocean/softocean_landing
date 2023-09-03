@@ -31,7 +31,7 @@ function BriefInput(props: BriefInputProps) {
   const inputProps = { value, onChange: handleChange, name, id, className };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col flex-grow">
       <p className="text-sm-16 text-dark-as-night">{label}</p>
       <div className="relative flex items-end">
         {multline ? (

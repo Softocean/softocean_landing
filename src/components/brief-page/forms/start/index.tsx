@@ -9,8 +9,8 @@ function BriefIndexForm() {
         <div className="grid grid-cols-2 grid-rows-1 gap-12">
           <BriefInput
             value={'test'}
-            id="name"
-            name="name"
+            id="companyName"
+            name="companyName"
             label="Название компании / проекта"
             placeholder="Ваше название"
           />

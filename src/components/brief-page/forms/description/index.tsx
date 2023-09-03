@@ -5,7 +5,7 @@ import FileInput from '../../file-input';
 
 function BriefDescriptionForm() {
   return (
-    <BriefFormContainer type="button" nextStepHref="type">
+    <BriefFormContainer type="button" nextStepHref="add-materials">
       <div className="flex flex-col gap-[34px] w-[80%] min-h-[320px]">
         <div className="w-full">
           <BriefInput
