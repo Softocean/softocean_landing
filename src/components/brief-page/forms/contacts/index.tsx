@@ -9,6 +9,7 @@ function BriefContactsForm() {
         <div className="flex flex-row gap-12">
           <BriefInput value={'test'} id="name" name="name" label="Имя" placeholder="Ваше имя" />
           <BriefInput
+            telephone
             value={'test'}
             id="telephone"
             name="telephone"
