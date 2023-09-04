@@ -4,8 +4,14 @@ import { Manrope } from 'next/font/google';
 import { Open_Sans } from 'next/font/google';
 import Footer from '@/components/footer';
 
-const manrope = Manrope({ subsets: ['latin', 'cyrillic'] });
-const openSans = Open_Sans({ subsets: ['latin', 'cyrillic'] });
+const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-manrope' 
+});
+const openSans = Open_Sans({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-openSans' 
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${openSans.className} bg-white`}>
+      <body className={`${manrope.variable} ${openSans.variable} bg-white`}>
         {children}
         <section className="mb-10 mt-[90px]">
           <Footer />

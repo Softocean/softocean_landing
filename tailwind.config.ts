@@ -38,6 +38,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        manrope: ['var(--font-manrope)'],
+        openSans: ['var(--font-openSans)'],
+      },
     },
   },
   plugins: [],

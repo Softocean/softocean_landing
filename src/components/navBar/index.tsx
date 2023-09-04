@@ -37,8 +37,9 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
       <div className="bg-white pt-[42px] pb-[150px] flex flex-col">
         <ul
           className="
-            relative flex  mb-[100px]
-            ml-[490px] max-2xl:ml-[250px] max-xl:ml-[140px] max-lg:mx-[20px]">
+            relative flex mb-[100px]
+            ml-[490px] max-2xl:ml-[250px] max-xl:ml-[140px] max-lg:mx-[20px]"
+          >
           {navButtonsData.map((button, index) => {
             return (
               <Link
