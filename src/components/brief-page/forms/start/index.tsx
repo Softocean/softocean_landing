@@ -1,12 +1,21 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
+import { getBriefingFormStepHref } from '@/utils/brief-page-routing';
 import BriefInput from '../../input';
 import BriefFormContainer from '../form-container';
 
 function BriefIndexForm() {
+  const router = useRouter();
   return (
-    <BriefFormContainer type="button" nextStepHref="type">
-      <div className="flex flex-col gap-12 w-[85%]">
-        <div className="grid grid-cols-2 grid-rows-1 gap-12">
+    <BriefFormContainer
+      type="button"
+      nextStepHref="type"
+      onNextClick={() => {
+        router.push(getBriefingFormStepHref('type'));
+      }}>
+      <div className="flex flex-col gap-8 md:gap-12 w-[90%] md:w-[85%]">
+        <div className="grid xl:grid-cols-2 xl:grid-rows-1 gap-8 md:gap-12">
           <BriefInput
             value={'test'}
             id="companyName"
@@ -22,7 +31,7 @@ function BriefIndexForm() {
             placeholder="Опишите в нескольких словах"
           />
         </div>
-        <div className="grid grid-cols-2 grid-rows-1 gap-12">
+        <div className="grid xl:grid-cols-2 xl:grid-rows-1 gap-8 md:gap-12">
           <BriefInput
             multline
             value={'test'}

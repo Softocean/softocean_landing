@@ -1,11 +1,21 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
+import { getBriefingFormStepHref } from '@/utils/brief-page-routing';
+import FileInput from '../../file-input';
 import BriefInput from '../../input';
 import BriefFormContainer from '../form-container';
-import FileInput from '../../file-input';
 
 function BriefDescriptionForm() {
+  const router = useRouter();
   return (
-    <BriefFormContainer type="button" nextStepHref="add-materials">
+    <BriefFormContainer
+      type="button"
+      onNextClick={() => {
+        router.push(getBriefingFormStepHref('add-materials'));
+      }}
+      prevStepHref={'platform'}
+      nextStepHref="add-materials">
       <div className="flex flex-col gap-[34px] w-[80%] min-h-[320px]">
         <div className="w-full">
           <BriefInput

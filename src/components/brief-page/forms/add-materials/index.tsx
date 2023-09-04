@@ -1,14 +1,16 @@
 'use client';
-import BriefSelect, { SelectItemType } from '../../select';
-import BriefFormContainer from '../form-container';
+import { useRouter } from 'next/navigation';
+import BrandbookIcon from '@/../assets/icons/brandbook.svg';
+import DiplomaIcon from '@/../assets/icons/diploma.svg';
+import FontIcon from '@/../assets/icons/font.svg';
+import LayersIcon from '@/../assets/icons/layer.svg';
 import LogotypeIcon from '@/../assets/icons/logotype.svg';
 import MotoIcon from '@/../assets/icons/moto.svg';
 import PantoneIcon from '@/../assets/icons/pantone.svg';
-import DiplomaIcon from '@/../assets/icons/diploma.svg';
-import LayersIcon from '@/../assets/icons/layer.svg';
-import BrandbookIcon from '@/../assets/icons/brandbook.svg';
-import FontIcon from '@/../assets/icons/font.svg';
 import PatentIcon from '@/../assets/icons/patent.svg';
+import { getBriefingFormStepHref } from '@/utils/brief-page-routing';
+import BriefSelect, { SelectItemType } from '../../select';
+import BriefFormContainer from '../form-container';
 
 const selectItems: Array<SelectItemType> = [
   { icon: <LogotypeIcon />, name: 'Логотип' },
@@ -22,9 +24,16 @@ const selectItems: Array<SelectItemType> = [
 ];
 
 function BriefAddMaterialsForm() {
+  const router = useRouter();
   return (
-    <BriefFormContainer type={'button'} nextStepHref="create-content">
-      <p className="mb-5 text-base text-lightdark w-[80%]">
+    <BriefFormContainer
+      type={'button'}
+      onNextClick={() => {
+        router.push(getBriefingFormStepHref('create-content'));
+      }}
+      prevStepHref={'description'}
+      nextStepHref="create-content">
+      <p className="mb-5 text-sm-16 md:text-base text-lightdark w-[80%]">
         Отметьте материалы, которые можете предоставить. Если у вас их нет - пропустите этот шаг и
         мы сделаем все сами
       </p>

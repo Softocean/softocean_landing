@@ -1,15 +1,15 @@
 'use client';
-import BriefSelect, { SelectItemType } from '../../select';
-import BriefNavButtons from '../../nav-buttons';
-
-import BusinessCardIcon from '@/../assets/icons/business-card.svg';
+import { useRouter } from 'next/navigation';
 import BriefcaseIcon from '@/../assets/icons/briefcase.svg';
-import ShoppingBagIcon from '@/../assets/icons/shopping-bag.svg';
+import BusinessCardIcon from '@/../assets/icons/business-card.svg';
 import MegaphoneIcon from '@/../assets/icons/megaphone.svg';
-import AggregatorIcon from '@/../assets/icons/site-map.svg';
-import RocketIcon from '@/../assets/icons/rocket.svg';
-import SmartPhoneIcon from '@/../assets/icons/smartphone.svg';
 import OtherIcon from '@/../assets/icons/more.svg';
+import RocketIcon from '@/../assets/icons/rocket.svg';
+import ShoppingBagIcon from '@/../assets/icons/shopping-bag.svg';
+import AggregatorIcon from '@/../assets/icons/site-map.svg';
+import SmartPhoneIcon from '@/../assets/icons/smartphone.svg';
+import { getBriefingFormStepHref } from '@/utils/brief-page-routing';
+import BriefSelect, { SelectItemType } from '../../select';
 import BriefFormContainer from '../form-container';
 
 const selectItems: Array<SelectItemType> = [
@@ -24,8 +24,15 @@ const selectItems: Array<SelectItemType> = [
 ];
 
 function BriefTypeForm() {
+  const router = useRouter();
   return (
-    <BriefFormContainer type={'button'} nextStepHref="platform">
+    <BriefFormContainer
+      type={'button'}
+      onNextClick={() => {
+        router.push(getBriefingFormStepHref('platform'));
+      }}
+      prevStepHref={'index'}
+      nextStepHref="platform">
       <p className="mb-10 text-base text-lightdark">Выберите тип Вашего продукта</p>
       <BriefSelect items={selectItems} />
     </BriefFormContainer>

@@ -23,13 +23,12 @@ const SkipButton = React.forwardRef<HTMLDivElement, SkipButtonProps>(function Sk
       }}
       className="hover:opacity-[0.8] cursor-pointer h-fit">
       <div className="flex flex-row gap-1">
-        <p className="text-sm-16 text-black items-center">Пропустить</p>
+        <p className="text-sm md:text-sm-16 text-black items-center">Пропустить</p>
         <span className="my-auto">
           <SkipArrowIcon />
         </span>
       </div>
-      <p className="text-sm text-brainstem-grey">Затрудняюсь ответить</p>
-      <a hidden href={href}></a> {/**пойдет под SEO? */}
+      <p className="text-sm-12 md:text-sm text-brainstem-grey">Затрудняюсь ответить</p>
     </div>
   );
 });

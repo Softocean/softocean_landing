@@ -22,7 +22,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       ref={ref}
       disabled={disabled}
       type={type}
-      className={`appearance-none ${className} w-fit cursor-pointer rounded-[10px] bg-gradient-main from-deep-sky-blue from-0%  to-rebecca-purple to-100% px-12 py-4 text-base-21 font-normal text-white`}>
+      className={`appearance-none ${className} w-fit cursor-pointer rounded-md md:rounded-[10px] bg-gradient-main from-deep-sky-blue from-0%  to-rebecca-purple to-100% px-4 py-2 md:px-12 md:py-4 text-base-21 font-normal text-white`}>
       {children}
     </button>
   );

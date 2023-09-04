@@ -1,8 +1,8 @@
 'use client';
-import { useSelectedLayoutSegments } from 'next/navigation';
 import React from 'react';
-import ProgressBar from '../progress-bar';
+import { useSelectedLayoutSegments } from 'next/navigation';
 import { BriefingRoutesType, SegmentDataType, SegmentsDataType } from '@/constants';
+import ProgressBar from '../progress-bar';
 
 interface TitleProps {
   segmentsData: SegmentsDataType;
@@ -18,8 +18,8 @@ function Title({ segmentsData }: TitleProps) {
     currentSegmentData = segmentsData[segments[0]];
   }
   return (
-    <div className="w-[70%]">
-      <p className="mb-3 flex min-h-[130px] items-center text-xl font-bold text-dark-as-night">
+    <div className="w-full md:w-[70%]">
+      <p className="mb-3 flex min-h-[80px] md:min-h-[130px] xl:text-xl lg:text-lg text-base-24 items-center font-bold text-dark-as-night">
         {currentSegmentData?.title}
       </p>
       <ProgressBar

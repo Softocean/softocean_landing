@@ -41,7 +41,7 @@ function FileInput() {
             onChange={(e) => {
               onFileSelected(e);
             }}
-            className="block file:hidden text-base"
+            className="block file:hidden text-sm-16 md:text-base"
             id="files"
             type="file"
             accept=".png,.jpg,.webp,.avif,.jpeg"

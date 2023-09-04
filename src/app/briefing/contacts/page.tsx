@@ -2,11 +2,7 @@ import React from 'react';
 import { BriefContactsForm } from '@/components/brief-page';
 
 function Contacts() {
-  return (
-    <div className="mt-11">
-      <BriefContactsForm />
-    </div>
-  );
+  return <BriefContactsForm />;
 }
 
 export default Contacts;

@@ -17,7 +17,7 @@ interface BriefNavigationProps {
 function BriefNavigation({ links }: BriefNavigationProps) {
   const pathname = usePathname();
   return (
-    <aside className="border-l-[1px] border-border-gray py-6 pl-[60px]">
+    <aside className="border-l-[1px] border-border-gray py-6 xl:pl-[60px] pl-[30px] hidden md:block">
       <p className="mb-[21px] text-base font-medium text-dark-as-night">Ваш продукт</p>
       <nav className="flex flex-col gap-4">
         {links.map((link, i) => {

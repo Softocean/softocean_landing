@@ -24,12 +24,12 @@ const links: BriefLinksType = [
 
 function BriefLayout({ children }: BriefLayoutProps) {
   return (
-    <section className="px-[193px]">
+    <section className="mx-auto w-[80%]">
       <BriefTitle segmentsData={segmentsData} />
-      <div className="flex flex-row">
-        <div className="form w-[65%]">
+      <div className="flex flex-row justify-center md:justify-start">
+        <form className="form w-full md:w-[65%]">
           <BriefFormProvider>{children}</BriefFormProvider>
-        </div>
+        </form>
         <BriefNavigation links={links} />
       </div>
     </section>

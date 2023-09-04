@@ -48,7 +48,7 @@ function BriefInput(props: BriefInputProps) {
   };
 
   return (
-    <div className="flex flex-col flex-grow">
+    <div className="flex flex-col flex-grow justify-end">
       <p className="text-sm-16 text-dark-as-night">{label}</p>
       <div className="relative flex items-end">
         {multline ? (

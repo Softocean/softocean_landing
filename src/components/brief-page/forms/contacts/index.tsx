@@ -4,9 +4,9 @@ import BriefFormContainer from '../form-container';
 
 function BriefContactsForm() {
   return (
-    <BriefFormContainer type="button" nextStepHref="index">
-      <div className="flex flex-col gap-12 w-[75%]">
-        <div className="flex flex-row gap-12">
+    <BriefFormContainer type="submit" prevStepHref="graphic-presentation">
+      <div className="flex flex-col gap-12 w-[90%] md:w-[60%] lg:w-[85%] 2xl:w-[75%]">
+        <div className="flex flex-col gap-8 xl:flex-row xl:gap-12">
           <BriefInput value={'test'} id="name" name="name" label="Имя" placeholder="Ваше имя" />
           <BriefInput
             telephone
@@ -24,7 +24,7 @@ function BriefContactsForm() {
             placeholder="рабочая почта"
           />
         </div>
-        <div className="w-[450px]">
+        <div className="xl:w-[450px]">
           <BriefInput
             multline
             value={'test'}

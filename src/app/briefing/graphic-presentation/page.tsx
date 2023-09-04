@@ -2,11 +2,7 @@ import React from 'react';
 import { BriefGraphicPresentationForm } from '@/components/brief-page';
 
 function GraphicPresentation() {
-  return (
-    <div className="mt-11">
-      <BriefGraphicPresentationForm />
-    </div>
-  );
+  return <BriefGraphicPresentationForm />;
 }
 
 export default GraphicPresentation;

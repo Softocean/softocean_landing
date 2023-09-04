@@ -19,6 +19,10 @@ export function useMediaQuery(query: MediaQuery) {
     (onChange: () => void) => subscribe(onChange, query),
     [query]
   );
-  const matches = React.useSyncExternalStore(subscribeMediaQuery, () => getSnapshot(query));
+  const matches = React.useSyncExternalStore(
+    subscribeMediaQuery,
+    () => getSnapshot(query),
+    () => false
+  );
   return matches;
 }
