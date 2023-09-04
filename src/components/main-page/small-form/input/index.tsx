@@ -30,7 +30,7 @@ const SmallFormInput = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             type="text"
             className={clsx(
-              'peer block appearance-none border-b-[1px]  py-[6px] focus:border-lightdark focus:outline-none',
+              'w-full peer block appearance-none border-b-[1px]  py-[6px] focus:border-lightdark focus:outline-none',
               { 'border-border-gray': !error },
               { 'border-error-color': !!error }
             )}

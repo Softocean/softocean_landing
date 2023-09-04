@@ -30,11 +30,12 @@ function PortfolioSlide({
         alt={`softocean portfolio ${title} ${typeOfProject}`}
         placeholder={blur ? 'blur' : 'empty'}
         blurDataURL={blur ? blurDataURL : undefined}
+        priority={true}
       />
-      <div className="flex flex-row items-center justify-between">
-        <div className="flex max-w-xs flex-col">
+      <div className="flex flex-col gap-2 lg:flex-row items-center justify-between">
+        <div className="flex max-w-xs flex-col gap-1 items-center lg:items-start">
           <p className="text-sm">{`${typeOfProject}*`}</p>
-          <p className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-lg text-transparent">
+          <p className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-base-24 md:text-lg text-transparent">
             {title}
           </p>
           <p className="text-base leading-[125%]">{subText}</p>

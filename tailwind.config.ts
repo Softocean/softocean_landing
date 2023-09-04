@@ -25,6 +25,9 @@ const config: Config = {
       'brainstem-grey': '#b6b6b6',
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
+      'grey-as-stone': '#767575',
+      greyDark: '#727377',
+
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],
@@ -34,6 +37,7 @@ const config: Config = {
       base: ['18px', 'normal'],
       'base-21': ['21px', 'normal'],
       'base-24': ['24px', 'normal'],
+      'lg-18': ['18px', 'normal'],
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
     },
