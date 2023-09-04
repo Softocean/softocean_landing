@@ -24,7 +24,7 @@ const links: BriefLinksType = [
 
 function BriefLayout({ children }: BriefLayoutProps) {
   return (
-    <section className="mx-auto w-[80%]">
+    <section className="mx-auto w-[80%] pb-[164px]">
       <BriefTitle segmentsData={segmentsData} />
       <div className="flex flex-row justify-center md:justify-start">
         <form className="form w-full md:w-[65%]">
