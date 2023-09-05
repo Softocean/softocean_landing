@@ -34,7 +34,10 @@ export default function Home() {
         title="Разработка программных продуктов"
         subText="Эффективное решение бизнес-задач с помощью цифровых технологий"
       />
-      <Feedback children={''} />
+      <section className="mt-[100px]">
+        <p className="text-center text-xl font-bold text-lightdark">Отзывы</p>
+        <Feedback />
+      </section>
       <section className="mt-[380px]">
         <p className="text-center text-xl font-bold text-lightdark">Портфолио</p>
         <Slider slides={slides} />

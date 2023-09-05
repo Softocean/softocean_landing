@@ -1,7 +1,6 @@
 import React from 'react';
 import Case from '@/components/case/page';
 import { CaseData } from '@/components/case/constant';
-import Feedback from '@/components/feedback';
 
 export default function WhatWeDo() {
   return (
@@ -40,11 +39,6 @@ export default function WhatWeDo() {
           />
         );
       })}
-      <Feedback
-        children={
-          'Наша миссия реализуется при помощи информационных технологий. Мы пытаемся понять клиента и помочь ему прийти к верному решению, упростить ему задачу и сделать лучше его бизнес.'
-        }
-      />
     </>
   );
 }
