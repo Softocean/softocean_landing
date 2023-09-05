@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
@@ -38,8 +38,7 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
         <ul
           className="
             relative flex mb-[100px]
-            ml-[490px] max-2xl:ml-[250px] max-xl:ml-[140px] max-lg:mx-[20px]"
-          >
+            ml-[490px] max-2xl:ml-[250px] max-xl:ml-[140px] max-lg:mx-[20px]">
           {navButtonsData.map((button, index) => {
             return (
               <Link
