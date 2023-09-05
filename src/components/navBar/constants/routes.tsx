@@ -1,8 +1,8 @@
-interface PartnersRoutes {
+interface PartnersRoutesPaths {
   [key: string]: string;
 }
 
-export const PartnersRoutes: PartnersRoutes[] = [
+export const PartnersRoutes: PartnersRoutesPaths[] = [
   { events: '/partners/events' },
   { forIndividuals: '/partners/for-individuals' },
   { forIt: '/partners/for-it' },

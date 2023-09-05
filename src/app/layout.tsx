@@ -6,11 +6,11 @@ import Footer from '@/components/footer';
 
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-manrope' 
+  variable: '--font-manrope',
 });
 const openSans = Open_Sans({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-openSans' 
+  variable: '--font-openSans',
 });
 
 export const metadata: Metadata = {
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${openSans.variable} bg-white`}>
-        {children}
-        <section className="mb-10 mt-[90px]">
+      <body className={`${manrope.className} ${openSans.className} bg-white`}>
+        <main className="min-h-[calc(100vh-322px)]">{children}</main>
+        <section className="pt-[40px] h-[322px]">
           <Footer />
         </section>
       </body>
