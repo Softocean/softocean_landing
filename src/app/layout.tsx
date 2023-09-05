@@ -16,8 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${manrope.className} ${openSans.className} bg-white`}>
+        <main className="min-h-[calc(100vh-322px)]">
         {children}
-        <section className="mb-10 mt-[90px]">
+         </main>
+        <section className="pt-[40px] h-[322px]">
           <Footer />
         </section>
       </body>

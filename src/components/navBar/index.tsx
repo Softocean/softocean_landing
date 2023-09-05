@@ -1,21 +1,23 @@
 'use client';
 
+import React, { FC } from 'react';
 import { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useNavButtonsData } from './hooks';
 
-export default function NavBar({
+const NavBar: FC<{ children: React.ReactNode }> = ({
   children, // will be a page or nested layout
-}: {
-  children: React.ReactNode;
-}) {
+}) => {
   const router = useRouter();
+  const pathname = usePathname();
   const navButtonsData = useNavButtonsData();
   const tabsRef = useRef<(HTMLElement | null)[]>([]);
-  const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
-  const [tabUnderlineWidth, setTabUnderlineWidth] = useState<number>(0);
-  const [tabUnderlineLeft, setTabUnderlineLeft] = useState<number>(0);
+  const [tabBackgroundWidth, setTabBackgroundWidth] = useState<number>(0);
+  const [tabBackgroundLeft, setTabBackgroundLeft] = useState<number>(0);
+  const [tabBackgroundTop, setTabBackgroundTop] = useState<number>(0);
+  const [tabBackgroundHeight, setTabBackgroundHeight] = useState<number>(0);
 
   const onSelectedTab = (href: string) => {
     router.push(href);
@@ -23,41 +25,62 @@ export default function NavBar({
 
   useEffect(() => {
     const setTabPosition = () => {
-      const currentTab = tabsRef.current[activeTabIndex] as HTMLElement;
-      setTabUnderlineLeft(currentTab?.offsetLeft ?? 0);
-      setTabUnderlineWidth(currentTab?.clientWidth ?? 0);
+      const currentTab = tabsRef.current.find((tab) => tab?.getAttribute('href') === pathname);
+      setTabBackgroundLeft(currentTab?.offsetLeft ?? 0);
+      setTabBackgroundWidth(currentTab?.clientWidth ?? 0);
+      setTabBackgroundTop(currentTab?.offsetTop ?? 0);
+      setTabBackgroundHeight(currentTab?.clientHeight ?? 0);
     };
 
     setTabPosition();
-  }, [activeTabIndex]);
+  }, [pathname]);
 
   return (
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
       <div className="bg-white pt-[42px] pb-[150px] flex flex-col">
-        <ul className="relative flex ml-[490px] mb-[100px]">
-          {navButtonsData.map((button) => {
+        <ul
+          className="
+            relative flex mb-[100px]
+            ml-[490px] max-2xl:ml-[250px] max-xl:ml-auto max-xl:mr-auto
+            max-lg:flex-col max-w-min max-lg:mx-auto max-lg:my-[20px]">
+          {navButtonsData.map((button, index) => {
             return (
               <Link
+                className="mr-2 max-lg: flex justify-center"
                 href={button.href}
                 key={button.id}
-                ref={(el) => (tabsRef.current[button.id] = el)}
+                ref={(el) => (tabsRef.current[index] = el)}
                 onClick={() => {
-                  onSelectedTab(button.href), setActiveTabIndex(button.id);
-                }}
-              >
+                  onSelectedTab(button.href);
+                }}>
                 <span
-                  className="absolute z-10 bottom-0 top-0 flex overflow-hidden rounded-2xl cursor-pointer transition-all duration-300"
-                  style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
-                >
-                  <span className="h-full w-full rounded-2xl bg-gradient-main from-deep-sky-blue from-0% to-rebecca-purple to-100%" />
+                  className="
+                    absolute z-10 bottom-0 top-0
+                    flex overflow-hidden rounded-2xl
+                    cursor-pointer transition-all duration-300
+                    max-lg:flex-col left-0 right-0"
+                  style={{
+                    left: tabBackgroundLeft,
+                    width: tabBackgroundWidth,
+                    top: tabBackgroundTop,
+                    height: tabBackgroundHeight,
+                  }}>
+                  <span
+                    className="
+                    h-full w-full
+                    rounded-2xl
+                    bg-gradient-main from-deep-sky-blue from-0% to-rebecca-purple to-100%
+                  "
+                  />
                 </span>
                 <li
-                  className={`mr-2 px-4 cursor-pointer  ${
+                  className={`cursor-pointer   ${
                     button.active ? 'text-sm-16 text-white duration-300' : ''
-                  }`}
-                >
-                  <p className="relative z-20 my-[5px] whitespace-nowrap">{button.title}</p>
+                  }`}>
+                  <p className="relative z-20 my-[5px] mx-[16px] whitespace-nowrap">
+                    {button.title}
+                  </p>
                 </li>
               </Link>
             );
@@ -67,4 +90,6 @@ export default function NavBar({
       </div>
     </section>
   );
-}
+};
+
+export default NavBar;
