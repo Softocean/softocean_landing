@@ -17,10 +17,10 @@ const config: Config = {
       transparent: 'transparent',
       lightgray: 'lightgray',
       'deep-sky-blue': '#0B96B4',
+      'light-blue': '#F8F8F8',
       'rebecca-purple': '#551DB0',
       'grey-as-stone': '#767575',
       greyDark: '#727377',
-
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],

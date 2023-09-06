@@ -9,23 +9,32 @@ interface ImageProps {
   imageAlt: string;
   description: string;
   question: string;
-  /*blur?: boolean;
-  blurDataURL: string;*/
+  /*blurDataURL: string;*/
 }
 
 const Case: FC<ImageProps> = ({ id, title, description, imageSrc, imageAlt, question }) => {
   const textSection = (
-    <div className="grid gap-[18px] max-w-[488px] my-0 mx-auto">
-      <h3 className=" text-xl text-dark-as-night text-manrope font-bold">{title}</h3>
+    <div
+      className="grid max-w-[488px] my-0 mx-auto
+      max-2xl:mx-[24px]
+      gap-[18px] max-xl:gap-[8px]">
+      <h3
+        className="
+        text-dark-as-night text-manrope font-bold
+        text-xl max-2xl:text-lg max-xl:base-24 max-lg:text-base-21">
+        {title}
+      </h3>
       <p
         className="
-    text-base-21 text-dark-as-night text-manrope">
+        text-dark-as-night text-manrope 
+          text-base-21 max-xl:text-base max-lg:text-sm-16">
         {description}
       </p>
       <p
         className="
-    text-base-21 leading-[31.5px] text-manrope font-medium
-    bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent">
+          leading-[31.5px] text-manrope font-medium
+          bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent
+          text-base-21 max-xl:text-base max-lg:text-sm-16">
         {question}
       </p>
     </div>
@@ -35,8 +44,8 @@ const Case: FC<ImageProps> = ({ id, title, description, imageSrc, imageAlt, ques
     <Image
       alt={imageAlt}
       src={imageSrc}
-      /*placeholder={blur ? 'blur' : 'empty'}
-      blurDataURL={blurDataURL}*/
+      placeholder="blur"
+      /*blurDataURL={blurDataURL}*/
       width={1133}
       height={651}
     />
@@ -44,10 +53,12 @@ const Case: FC<ImageProps> = ({ id, title, description, imageSrc, imageAlt, ques
 
   return (
     <div
-      className="w-full mb-[50px]
-        max-2xl:gap-[100px] max-xl:gap-[70px] max-lg:gap-[40px]
+      className=" mb-[50px]
         flex flex-row items-center
-        font-manrope">
+        font-manrope
+        mx-auto max-2xl:mx-[20px] w-auto
+        
+        ">
       {id % 2 === 0 ? (
         <>
           {textSection}

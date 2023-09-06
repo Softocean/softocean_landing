@@ -3,29 +3,33 @@ import lowqualityTempCHEL from '@/../assets/low-quality/main-page/feedbackCHEL-l
 import tempCHEL from '@/../assets/main-page/feedbackCHEL.jpg';
 import Avatar from '@/components/avatar';
 
-function Feedback() {
+function Feedback({ children }: { children: React.ReactNode }) {
   return (
-    <div className="px-4 mx-auto mt-4 lg:mt-[32px] flex w-fit flex-row items-center  gap-4 lg:gap-[140px]">
-      <Avatar
-        type="temp"
-        name="Кирилл Кириллов"
-        avatarSrc={tempCHEL}
-        blur
-        blurDataURL={lowqualityTempCHEL.src}
-      />
-      <div className="lg:py-10">
-        <p className="w-fit lg:w-[784px] text-sm lg:text-base leading-[125%]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry&lsquo;s standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen book.
-          <br/>
-          <br/> It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+    <section className="mt-10 md:mt-[100px]">
+      <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Отзывы</p>
+      <>{children}</>
+      <div className="px-4 mx-auto mt-4 lg:mt-[32px] flex w-fit flex-row items-center  gap-4 lg:gap-[140px]">
+        <Avatar
+          type="temp"
+          name="Кирилл Кириллов"
+          avatarSrc={tempCHEL}
+          blur
+          blurDataURL={lowqualityTempCHEL.src}
+        />
+        <div className="lg:py-10">
+          <p className="w-fit lg:w-[784px] text-sm lg:text-base leading-[125%]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry&lsquo;s standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book.
+            <br />
+            <br /> It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

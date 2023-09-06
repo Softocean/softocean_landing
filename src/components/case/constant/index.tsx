@@ -18,6 +18,12 @@ interface CaseData {
   imageSrc: StaticImageData;
 }
 
+interface FeedBackData {
+  description: string;
+  question: string;
+  textBtn: string;
+}
+
 export const CaseData: CaseData[] = [
   {
     id: 0,
@@ -90,5 +96,14 @@ export const CaseData: CaseData[] = [
       'Достичь развития и высокого результата в бизнесе уже невозможно без информационных технологий, сэкономьте свое время, позвольте нам стать вашим проводником в цифровой мир. Воспользуйтесь нашими услугами:',
     question: 'С чем вы мне поможете?!',
     imageSrc: consultingNote,
+  },
+];
+
+export const FeedBackData: FeedBackData[] = [
+  {
+    description:
+      'Наша миссия реализуется при помощи информационных технологий. Мы пытаемся понять клиента и помочь ему прийти к верному решению, упростить ему задачу и сделать лучше его бизнес.',
+    question: 'Готовы начать?',
+    textBtn: 'Связаться с нами',
   },
 ];
