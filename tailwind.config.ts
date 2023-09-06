@@ -38,6 +38,9 @@ const config: Config = {
       backgroundImage: {
         'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
       },
+      // gridTemplateColumns: {
+      //   '3': 'repeat(auto-fit, minmax(px, 1fr))'
+      // },
     },
   },
   plugins: [],
