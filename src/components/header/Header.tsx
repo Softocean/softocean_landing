@@ -159,7 +159,7 @@ export default function Nav() {
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stopColor="#0B96B4" />
-                  <stop offset="1" stop-color="#551DB0" />
+                  <stop offset="1" stopColor="#551DB0" />
                 </linearGradient>
               </defs>
             </svg>

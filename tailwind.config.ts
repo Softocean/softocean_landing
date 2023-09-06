@@ -8,23 +8,31 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      'error-color': '#f43f5e',
+      'border-gray': '#E8E8E8',
+      black: '#000000',
+      'dark-as-night': '#222222',
+      lightdark: '#4c4c4c',
+      white: '#ffffff',
       transparent: 'transparent',
+      lightgray: 'lightgray',
       'deep-sky-blue': '#0B96B4',
       'rebecca-purple': '#551DB0',
-    },
-    fontFamily: {
-      manrope: ['Manrope'],
+      'grey-as-stone': '#767575',
+      greyDark: '#727377',
+
     },
     fontSize: {
-      'sm-10': ['10px', '18px'],
-      'sm-12': ['12px', '20px'],
-      sm: ['14px', '20px'],
-      'sm-16': ['16px', '22px'],
-      base: ['18px', '26px'],
-      'base-21': ['21px', '30px'],
-      'base-24': ['24px', '31px'],
-      lg: ['36px', '48px'],
-      xl: ['48px', '60px'],
+      'sm-10': ['10px', 'normal'],
+      'sm-12': ['12px', 'normal'],
+      sm: ['14px', 'normal'],
+      'sm-16': ['16px', 'normal'],
+      base: ['18px', 'normal'],
+      'base-21': ['21px', 'normal'],
+      'base-24': ['24px', 'normal'],
+      'lg-18': ['18px', 'normal'],
+      lg: ['36px', 'normal'],
+      xl: ['48px', 'normal'],
     },
     extend: {
       backgroundImage: {
