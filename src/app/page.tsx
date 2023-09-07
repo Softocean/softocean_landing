@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Header from '@/components/header/Header';
 import Feedback from '@/components/feedback';
 import { HeaderSectionLayout, SlideProps, SmallForm } from '@/components/main-page';
 import CustomSwiper from '@/components/main-page/slider';
