@@ -1,21 +1,21 @@
-import BlogAverage from '@/components/blogAverage/blogAverage';
-import BlogBig from '@/components/blogBig/blogBig';
-import BlogSmall from '@/components/blogSmall/blogSmall';
 import CardArticle from '@/components/cardArticle/CardArticle';
-import { mokData, ImokData } from '@/utils/mokFile';
+import PromoArticle from '@/components/promoArticle/promoArticle';
+import { mokData } from '@/utils/mokFile';
 
 const Blog = () => {
-  //   console.log(mokData);
 
   return (
-    <>
-      <h2 className="my-10">Placeholder for Promo</h2>
-      <div className="flex flex-wrap  max-w-[1900px] mx-auto gap-5">
-        {mokData.map((item, index) => (
+    <div className='mx-[300px]'>
+      <div>{mokData.slice(0, 1).map((item, index) => (
+        <PromoArticle key={index} mokData={item} />
+      ))}
+      </div>
+      <div className="flex flex-wrap mx-auto gap-y-[100px] justify-between">
+        {mokData.slice(1).map((item, index) => (
           <CardArticle key={item.title} mokData={item} index={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
