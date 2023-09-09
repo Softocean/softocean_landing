@@ -8,7 +8,7 @@ import PersonIcon from '@/../assets/icons/person.svg';
 import PhoneIcon from '@/../assets/icons/phone.svg';
 import Button from '@/components/button';
 import { MainPageFormDataType } from '@/types/types';
-import { MainPageFormValidationScheme } from '@/utils/validationSchemes/main-page-form';
+import { MainPageFormValidationScheme } from '@/utils';
 import SmallFormInput from './input';
 
 function SmallForm() {
@@ -46,7 +46,7 @@ function SmallForm() {
               <SmallFormInput
                 error={errors.name}
                 helperText={errors.name?.message}
-                icon={<PersonIcon/>}
+                icon={<PersonIcon />}
                 {...field}
                 id="name"
                 placeholder="Name*"
@@ -62,7 +62,7 @@ function SmallForm() {
               <SmallFormInput
                 error={errors.email}
                 helperText={errors.email?.message}
-                icon={<MailIcon/>}
+                icon={<MailIcon />}
                 {...field}
                 id="email"
                 placeholder="E-mail*"
@@ -78,7 +78,7 @@ function SmallForm() {
               <SmallFormInput
                 error={errors.phone}
                 helperText={errors.phone?.message}
-                icon={<PhoneIcon/>}
+                icon={<PhoneIcon />}
                 {...field}
                 name="phone"
                 id="phone"
@@ -96,7 +96,9 @@ function SmallForm() {
           Политикой конфиденциальности
         </Link>
       </p>
-      <Button className="mt-10" type="submit" text="Отправить"/>
+      <Button className="mt-10" type="submit">
+        Отправить
+      </Button>
     </form>
   );
 }
