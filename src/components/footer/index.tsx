@@ -76,7 +76,7 @@ function Footer() {
           className="text-center w-[182px] text-[12px] 
                                      font-normal flex flex-col justify-center text-[#B6B6B6] 
                                      ease-in duration-300 hover:text-black">
-          Cactus Vision 2020 Политика конфиденциальности
+          Softocean 2022 Privacy Policy
         </div>
         <div
           className="w-full border-b-2 border-b-[#E5E5E580] 
