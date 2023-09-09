@@ -8,7 +8,7 @@ import PersonIcon from '@/../assets/icons/person.svg';
 import PhoneIcon from '@/../assets/icons/phone.svg';
 import Button from '@/components/button';
 import { MainPageFormDataType } from '@/types/types';
-import { MainPageFormValidationScheme } from '@/utils/validationSchemes/main-page-form';
+import { MainPageFormValidationScheme } from '@/utils';
 import SmallFormInput from './input';
 
 function SmallForm() {
