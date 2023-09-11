@@ -1,10 +1,9 @@
-import React from 'react';
 import Button from '@/components/button';
 import { FeedBackData } from '@/components/case/constant';
 
 function buttonWithQuestion() {
   return (
-    <p
+    <div
       className="grid  mx-auto  justify-center font-bold bg-light-blue
       my-[150px] max-2xl:my-[100px] max-xl:my-[50px] max-md:my-[25px]
       py-[60px] max-2xl:py-[30px] max-xl:py-[16px]
@@ -17,7 +16,7 @@ function buttonWithQuestion() {
         type="button"
         text={FeedBackData[0].textBtn}
       />
-    </p>
+    </div>
   );
 }
 

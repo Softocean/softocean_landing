@@ -1,6 +1,3 @@
-'use client';
-
-import React, { FC, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
@@ -11,15 +8,12 @@ interface ImageProps {
   imageAlt: string;
   description: string;
   question: string;
-  /*blurDataURL: string;*/
 }
 
-const Case: FC<ImageProps> = ({ id, title, description, imageSrc, imageAlt, question }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-
+function Case({ id, title, description, imageSrc, imageAlt, question }: ImageProps) {
   const textSection = (
     <div
-      className="grid max-w-[488px] my-0 mx-auto
+      className="grid max-w-[488px] mt-0 mb-[20px] mx-auto
       max-2xl:mx-[24px] max-md:mx-[8px]
       gap-[18px] max-xl:gap-[8px] max-md:max-w-full">
       <h3
@@ -45,52 +39,27 @@ const Case: FC<ImageProps> = ({ id, title, description, imageSrc, imageAlt, ques
   );
 
   const imageSection = (
-    <Image
-      alt={imageAlt}
-      src={imageSrc}
-      placeholder="blur"
-      /*blurDataURL={blurDataURL}*/
-      width={1133}
-      height={651}
-    />
+    <Image alt={imageAlt} src={imageSrc} placeholder="blur" width={1133} height={651} />
   );
-
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    const resizeListener = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => setWidth(window.innerWidth), 150);
-    };
-
-    window.addEventListener('resize', resizeListener);
-
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    };
-  }, []);
 
   return (
     <div
-      className=" mb-[50px]
-        flex flex-row items-center
-        font-manrope
-        mx-auto max-2xl:mx-[20px] w-auto max-md:mx-[8px]
-        max-md:flex-col max-md:mb-[10px]
-        ">
-      {width > 768 && id % 2 === 0 ? (
-        <>
+      className="mb-[50px] max-md:mb-[10px] font-manrope 
+      mx-auto max-2xl:mx-[20px] w-auto max-md:mx-[8px]">
+      {id % 2 === 0 && (
+        <div className="flex flex-row items-center max-md:flex-col">
           {textSection}
           {imageSection}
-        </>
-      ) : (
-        <>
+        </div>
+      )}
+      {id % 2 !== 0 && (
+        <div className="flex flex-row items-center max-md:flex-col-reverse">
           {imageSection}
           {textSection}
-        </>
+        </div>
       )}
     </div>
   );
-};
+}
 
 export default Case;

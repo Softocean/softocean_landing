@@ -1,16 +1,15 @@
-import Image from 'next/image';
-import erpNote from '../../../../assets/what-we-do-page/erpNote.jpg';
+import { StaticImageData } from 'next/image';
+import consultingNote from '../../../../assets/what-we-do-page/consultingNote.jpg';
 import crm from '../../../../assets/what-we-do-page/crm.jpg';
 import cyfra from '../../../../assets/what-we-do-page/cyfra.jpg';
+import erpNote from '../../../../assets/what-we-do-page/erpNote.jpg';
+import marketPlaceNote from '../../../../assets/what-we-do-page/marketPlaceNote.jpg';
 import mobile from '../../../../assets/what-we-do-page/mobile.jpg';
+import softwareNote from '../../../../assets/what-we-do-page/softwareNote.jpg';
 import webNote from '../../../../assets/what-we-do-page/webNote.jpg';
 import webServiceNote from '../../../../assets/what-we-do-page/webServiceNote.jpg';
-import softwareNote from '../../../../assets/what-we-do-page/softwareNote.jpg';
-import marketPlaceNote from '../../../../assets/what-we-do-page/marketPlaceNote.jpg';
-import consultingNote from '../../../../assets/what-we-do-page/consultingNote.jpg';
-import { StaticImageData } from 'next/image';
 
-interface CaseData {
+interface CaseDataTypes {
   id: number;
   title: string;
   description: string;
@@ -18,13 +17,13 @@ interface CaseData {
   imageSrc: StaticImageData;
 }
 
-interface FeedBackData {
+interface FeedBackDataTypes {
   description: string;
   question: string;
   textBtn: string;
 }
 
-export const CaseData: CaseData[] = [
+export const CaseData: CaseDataTypes[] = [
   {
     id: 0,
     title: 'ERP-cистемы',
@@ -99,7 +98,7 @@ export const CaseData: CaseData[] = [
   },
 ];
 
-export const FeedBackData: FeedBackData[] = [
+export const FeedBackData: FeedBackDataTypes[] = [
   {
     description:
       'Наша миссия реализуется при помощи информационных технологий. Мы пытаемся понять клиента и помочь ему прийти к верному решению, упростить ему задачу и сделать лучше его бизнес.',

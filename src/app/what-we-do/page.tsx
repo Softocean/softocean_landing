@@ -1,9 +1,9 @@
 import React from 'react';
-import Case from '@/components/case/page';
-import { CaseData } from '@/components/case/constant';
-import Feedback from '@/components/feedback';
-import { FeedBackData } from '@/components/case/constant';
 import ButtonWithQuestion from '@/components/buttonWithQuestion';
+import { CaseData } from '@/components/case/constant';
+import { FeedBackData } from '@/components/case/constant';
+import Case from '@/components/case/page';
+import Feedback from '@/components/feedback';
 
 export default function WhatWeDo() {
   return (
@@ -47,18 +47,16 @@ export default function WhatWeDo() {
           />
         );
       })}
-      <Feedback
-        children={
-          <p
-            className="flex max-w-[803px] mx-auto mt-[16px] 
+      <Feedback>
+        <p
+          className="flex max-w-[803px] mx-auto mt-[16px] 
             text-base text-center leading-[22.5px]
             max-xl:text-sm
             max-md:mx-[16px] 
             mb-[150px] max-md:mb-[50px]">
-            {FeedBackData[0].description}
-          </p>
-        }
-      />
+          {FeedBackData[0].description}
+        </p>
+      </Feedback>
       <ButtonWithQuestion />
     </div>
   );

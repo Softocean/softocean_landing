@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Header from '@/components/header/Header';
 import Feedback from '@/components/feedback';
 import { HeaderSectionLayout, SlideProps, SmallForm } from '@/components/main-page';
 import CustomSwiper from '@/components/main-page/slider';
@@ -37,7 +35,7 @@ export default function Home() {
         title="Разработка программных продуктов"
         subText="Эффективное решение бизнес-задач с помощью цифровых технологий"
       />
-      <Feedback children={''} />
+      <Feedback>{}</Feedback>
       <section className="px-4 mt-10 md:mt-[380px]">
         <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Портфолио</p>
         <CustomSwiper slides={slides} />
