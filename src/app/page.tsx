@@ -52,28 +52,22 @@ export default function Home() {
   ];
   return (
     <>
-      <main>
-        <HeaderSectionLayout
-          title="Development of software products"
-          subText="Effectively solving business problems using digital technologies"
-        />
-        <Feedback>{}</Feedback>
-        <section className="px-4 mt-10 md:mt-[380px]">
-          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">
-            Our Products
-          </p>
-          <CustomSwiper slides={slides_products} />
-        </section>
-        <section className="px-4 mt-10 md:mt-[380px]">
-          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">
-            Our Projects
-          </p>
-          <CustomSwiper slides={slides_projects} />
-        </section>
-        <section className="mb-[100px] mt-10 md:mt-[150px] px-4 sm:px-0">
-          <SmallForm />
-        </section>
-      </main>
+      <HeaderSectionLayout
+        title="Development of software products"
+        subText="Effectively solving business problems using digital technologies"
+      />
+      <Feedback>{}</Feedback>
+      <section className="px-4 mt-10 md:mt-[380px]">
+        <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Our Products</p>
+        <CustomSwiper slides={slides_products} />
+      </section>
+      <section className="px-4 mt-10 md:mt-[380px]">
+        <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Our Projects</p>
+        <CustomSwiper slides={slides_projects} />
+      </section>
+      <section className="mb-[100px] mt-10 md:mt-[150px] px-4 sm:px-0">
+        <SmallForm />
+      </section>
     </>
   );
 }

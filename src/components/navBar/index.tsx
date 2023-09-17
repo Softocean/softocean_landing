@@ -38,16 +38,16 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
   return (
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
-      <div className="bg-white pt-[42px] pb-[150px] flex flex-col">
+      <div className="flex flex-col bg-white pb-[150px] pt-[42px]">
         <ul
           className="
-            relative flex mb-[100px]
-            ml-[490px] max-2xl:ml-[250px] max-xl:ml-auto max-xl:mr-auto
-            max-lg:flex-col max-w-min max-lg:mx-auto max-lg:my-[20px]">
+            relative mx-auto mb-[100px] flex
+            max-w-min max-2xl:ml-[250px] max-xl:ml-auto
+            max-xl:mr-auto max-lg:mx-auto max-lg:my-[20px] max-lg:flex-col">
           {navButtonsData.map((button, index) => {
             return (
               <Link
-                className="mr-2 max-lg: flex justify-center"
+                className="max-lg: mr-2 flex justify-center"
                 href={button.href}
                 key={button.id}
                 ref={(el) => (tabsRef.current[index] = el)}
@@ -56,10 +56,10 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
                 }}>
                 <span
                   className="
-                    absolute z-10 bottom-0 top-0
-                    flex overflow-hidden rounded-2xl
-                    cursor-pointer transition-all duration-300
-                    max-lg:flex-col left-0 right-0"
+                    absolute bottom-0 left-0 right-0
+                    top-0 z-10 flex
+                    cursor-pointer overflow-hidden rounded-2xl
+                    transition-all duration-300 max-lg:flex-col"
                   style={{
                     left: tabBackgroundLeft,
                     width: tabBackgroundWidth,
@@ -78,7 +78,7 @@ const NavBar: FC<{ children: React.ReactNode }> = ({
                   className={`cursor-pointer   ${
                     button.active ? 'text-sm-16 text-white duration-300' : ''
                   }`}>
-                  <p className="relative z-20 my-[5px] mx-[16px] whitespace-nowrap">
+                  <p className="relative z-20 mx-[16px] my-[5px] whitespace-nowrap">
                     {button.title}
                   </p>
                 </li>

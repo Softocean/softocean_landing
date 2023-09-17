@@ -24,11 +24,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${manrope.className} ${openSans.className} bg-white`}>
-        <Header />
-        <main className="min-h-[calc(100vh-322px)]">{children}</main>
-        <section className="pt-[40px] h-[322px]">
-          <Footer />
-        </section>
+        <div className="mx-auto 2xl:container">
+          <Header />
+          <main className="mt-10 min-h-[calc(100vh-322px)]">{children}</main>
+          <section className="h-[322px] pt-[40px]">
+            <Footer />
+          </section>
+        </div>
       </body>
     </html>
   );
