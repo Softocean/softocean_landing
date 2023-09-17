@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui';
 import dzen from '../../../assets/about/dzen.png';
 import vk from '../../../assets/about/icon-vk.png';
 import icon from '../../../assets/about/icon.png';
@@ -10,12 +11,12 @@ import telegram from '../../../assets/about/telegram.png';
 
 export default function About() {
   return (
-    <section className="flex flex-col items-center m-auto gap-10">
-      <div className="flex flex-col items-center justify-center m-auto max-w-[768px] lg:max-w-[950px]">
-        <h1 className="text-[center] text-[24px] font-bold md:text-[36px] lg:text-[48px]">
+    <section className="m-auto flex flex-col items-center gap-10">
+      <div className="m-auto flex max-w-[768px] flex-col items-center justify-center lg:max-w-[950px]">
+        <h1 className="text-[24px] font-bold text-[center] md:text-[36px] lg:text-[48px]">
           <span className="text-[#551DB0]">Sonus space</span> - Мир без копирайта
         </h1>
-        <h3 className="text-[center] mt-[10px] text-[9px] font-light text-[#4C4C4C] md:text-[12px] lg:text-[18px] max-w-[450px] lg:max-w-[950px] md:max-w-[768px]">
+        <h3 className="mt-[10px] max-w-[450px] text-[9px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
           Авторское право препятствует развитию общества, потому что юридически ограничивает
           желающих улучшить или усовершенствовать продукт.
         </h3>
@@ -28,14 +29,14 @@ export default function About() {
         height={431}
         blurDataURL=""
         style={{ objectFit: 'contain' }}
-        className="ease-in duration-300 hover:opacity-50 max-w-[450px] lg:max-w-[950px] md:max-w-[768px]"
+        className="max-w-[450px] duration-300 ease-in hover:opacity-50 md:max-w-[768px] lg:max-w-[950px]"
       />
 
-      <div className="flex flex-col items-center justify-center gap-4 lg:gap-8 md:gap-6">
-        <h2 className="text-[center] text-[18px] font-bold text-[#4E4E4E] md:text-[24px] lg:text-[36px]">
+      <div className="flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-8">
+        <h2 className="text-[18px] font-bold text-[#4E4E4E] text-[center] md:text-[24px] lg:text-[36px]">
           Наше отношение к проблеме
         </h2>
-        <div className="text-[9px] font-light text-[center] text-[#4C4C4C] flex flex-col max-w-[450px] gap-6 md:gap-3 md:text-[12px] lg:text-[18px] md:max-w-[768px] lg:max-w-[950px]">
+        <div className="flex max-w-[450px] flex-col gap-6 text-[9px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:gap-3 md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
           <p>
             Следует разграничивать авторское право и копирайт. Любая интеллектуальная собственность
             с момента создания защищена авторским правом. Но тот, кто желает заявить о своих
@@ -56,114 +57,109 @@ export default function About() {
             технологий, так как результат его деятельности –анализ и синтез предыдущего опыта.{' '}
           </p>
         </div>
-        <span className="text-[start] font-bold self-start text-[9px] lg:text-[18px] md:text-[12px]">
+        <span className="self-start text-[9px] font-bold text-[start] md:text-[12px] lg:text-[18px]">
           {' '}
           Решение:{' '}
         </span>
-        <p className="text-[#4C4C4C] font-light text-[9px] max-w-[450px] md:text-[12px] lg:text-[18px] md:max-w-[768px] lg:max-w-[950px]">
+        <p className="max-w-[450px] text-[9px] font-light text-[#4C4C4C] md:max-w-[768px] md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
           Мы заявляем об отрицательном влиянии копирайта на развитие общества в наших медиа каналах,
           информируя читателей о существующей проблеме.{' '}
           <span className="font-bold">На данный момент в наших силах только информирование.</span>
         </p>
-        <h2 className="font-bold text-[18px] max-w-[450px] md:text-[24px] lg:text-[36px] md:max-w-[768px] lg:max-w-[950px]">
+        <h2 className="max-w-[450px] text-[18px] font-bold md:max-w-[768px] md:text-[24px] lg:max-w-[950px] lg:text-[36px]">
           Зачем мы это делаем?
         </h2>
-        <p className="text-[#4C4C4C] max-w-[450px] font-light text-[9px] md:text-[18px] md:max-w-[768px] lg:max-w-[950px]">
+        <p className="max-w-[450px] text-[9px] font-light text-[#4C4C4C] md:max-w-[768px] md:text-[18px] lg:max-w-[950px]">
           Наша миссия быть проводником в мир равенства и свободы, формировать информационное поле,
           повышающее культуру человечности. Человек – мера всех вещей, и нам бы очень хотелось,
           чтобы он это понимал. Как важно сейчас – в мире морального хаоса, оставаться человечным. И
           путь этот к человечности не может быть простым, но полным новых открытий и
           самосовершенствования.
         </p>
-        <ul className="flex flex-col self-start justify-start font-normal ">
-          <li className="font-bold mb-5 text-[9px] md:text-[12px] lg:text-[18px]">
+        <ul className="flex flex-col justify-start self-start font-normal ">
+          <li className="mb-5 text-[9px] font-bold md:text-[12px] lg:text-[18px]">
             Наши медиа каналы отражают следующие принципы:
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
             - свободное распространение информации;
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
-          - копирайт - это тотальное ограничение, и мы хотим, чтобы все об этом знали;
+            - копирайт - это тотальное ограничение, и мы хотим, чтобы все об этом знали;
           </li>
           <li className="text-[9px] md:text-[12px] lg:text-[18px]">
             - воспитание культуры человечности в наших читателях.
           </li>
         </ul>
-        <div className="flex flex-col justify-center max-w-[450px] gap-8 md:max-w-[950px]">
-          <h2 className="font-bold self-center text-[16px] text-[#4E4E4E] md:text-[24px] lg:text-[36px]">
+        <div className="flex max-w-[450px] flex-col justify-center gap-8 md:max-w-[950px]">
+          <h2 className="self-center text-[16px] font-bold text-[#4E4E4E] md:text-[24px] lg:text-[36px]">
             Мы используем следующие каналы
           </h2>
-          <div className="flex flex-row gap-[5px] items-center justify-between md:gap-[15px]">
-            <div className=" flex items-center w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+          <div className="flex flex-row items-center justify-between gap-[5px] md:gap-[15px]">
+            <div className=" flex h-[32px] w-[32px] items-center md:h-[64px] md:w-[64px]">
               <Image
                 src={vk}
                 alt="логотип"
                 width={64}
                 height={64}
                 blurDataURL=""
-                className="ease-in duration-300 hover:opacity-50"
+                className="duration-300 ease-in hover:opacity-50"
               />
             </div>
-            <div className="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
               <Image
                 src={insta}
                 alt="логотип"
                 width={64}
                 height={64}
                 blurDataURL=""
-                className="ease-in duration-300 hover:opacity-50"
+                className="duration-300 ease-in hover:opacity-50"
               />
             </div>
-            <div className="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
               <Image
                 src={telegram}
                 alt="логотип"
                 width={64}
                 height={64}
                 blurDataURL=""
-                className="ease-in duration-300 hover:opacity-50"
+                className="duration-300 ease-in hover:opacity-50"
               />
             </div>
-            <div className="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
               <Image
                 src={icon}
                 alt="логотип"
                 width={64}
                 height={64}
                 blurDataURL=""
-                className="ease-in duration-300 hover:opacity-50"
+                className="duration-300 ease-in hover:opacity-50"
               />
             </div>
-            <div className="w-[32px] h-[32px] md:w-[64px] md:h-[64px]">
+            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
               <Image
                 src={dzen}
                 alt="логотип"
                 width={64}
                 height={64}
                 blurDataURL=""
-                className="ease-in duration-300 hover:opacity-50"
+                className="duration-300 ease-in hover:opacity-50"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="w-[90%] flex flex-row justify-between">
+      <div className="flex w-[90%] flex-row justify-between">
         <Link
           href="/"
-          className=" leading-[21px] font-light text-[9px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]">
+          className=" text-[9px] font-light leading-[21px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]">
           {' '}
           &#171; Предыдущий проект
         </Link>
 
-        <div
-          className="w-[120px] md:w-[200px] rounded-[10px] h-[25px] md:h-[50px]  flex justify-center self-center
-                                    bg-gradient-to-r from-[#0B96B4] to-[#551DB0] ease-in duration-300 hover:opacity-50">
-          <div className="font-normal bg-clip-text text-[#FFFFFF] flex items-center text-[9px] md:text-[18px]">
-            Перейти
-          </div>
-        </div>
+        <Button>Перейти</Button>
+
         <Link
-          className=" leading-[21px] font-light text-[9px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]"
+          className=" text-[9px] font-light leading-[21px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]"
           href="/">
           Следующий проект &#187;
         </Link>

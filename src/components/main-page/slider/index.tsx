@@ -75,14 +75,14 @@ function CustomSwiper({ slides }: SwiperProps) {
   return (
     <div className="relative flex flex-row justify-center gap-6">
       <button
-        className="rotate-180 invisible left"
+        className="left invisible rotate-180"
         onClick={() => swiperElRef.current.swiper.slidePrev()}>
         <SwiperArrowSvg />
       </button>
       <div className="w-[75%]">
         <swiper-container ref={swiperElRef} pagination="true" init="false">
-          {slides.map((slide, i) => (
-            <swiper-slide key={`slide-${i}`}>
+          {slides.map((slide) => (
+            <swiper-slide key={slide.id}>
               <Slide {...slide} />
             </swiper-slide>
           ))}
