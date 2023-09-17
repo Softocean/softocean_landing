@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import Header from '@/components/header/Header';
 import Feedback from '@/components/feedback';
+import Header from '@/components/header/Header';
 import { HeaderSectionLayout, SlideProps, SmallForm } from '@/components/main-page';
 import CustomSwiper from '@/components/main-page/slider';
 
@@ -50,7 +49,6 @@ export default function Home() {
       subText: 'Task manager',
       linkUrl: 'https://onetask.team',
     },
-
   ];
   return (
     <>
@@ -60,16 +58,17 @@ export default function Home() {
           title="Development of software products"
           subText="Effectively solving business problems using digital technologies"
         />
-        <section className="mt-10 md:mt-[100px]">
-          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">About</p>
-          <Feedback />
-        </section>
+        <Feedback>{}</Feedback>
         <section className="px-4 mt-10 md:mt-[380px]">
-          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Our Products</p>
+          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">
+            Our Products
+          </p>
           <CustomSwiper slides={slides_products} />
         </section>
         <section className="px-4 mt-10 md:mt-[380px]">
-          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Our Projects</p>
+          <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">
+            Our Projects
+          </p>
           <CustomSwiper slides={slides_projects} />
         </section>
         <section className="mb-[100px] mt-10 md:mt-[150px] px-4 sm:px-0">
