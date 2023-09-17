@@ -52,7 +52,6 @@ export default function Home() {
   ];
   return (
     <>
-      <Header />
       <main>
         <HeaderSectionLayout
           title="Development of software products"
