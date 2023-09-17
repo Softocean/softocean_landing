@@ -1,5 +1,5 @@
-import Button from '@/components/button';
 import { FeedBackData } from '@/components/case/constant';
+import { Button } from '@/components/ui';
 
 function buttonWithQuestion() {
   return (
@@ -10,12 +10,7 @@ function buttonWithQuestion() {
       max-xl:py-[16px] max-xl:text-base-24 max-md:my-[25px]
       max-md:text-center">
       {FeedBackData[0].question}
-      <Button
-        className="mt-[53px] justify-self-center text-base-21  leading-[31.5px]
-        max-xl:mt-[23px] max-lg:mx-auto"
-        type="button">
-        {FeedBackData[0].textBtn}
-      </Button>
+      <Button type="button">{FeedBackData[0].textBtn}</Button>
     </div>
   );
 }

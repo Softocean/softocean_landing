@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '@/components/button';
+import { Button } from '@/components/ui';
 
 interface PartnersProps {
   title: string;
@@ -10,12 +10,7 @@ interface PartnersProps {
 
 export default function PartnersContent({ title, description, textButton }: PartnersProps) {
   return (
-    <div
-      className="
-      ml-[190px] flex flex-col justify-center
-      gap-[32px]
-      max-xl:ml-[80px] max-lg:mx-auto max-lg:grid max-lg:text-center
-      ">
+    <div className="mx-auto flex flex-col justify-center gap-[32px]">
       <h2
         className="
           ml-[25px] max-w-[1192px] justify-self-center  whitespace-pre-line
@@ -27,9 +22,7 @@ export default function PartnersContent({ title, description, textButton }: Part
       <p className="text-grey max-w-[900px] justify-self-center text-base max-lg:mx-[20px] max-lg:max-w-[600px]">
         {description}
       </p>
-      <Button className="text-sm-16 max-lg:mx-auto" type="button">
-        {textButton}
-      </Button>
+      <Button className="self-center lg:self-start">{textButton}</Button>
     </div>
   );
 }

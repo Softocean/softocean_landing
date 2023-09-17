@@ -45,7 +45,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        'gradient-main': 'linear-gradient(190deg, var(--tw-gradient-stops))',
+        'gradient-main': 'linear-gradient(253deg, var(--tw-gradient-stops))',
       },
       fontFamily: {
         manrope: ['var(--font-manrope)'],
