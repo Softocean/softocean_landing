@@ -23,13 +23,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${openSans.className} bg-white`}>
-        <div className="mx-auto 2xl:container">
+      <body className={`${manrope.className} ${openSans.className}  bg-white`}>
+        <div className="mx-auto flex min-h-screen flex-col 2xl:container">
           <Header />
-          <main className="mt-10 min-h-[calc(100vh-322px)]">{children}</main>
-          <section className="h-[322px] pt-[40px]">
-            <Footer />
-          </section>
+          <main className="mt-10">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

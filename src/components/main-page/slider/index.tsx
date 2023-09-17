@@ -46,6 +46,7 @@ function CustomSwiper({ slides }: SwiperProps) {
         },
       },
       watchOverflow: true,
+      grabCursor: true,
       pagination: {
         clickable: true,
       },

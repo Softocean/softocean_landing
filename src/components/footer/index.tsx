@@ -9,7 +9,7 @@ import { NavLink } from '../nav-link';
 function Footer() {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col justify-between">
+    <footer className="mt-auto flex flex-col pb-4 pt-16">
       <div className="mx-auto flex w-full justify-center gap-x-20 px-4 md:justify-between">
         <Link href="/" className="text-[1vw]">
           <Image
@@ -101,7 +101,7 @@ function Footer() {
           duration-300 ease-in hover:border-black "
         />
       </div>
-    </div>
+    </footer>
   );
 }
 
