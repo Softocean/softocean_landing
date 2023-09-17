@@ -10,7 +10,7 @@ export const NavLink = ({ href, children }: NavLinkProps) => {
   return (
     <Link
       href={href}
-      className="no-underline flex h-full items-center text-[1.4em] hover:bg-clip-text hover:text-transparent hover:bg-gradient-main hover:from-deep-sky-blue hover:to-rebecca-purple">
+      className="flex h-full items-center text-base no-underline hover:bg-gradient-main hover:from-deep-sky-blue hover:to-rebecca-purple hover:bg-clip-text hover:text-transparent">
       {children}
     </Link>
   );

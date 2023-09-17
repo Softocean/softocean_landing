@@ -12,22 +12,24 @@ export default function PartnersContent({ title, description, textButton }: Part
   return (
     <div
       className="
-      flex flex-col gap-[32px] ml-[190px]
-      max-xl:ml-[80px]
-      max-lg:mx-auto justify-center max-lg:grid max-lg:text-center
+      ml-[190px] flex flex-col justify-center
+      gap-[32px]
+      max-xl:ml-[80px] max-lg:mx-auto max-lg:grid max-lg:text-center
       ">
       <h2
         className="
-          ml-[25px] font-bold text-dark-as-night  whitespace-pre-line
-          text-xl max-2xl:text-lg max-lg:text-base-24
-          max-w-[1192px] max-lg:max-w-[600px]
-          max-lg:mx-[20px] justify-self-center">
+          ml-[25px] max-w-[1192px] justify-self-center  whitespace-pre-line
+          text-xl font-bold text-dark-as-night
+          max-2xl:text-lg max-lg:mx-[20px]
+          max-lg:max-w-[600px] max-lg:text-base-24">
         {title}
       </h2>
-      <p className="text-grey text-base max-w-[900px] max-lg:max-w-[600px] max-lg:mx-[20px] justify-self-center">
+      <p className="text-grey max-w-[900px] justify-self-center text-base max-lg:mx-[20px] max-lg:max-w-[600px]">
         {description}
       </p>
-      <Button className="text-sm-16 max-lg:mx-auto" type="button" text={textButton} />
+      <Button className="text-sm-16 max-lg:mx-auto" type="button">
+        {textButton}
+      </Button>
     </div>
   );
 }

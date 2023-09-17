@@ -3,14 +3,14 @@ import PromoArticle from '@/components/promoArticle/promoArticle';
 import { mokData } from '@/utils/mokFile';
 
 const Blog = () => {
-
   return (
-    <div className='mx-[300px]'>
-      <div>{mokData.slice(0, 1).map((item, index) => (
-        <PromoArticle key={index} mokData={item} />
-      ))}
+    <div className="px-2">
+      <div>
+        {mokData.slice(0, 1).map((item, index) => (
+          <PromoArticle key={index} mokData={item} />
+        ))}
       </div>
-      <div className="flex flex-wrap mx-auto gap-y-[100px] justify-between">
+      <div className="mx-auto flex flex-wrap justify-between lg:gap-y-10">
         {mokData.slice(1).map((item, index) => (
           <CardArticle key={item.title} mokData={item} index={index} />
         ))}

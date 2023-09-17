@@ -1,77 +1,65 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
 
 export default function Header() {
   const [isOpened, setIsOpened] = useState(false);
+
   function toggleMenu() {
     setIsOpened(!isOpened);
   }
 
   return (
     <header>
-      <nav
-        className="
-         flex flex-wrap md:flex-nowrap
-         items-center
-         justify-between
-         w-full
-         py-5
-         px-5
-         text-lg text-gray-700
-         bg-white
-         max-w-7xl
-         mx-auto
-         text-[1vw]
-       ">
-        <Link href="/" className="text-[1vw]">
+      <nav className="text-gray-700 flex w-full flex-wrap items-center justify-start gap-x-12 px-4 py-5 text-lg md:flex-nowrap">
+        <Link href="/">
           <Image
             src={logo}
             alt="логотип"
-            width={136}
-            height={68}
-            className="ease-in duration-300 hover:opacity-50"
+            width={150}
+            height={60}
+            className="w-20 duration-300 ease-in hover:opacity-50 lg:w-32"
           />
         </Link>
 
-        <ul className="p-0 hidden gap-3 justify-between md:flex">
-          <li className="list-none text-[1vw]">
+        <ul className="hidden justify-between gap-x-5 p-0 md:flex">
+          <li className="list-none">
             <NavLink href="/about">Кто мы</NavLink>
           </li>
-          <li className="list-none text-[1vw]">
+          <li className="list-none">
             <NavLink href="/what-we-do">Чем занимаемся</NavLink>
           </li>
-          <li className="list-none text-[1vw]">
+          <li className="list-none">
             <NavLink href="/blog">Блог</NavLink>
           </li>
-          <li className="list-none text-[1vw]">
+          <li className="list-none">
             <NavLink href="/partners">Партнерам</NavLink>
           </li>
-          <li className="list-none text-[1vw]">
+          <li className="list-none">
             <NavLink href="/contacts">Контакты</NavLink>
           </li>
-          <li className="list-none text-[1vw]">
+          <li className="list-none">
             <NavLink href="/team">Команда</NavLink>
           </li>
         </ul>
 
-        <ul className="p-0 hidden gap-3 md:flex">
-          <li className="list-none text-[1vw]">
+        <ul className="ml-auto hidden gap-3 p-0 lg:flex">
+          <li className="list-none text-sm">
             <Link
               href="/briefing"
-              className="no-underline flex h-full items-center text-[1.4em] text-purple-400 text-purple-500 bg-clip-text text-transparent bg-gradient-main from-deep-sky-blue to-rebecca-purple hover:opacity-50">
+              className="text-purple-500 flex h-full items-center bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent no-underline hover:opacity-50">
               Заполнить бриф
             </Link>
           </li>
-          <li className="list-none flex text-[1vw]">
-            <p className="text-[1.4em] self-center">+7 (999) 999-99-99</p>
+          <li className="flex list-none text-sm">
+            <p className="self-center ">+7 (999) 999-99-99</p>
           </li>
-          <li className="list-none flex text-[1vw]">
+          <li className="flex list-none">
             <svg
-              className="h-[1.4em] w-[1.4em] self-center cursor-pointer"
+              className="w-6 cursor-pointer self-center"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 18 18"
               fill="none">
@@ -97,11 +85,11 @@ export default function Header() {
 
         <button
           onClick={toggleMenu}
-          className="md:invisible md:hidden block visible cursor-pointer">
+          className="visible ml-auto block cursor-pointer md:invisible md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="menu-button"
-            className="h-6 w-6 cursor-pointer md:hidden block"
+            className="block h-6 w-6 cursor-pointer md:hidden"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor">
@@ -116,64 +104,58 @@ export default function Header() {
 
         <div
           className={
-            isOpened ? 'visible w-full md:flex md:items-center md:w-auto' : 'hidden invisible'
+            isOpened ? 'visible w-full md:flex md:w-auto md:items-center' : 'invisible hidden'
           }
           id="menu">
-          <ul
-            className="
-             pt-4
-             text-base text-gray-700
-             md:flex
-             md:justify-between 
-             md:pt-0">
+          <ul className="text-gray-700 pt-4 text-base md:flex md:justify-between md:pt-0">
             <li>
-              <Link className="md:p-4 py-2 block hover:text-purple-400" href="/about">
+              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/about">
                 Кто мы
               </Link>
             </li>
             <li>
-              <Link className="md:p-4 py-2 block hover:text-purple-400" href="/what-we-do">
+              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/what-we-do">
                 Чем занимаемся
               </Link>
             </li>
             <li>
-              <Link className="md:p-4 py-2 block hover:text-purple-400" href="/blog">
+              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/blog">
                 Блог
               </Link>
             </li>
             <li>
-              <Link className="md:p-4 py-2 block hover:text-purple-400" href="/partners">
+              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/partners">
                 Партнерам
               </Link>
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
+                className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
                 href="/contacts">
                 Контакты
               </Link>
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
+                className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
                 href="/team">
                 Команда
               </Link>
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block text-purple-400 text-purple-500 bg-clip-text text-transparent bg-gradient-main from-deep-sky-blue to-rebecca-purple"
+                className="text-purple-400 text-purple-500 block bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text py-2 text-transparent md:p-4"
                 href="/">
                 Заполнить бриф
               </Link>
             </li>
             <li>
-              <Link className="md:p-4 py-2 block hover:text-purple-400 text-purple-500" href="/">
+              <Link className="hover:text-purple-400 text-purple-500 block py-2 md:p-4" href="/">
                 +7 (978) 93 444 96
               </Link>
             </li>
             <li>
-              <Link className="md:p-4 py-2 block" href="/">
+              <Link className="block py-2 md:p-4" href="/">
                 <svg
                   className="h-[18px] w-[18px] cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
