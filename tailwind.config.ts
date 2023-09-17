@@ -49,6 +49,9 @@ const config: Config = {
       boxShadow: {
         card: '0px 3px 16px 0px rgba(0, 0, 0, 0.1)',
       },
+      gridTemplateColumns: {
+        '3': 'repeat(3, minmax(0, 380px))',
+      },
     },
   },
   plugins: [],
