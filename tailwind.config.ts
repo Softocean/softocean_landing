@@ -27,7 +27,7 @@ const config: Config = {
       'rebecca-purple': '#551DB0',
       'grey-as-stone': '#767575',
       greyDark: '#727377',
-
+      'dark-white': '#F8F8F8',
     },
     fontSize: {
       'sm-10': ['10px', 'normal'],
@@ -40,6 +40,7 @@ const config: Config = {
       'lg-18': ['18px', 'normal'],
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
+      'not-found': ['144px', 'normal'],
     },
     extend: {
       backgroundImage: {
