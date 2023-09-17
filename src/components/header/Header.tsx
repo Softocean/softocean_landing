@@ -1,13 +1,14 @@
 'use client';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpened, setIsOpened] = useState(false);
-
   function toggleMenu() {
     setIsOpened(!isOpened);
   }
@@ -27,22 +28,70 @@ export default function Header() {
 
         <ul className="hidden justify-between gap-x-5 p-0 md:flex">
           <li className="list-none">
-            <NavLink href="/about">Кто мы</NavLink>
+            <NavLink
+              href="/about"
+              styles={
+                pathname === '/about'
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Кто мы
+            </NavLink>
           </li>
           <li className="list-none">
-            <NavLink href="/what-we-do">Чем занимаемся</NavLink>
+            <NavLink
+              href="/what-we-do"
+              styles={
+                pathname === '/what-we-do'
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Чем занимаемся
+            </NavLink>
           </li>
           <li className="list-none">
-            <NavLink href="/blog">Блог</NavLink>
+            <NavLink
+              href="/blog"
+              styles={
+                pathname === '/blog'
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Блог
+            </NavLink>
           </li>
           <li className="list-none">
-            <NavLink href="/partners">Партнерам</NavLink>
+            <NavLink
+              href="/partners"
+              styles={
+                pathname.includes('/partners')
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Партнерам
+            </NavLink>
           </li>
           <li className="list-none">
-            <NavLink href="/contacts">Контакты</NavLink>
+            <NavLink
+              href="/contacts"
+              styles={
+                pathname === '/contacts'
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Контакты
+            </NavLink>
           </li>
           <li className="list-none">
-            <NavLink href="/team">Команда</NavLink>
+            <NavLink
+              href="/team"
+              styles={
+                pathname === '/team'
+                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                  : ''
+              }>
+              Команда
+            </NavLink>
           </li>
         </ul>
 
