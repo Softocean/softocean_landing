@@ -47,7 +47,7 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
           <p className="max-w-xs text-base-21 font-bold lg:w-[627px] lg:text-xl">{title}</p>
           <p className="mt-4 max-w-sm font-semibold md:max-w-md">{subText}</p>
         </div>
-        <Button onClick={handleClick}>Связаться с нами</Button>
+        <Button onClick={handleClick}>Contact us</Button>
       </div>
       <div
         ref={imageLayoutRef}

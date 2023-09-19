@@ -35,8 +35,8 @@ function SmallForm() {
       action="submit"
       className="mx-auto flex min-h-[387px] flex-col items-center rounded-[10px] px-4 pb-6 pt-10 shadow-[0_4px_45px_0_rgba(0,0,0,0.07)] sm:w-[59%]">
       <p className="w-[200px] text-center text-sm text-dark-as-night md:text-base-24 lg:w-[380px] lg:text-lg">
-        Оставте заявку, и мы с вами свяжемся и вы от нас не отделаетесь
-      </p>
+        Leave a request and we will contact you
+     </p>
       <div className="mt-10 flex w-full flex-col gap-8 lg:w-fit lg:flex-row">
         <div>
           <Controller
@@ -89,15 +89,15 @@ function SmallForm() {
         </div>
       </div>
       <p className="mt-8 text-sm text-lightdark">
-        Нажимая на кнопку &quot;Отправить&quot; вы соглашаетесь с нашей{' '}
+            By clicking on the &quot;Submit&quot; button you agree to our{' '}
         <Link
           href="#"
           className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent">
-          Политикой конфиденциальности
+            privacy policy
         </Link>
       </p>
       <Button className="mt-10" type="submit">
-        Отправить
+        Confirm
       </Button>
     </form>
   );

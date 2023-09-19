@@ -6,16 +6,10 @@ import Avatar from '@/components/avatar';
 function Feedback({ children }: { children: React.ReactNode }) {
   return (
     <section className="mt-10 md:mt-[100px]">
-      <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Отзывы</p>
+      <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">SOFTOCEAN.COM</p>
       <>{children}</>
       <div className="px-4 mx-auto mt-4 lg:mt-[32px] flex w-fit flex-row items-center  gap-4 lg:gap-[140px]">
-        <Avatar
-          type="temp"
-          name="КРАСИВУЮ КАРТИНКУ СЮДА"
-          avatarSrc={tempCHEL}
-          blur
-          blurDataURL={lowqualityTempCHEL.src}
-        />
+
         <div className="lg:py-10">
           <p className="w-fit lg:w-[784px] text-sm lg:text-base leading-[125%]">
             We provide a full cycle of startup support - from software product development to

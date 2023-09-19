@@ -35,7 +35,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Кто мы
+              About
             </NavLink>
           </li>
           <li className="list-none">
@@ -46,7 +46,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Чем занимаемся
+              What we do
             </NavLink>
           </li>
           <li className="list-none">
@@ -57,7 +57,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Блог
+              Blog
             </NavLink>
           </li>
           <li className="list-none">
@@ -68,7 +68,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Партнерам
+              Partners
             </NavLink>
           </li>
           <li className="list-none">
@@ -79,7 +79,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Контакты
+              Contact
             </NavLink>
           </li>
           <li className="list-none">
@@ -90,7 +90,7 @@ export default function Header() {
                   ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
                   : ''
               }>
-              Команда
+              Team
             </NavLink>
           </li>
         </ul>
@@ -100,7 +100,7 @@ export default function Header() {
             <Link
               href="/briefing"
               className="text-purple-500 flex h-full items-center bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent no-underline hover:opacity-50">
-              Заполнить бриф
+              Fill in the brief
             </Link>
           </li>
           <li className="flex list-none text-sm">
@@ -164,43 +164,43 @@ export default function Header() {
             </li>
             <li>
               <Link className="hover:text-purple-400 block py-2 md:p-4" href="/what-we-do">
-                Чем занимаемся
+                What we do
               </Link>
             </li>
             <li>
               <Link className="hover:text-purple-400 block py-2 md:p-4" href="/blog">
-                Блог
+                Blog
               </Link>
             </li>
             <li>
               <Link className="hover:text-purple-400 block py-2 md:p-4" href="/partners">
-                Партнерам
+                Partners
               </Link>
             </li>
             <li>
               <Link
                 className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
                 href="/contacts">
-                Контакты
+                Contact
               </Link>
             </li>
             <li>
               <Link
                 className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
                 href="/team">
-                Команда
+                Team
               </Link>
             </li>
             <li>
               <Link
                 className="text-purple-400 text-purple-500 block bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text py-2 text-transparent md:p-4"
                 href="/">
-                Заполнить бриф
+                Fill in the brief
               </Link>
             </li>
             <li>
               <Link className="hover:text-purple-400 text-purple-500 block py-2 md:p-4" href="/">
-                +7 (978) 93 444 96
+                +382(068)442221
               </Link>
             </li>
             <li>
