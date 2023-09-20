@@ -21,7 +21,7 @@ const requisitesInfo: FC = () => {
       <Link
         href="/#"
         className="bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-base text-transparent cursor-pointer">
-        Показать всё
+        More
       </Link>
     </div>
   );

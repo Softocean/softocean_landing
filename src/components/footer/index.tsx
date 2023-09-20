@@ -24,14 +24,14 @@ function Footer() {
           <p
             className="text-[24px] font-medium 
             leading-[32px] hover:opacity-50">
-            +7 (978) 93 444 96
+            +38268442221
           </p>
           <Link
             href="/briefing"
             className="flex justify-end bg-gradient-to-r from-[#0B96B4] 
             to-[#551DB0] bg-clip-text text-[16px] 
             font-medium leading-[21px] text-transparent hover:opacity-50">
-            Заполнить бриф
+            Fill in the brief
           </Link>
         </div>
       </div>
@@ -43,7 +43,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Кто мы
+          About
         </NavLink>
         <NavLink
           href={'/what-we-do'}
@@ -52,7 +52,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Чем занимаемся
+          What Do It
         </NavLink>
         <NavLink
           href={'/blog'}
@@ -61,7 +61,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Блог
+          Blog
         </NavLink>
         <NavLink
           href={'/partners'}
@@ -70,7 +70,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Партнерам
+          Partners
         </NavLink>
         <NavLink
           href={'/contacts'}
@@ -79,7 +79,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Контакты
+          Contact
         </NavLink>
         <NavLink
           href={'/team'}
@@ -88,7 +88,7 @@ function Footer() {
               ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
               : ''
           }>
-          Команда
+          Team
         </NavLink>
       </div>
       <div className="mt-[35px] flex w-full flex-row items-center justify-center gap-[45px]">

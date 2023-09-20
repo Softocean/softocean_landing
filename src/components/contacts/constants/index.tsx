@@ -2,7 +2,6 @@ import Image from 'next/image';
 import FB from '../../../../assets/icons/FB.jpg';
 import Tg from '../../../../assets/icons/Telegram.jpg';
 import In from '../../../../assets/icons/LinkedIn.jpg';
-import VK from '../../../../assets/icons/VK.jpg';
 
 interface infoData {
   id: number;
@@ -18,16 +17,16 @@ export const infoData: infoData[] = [
   {
     id: 0,
     title: 'Phone',
-    description: '+7 (978) 93 444 96',
+    description: '+38268442221',
   },
   {
     id: 1,
     title: 'E-mail',
-    description: 'info@cactus.vision',
+    description: 'ctofo@softocean.com',
   },
   {
     id: 2,
-    title: 'Социальные сети',
+    title: 'Social',
     description: (
       <>
         <a href="https://example.com">
@@ -52,7 +51,7 @@ export const infoData: infoData[] = [
             blurDataURL={Tg.src}
           />
         </a>
-        <a href="https://example.com">
+        <a href="https://de.linkedin.com/company/softoceangmbh">
           <Image
             className="mr-[25px] cursor-pointer"
             alt="иконка linkedin"
@@ -63,17 +62,6 @@ export const infoData: infoData[] = [
             blurDataURL={In.src}
           />
         </a>
-        <a href="https://example.com">
-          <Image
-            className="mr-[25px] cursor-pointer"
-            alt="иконка вконтакте"
-            src={VK}
-            width={36}
-            height={36}
-            placeholder="blur"
-            blurDataURL={VK.src}
-          />
-        </a>
       </>
     ),
   },
@@ -81,9 +69,11 @@ export const infoData: infoData[] = [
 
 export const requisitesData: requisitesData[] = [
   {
-    'Название: ': 'ООО «Кактус Вижн»',
-    'КПП: ': 920101001,
-    'ОГРН: ': 1189204003878,
-    'ИНН: ': 9201525163,
+    'Name: ': 'Softocean GmbH',
+    'Addr: ': '47 F Fehrbelliner Strasse, 10119 Berlin, Germany',
+    'IBAN: ': 'DE66 1005 0000 0190 7725 49',
+    'BIC: ': 'BELADEBEXXX',
+    'VAT ID: ': 'DE320942876',
+    'Steuernummer: ': '30/537/50411',
   },
 ];
