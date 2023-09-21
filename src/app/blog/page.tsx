@@ -1,6 +1,6 @@
 import CardArticle from '@/components/cardArticle/CardArticle';
 import PromoArticle from '@/components/promoArticle/promoArticle';
-import { mokData } from '@/utils/mokFile';
+import { mokData } from '@/data/blog';
 
 const Blog = () => {
   return (
