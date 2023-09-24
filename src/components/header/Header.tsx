@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { navLinks } from '@/data/nav-links';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
 
@@ -25,76 +26,23 @@ export default function Header() {
             className="w-20 duration-300 ease-in hover:opacity-50 lg:w-32"
           />
         </Link>
-
         <ul className="hidden justify-between gap-x-5 p-0 md:flex">
-          <li className="list-none">
-            <NavLink
-              href="/about"
-              styles={
-                pathname === '/about'
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Кто мы
-            </NavLink>
-          </li>
-          <li className="list-none">
-            <NavLink
-              href="/what-we-do"
-              styles={
-                pathname === '/what-we-do'
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Чем занимаемся
-            </NavLink>
-          </li>
-          <li className="list-none">
-            <NavLink
-              href="/blog"
-              styles={
-                pathname === '/blog'
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Блог
-            </NavLink>
-          </li>
-          <li className="list-none">
-            <NavLink
-              href="/partners"
-              styles={
-                pathname.includes('/partners')
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Партнерам
-            </NavLink>
-          </li>
-          <li className="list-none">
-            <NavLink
-              href="/contacts"
-              styles={
-                pathname === '/contacts'
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Контакты
-            </NavLink>
-          </li>
-          <li className="list-none">
-            <NavLink
-              href="/team"
-              styles={
-                pathname === '/team'
-                  ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                  : ''
-              }>
-              Команда
-            </NavLink>
-          </li>
+          {navLinks.map((item) => {
+            return (
+              <li key={item.id} className="list-none">
+              <NavLink
+                href={item.link}
+                styles={
+                  pathname.includes(item.link)
+                    ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                    : ''
+                }>
+               {item.title}
+              </NavLink>
+            </li>
+            )
+          })}
         </ul>
-
         <ul className="ml-auto hidden gap-3 p-0 lg:flex">
           <li className="list-none text-sm">
             <Link
@@ -131,7 +79,6 @@ export default function Header() {
             </svg>
           </li>
         </ul>
-
         <button
           onClick={toggleMenu}
           className="visible ml-auto block cursor-pointer md:invisible md:hidden">
@@ -150,47 +97,21 @@ export default function Header() {
             />
           </svg>
         </button>
-
         <div
           className={
             isOpened ? 'visible w-full md:flex md:w-auto md:items-center' : 'invisible hidden'
           }
           id="menu">
           <ul className="text-gray-700 pt-4 text-base md:flex md:justify-between md:pt-0">
-            <li>
-              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/about">
-                Кто мы
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/what-we-do">
-                Чем занимаемся
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/blog">
-                Блог
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-purple-400 block py-2 md:p-4" href="/partners">
-                Партнерам
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
-                href="/contacts">
-                Контакты
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-purple-400 text-purple-500 block py-2 md:p-4"
-                href="/team">
-                Команда
-              </Link>
-            </li>
+            {navLinks.map((item) => {
+              return (
+                <li key={item.id}>
+                <Link className="hover:text-purple-400 block py-2 md:p-4" href={item.link}>
+                  {item.title}
+                </Link>
+              </li>
+              )
+            })}
             <li>
               <Link
                 className="text-purple-400 text-purple-500 block bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text py-2 text-transparent md:p-4"
