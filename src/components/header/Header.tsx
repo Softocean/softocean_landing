@@ -29,18 +29,22 @@ export default function Header() {
         <ul className="hidden justify-between gap-x-5 p-0 md:flex">
           {navLinks.map((item) => {
             return (
-              <li key={item.id} className="list-none">
-              <NavLink
-                href={item.link}
-                styles={
-                  pathname.includes(item.link)
-                    ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                    : ''
-                }>
-               {item.title}
-              </NavLink>
-            </li>
-            )
+              <>
+                {item.isActive && (
+                  <li key={item.id} className="list-none">
+                    <NavLink
+                      href={item.link}
+                      styles={
+                        pathname.includes(item.link)
+                          ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                          : ''
+                      }>
+                      {item.title}
+                    </NavLink>
+                  </li>
+                )}
+              </>
+            );
           })}
         </ul>
         <ul className="ml-auto hidden gap-3 p-0 lg:flex">
@@ -106,11 +110,11 @@ export default function Header() {
             {navLinks.map((item) => {
               return (
                 <li key={item.id}>
-                <Link className="hover:text-purple-400 block py-2 md:p-4" href={item.link}>
-                  {item.title}
-                </Link>
-              </li>
-              )
+                  <Link className="hover:text-purple-400 block py-2 md:p-4" href={item.link}>
+                    {item.title}
+                  </Link>
+                </li>
+              );
             })}
             <li>
               <Link

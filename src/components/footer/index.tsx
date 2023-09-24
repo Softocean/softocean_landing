@@ -37,19 +37,23 @@ function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 flex w-full flex-col items-center justify-center gap-x-6 md:flex-row">
-      {navLinks.map((item) => {
+        {navLinks.map((item) => {
           return (
-            <NavLink
-            key={item.id}
-            href={item.link}
-            styles={
-              pathname.includes(item.link)
-                ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
-                : ''
-            }>
-            {item.title}
-          </NavLink>
-          )
+            <>
+              {item.isActive && (
+                <NavLink
+                  key={item.id}
+                  href={item.link}
+                  styles={
+                    pathname.includes(item.link)
+                      ? 'bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text text-transparent'
+                      : ''
+                  }>
+                  {item.title}
+                </NavLink>
+              )}
+            </>
+          );
         })}
       </div>
       <div className="mt-[35px] flex w-full flex-row items-center justify-center gap-[45px]">
