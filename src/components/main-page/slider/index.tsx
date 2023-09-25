@@ -3,7 +3,7 @@
 
 import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
-import SwiperArrowSvg from '@/../assets/icons/swiper-arrow.svg';
+import { Navigation } from 'swiper/modules';
 import { Slide, SlideProps } from './slide';
 
 interface SwiperProps {
@@ -12,7 +12,7 @@ interface SwiperProps {
 
 register();
 
-function CustomSwiper({ slides }: SwiperProps) {
+export const Slider = ({ slides }: SwiperProps) => {
   const swiperElRef = useRef(null);
 
   useEffect(() => {
@@ -20,29 +20,29 @@ function CustomSwiper({ slides }: SwiperProps) {
     const params = {
       injectStyles: [
         `
-          .swiper-pagination {
-            margin-top: 60px;
-            position: relative;
-          }
-          .swiper-pagination-bullet {
-            margin: 0 8px;
-            height: 8px;
-            width: 8px;
-            opacity: 1;
-            background-image: linear-gradient(190deg, #0B96B4 0%, #551DB0 100%);
-          }
-          .swiper-pagination-bullet-active {
-            transform: scale(1.5);
-          }
+        .swiper-button-prev,
+        .swiper-button-next {
+          scale: 0.5;
+        }
+        .swiper-button-prev {
+          left: -5px;
+        }
+        .swiper-button-next {
+          right: -5px;
+        }
         `,
       ],
       breakpoints: {
         0: {
           slidesPerView: 1,
         },
-        1024: {
+        768: {
           slidesPerView: 2,
-          spaceBetween: 125,
+          spaceBetween: 24,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 24,
         },
       },
       watchOverflow: true,
@@ -50,23 +50,7 @@ function CustomSwiper({ slides }: SwiperProps) {
       pagination: {
         clickable: true,
       },
-      on: {
-        slideChange: () => {
-          const swiper = swiperEl.swiper;
-          const prevButton = document.querySelector('.left');
-          if (swiper?.isBeginning) {
-            prevButton.style.visibility = 'hidden';
-          } else {
-            prevButton.style.visibility = 'initial';
-          }
-          const nextButton = document.querySelector('.right');
-          if (swiper?.isEnd) {
-            nextButton.style.visibility = 'hidden';
-          } else {
-            nextButton.style.visibility = 'initial';
-          }
-        },
-      },
+      module: [Navigation],
     };
 
     Object.assign(swiperEl, params);
@@ -74,27 +58,16 @@ function CustomSwiper({ slides }: SwiperProps) {
   }, []);
 
   return (
-    <div className="relative flex flex-row justify-center gap-6">
-      <button
-        className="left invisible rotate-180"
-        onClick={() => swiperElRef.current.swiper.slidePrev()}>
-        <SwiperArrowSvg />
-      </button>
-      <div className="w-[75%]">
-        <swiper-container ref={swiperElRef} pagination="true" init="false">
-          {slides.map((slide) => (
-            <swiper-slide key={slide.id}>
-              <Slide {...slide} />
-            </swiper-slide>
-          ))}
-        </swiper-container>
-      </div>
-
-      <button className="right" onClick={() => swiperElRef.current.swiper.slideNext()}>
-        <SwiperArrowSvg />
-      </button>
+    <div className="w-full">
+      <swiper-container ref={swiperElRef} navigation="true" pagination="false" init="false">
+        {slides.map((slide) => (
+          <swiper-slide key={slide.id}>
+            <Slide {...slide} />
+          </swiper-slide>
+        ))}
+      </swiper-container>
     </div>
   );
-}
+};
 
-export default CustomSwiper;
+export default Slider;

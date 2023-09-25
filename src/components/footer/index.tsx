@@ -11,7 +11,7 @@ function Footer() {
   const pathname = usePathname();
   return (
     <footer className="mt-auto flex flex-col pb-4 pt-16">
-      <div className="mx-auto flex w-full justify-center gap-x-20 px-4 md:justify-between">
+      <div className="mx-auto flex w-full justify-center gap-x-20 md:justify-between">
         <Link href="/" className="text-[1vw]">
           <Image
             src={logo}
@@ -39,10 +39,9 @@ function Footer() {
       <div className="mx-auto mt-10 flex w-full flex-col items-center justify-center gap-x-6 md:flex-row">
         {navLinks.map((item) => {
           return (
-            <>
+            <div key={item.id}>
               {item.isActive && (
                 <NavLink
-                  key={item.id}
                   href={item.link}
                   styles={
                     pathname.includes(item.link)
@@ -52,7 +51,7 @@ function Footer() {
                   {item.title}
                 </NavLink>
               )}
-            </>
+            </div>
           );
         })}
       </div>

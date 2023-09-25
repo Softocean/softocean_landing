@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="text-gray-700 flex w-full flex-wrap items-center justify-start gap-x-12 px-4 py-5 text-lg md:flex-nowrap">
+      <nav className="text-gray-700 flex w-full flex-wrap items-center justify-start gap-x-12 py-5 text-lg md:flex-nowrap">
         <Link href="/">
           <Image
             src={logo}
@@ -29,9 +29,9 @@ export default function Header() {
         <ul className="hidden justify-between gap-x-5 p-0 md:flex">
           {navLinks.map((item) => {
             return (
-              <>
+              <div key={item.id}>
                 {item.isActive && (
-                  <li key={item.id} className="list-none">
+                  <li className="list-none">
                     <NavLink
                       href={item.link}
                       styles={
@@ -43,7 +43,7 @@ export default function Header() {
                     </NavLink>
                   </li>
                 )}
-              </>
+              </div>
             );
           })}
         </ul>

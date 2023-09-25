@@ -12,7 +12,8 @@ export interface PortfolioSlideProps {
   title: string;
   subtitle: string;
   link: string;
-  image?: StaticImport | string;
+  image: StaticImport | string;
+  alt?: string;
   blur?: boolean;
   blurDataURL?: string;
 }
