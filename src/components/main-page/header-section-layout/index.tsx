@@ -1,66 +1,44 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Image from 'next/image';
-import layoutImageLow from '@/../assets/low-quality/main-page/main-layout-low.jpg';
-import layoutImage from '@/../assets/main-page/main-layout.jpg';
-import { Button } from '@/components/ui';
+import mainBg from '../../../../assets/mainpage-bg.png';
 
 interface HeaderSectionLayoutProps {
   title: string;
   subText: string;
 }
 
-const thresholds: number[] = [];
-for (let i = 0; (i += 0.05), i <= 1; ) {
-  thresholds.push(i);
-}
-
 function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
-  const imageLayoutRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  const scrollCallback = () => {
-    if (imageLayoutRef.current) {
-      imageLayoutRef.current.style.transform = `translate(0, -${scrollY}px)`;
-    }
-  };
-
   useEffect(() => {
-    let observer: IntersectionObserver;
-    if (sectionRef.current) {
-      observer = new IntersectionObserver(scrollCallback, {
-        threshold: thresholds,
-      });
-      observer.observe(sectionRef.current);
+    window.onscroll = () => {
+      scrollRotate();
+    };
+  });
+
+  function scrollRotate() {
+    const image = document.getElementById('main-bg');
+    if (image) {
+      image.style.transform = 'rotate(' + window.scrollY / 12 + 'deg)';
     }
-  }, [sectionRef.current]);
-
-  function handleClick() {
-    console.log('test');
   }
-
   return (
-    <section ref={sectionRef} className="relative overflow-hidden sm:h-auto">
-      <div className="relative z-[2] m-6 flex flex-col items-center gap-4 px-4 md:mb-32 md:ml-[190px] md:mt-[120px] md:items-baseline md:gap-[45px]">
-        <div className="flex flex-col">
-          <p className="max-w-xs text-base-21 font-bold lg:w-[627px] lg:text-xl">{title}</p>
-          <p className="mt-4 max-w-sm font-semibold md:max-w-md">{subText}</p>
-        </div>
-        <Button onClick={handleClick}>Связаться с нами</Button>
-      </div>
-      <div
-        ref={imageLayoutRef}
-        className="absolute top-[-200px] z-[1] transition-all duration-[250ms] ease-linear md:top-0">
+    <section className="mb-[200px] mt-[125px] lg:mb-[240px] lg:mt-[200px]">
+      <div className="fixed -top-[20px] left-0 -z-10 max-w-full overflow-hidden 2xl:container">
         <Image
-          src={layoutImage}
-          placeholder="blur"
-          blurDataURL={layoutImageLow.src}
-          alt="bubbles"
-          className="h-screen w-auto object-cover"
+          id="main-bg"
+          src={mainBg}
+          className="relative -left-40 -top-24 w-full max-w-7xl opacity-60 bg-blend-multiply transition-transform ease-linear md:-left-60 lg:-left-80 lg:-top-48"
+          onScroll={scrollRotate}
+          alt="Big sphere"
         />
       </div>
-      <div className="clear-[float] absolute top-[-20%] z-[1] h-[120%] w-[100%] bg-white/50"></div>
+      <div className="flex flex-col">
+        <h1 className="text-text-primary text-h1-mobile md:text-h1-tablet xl:text-h1 font-[700]">
+          {title.toUpperCase()}
+        </h1>
+        <p className="text-body-1-mobile md:text-body-1 font-[500]">{subText}</p>
+      </div>
     </section>
   );
 }

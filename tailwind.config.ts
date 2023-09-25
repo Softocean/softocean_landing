@@ -8,11 +8,18 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {
-      xs: '480px',
-      ...defaultTheme.screens,
-    },
+    // screens: {
+    //   xs: '480px',
+    //   ...defaultTheme.screens,
+    // },
     colors: {
+      bg: {
+        main: '#D1EAF9',
+      },
+      text: {
+        primary: '#222',
+        secondary: '#B6B6B6',
+      },
       'error-color': '#f43f5e',
       'border-gray': '#E8E8E8',
       black: '#000000',
@@ -31,6 +38,13 @@ const config: Config = {
       'dark-white': '#F8F8F8',
     },
     fontSize: {
+      // Desktop
+      h1: ['90px', 'normal'],
+      h2: ['48px', 'normal'],
+      h4: ['36px', 'normal'],
+      'body-1': ['21px', 'normal'],
+      'body-2': ['16px', 'normal'],
+
       'sm-10': ['10px', 'normal'],
       'sm-12': ['12px', 'normal'],
       sm: ['14px', 'normal'],
@@ -42,6 +56,16 @@ const config: Config = {
       lg: ['36px', 'normal'],
       xl: ['48px', 'normal'],
       'not-found': ['144px', 'normal'],
+
+      // Tablet
+      'h1-tablet': ['68px', 'normal'],
+
+      // Mobile
+      'h1-mobile': ['48px', 'normal'],
+      'h2-mobile': ['36px', 'normal'],
+      'h4-mobile': ['28px', 'normal'],
+      'body-1-mobile': ['16px', 'normal'],
+      'body-2-mobile': ['14px', 'normal'],
     },
     extend: {
       backgroundImage: {
@@ -56,6 +80,9 @@ const config: Config = {
       },
       gridTemplateColumns: {
         '3': 'repeat(3, minmax(0, 380px))',
+      },
+      screens: {
+        '3xl': '1900px',
       },
     },
   },

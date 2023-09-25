@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-import type { Metadata } from 'next';
-import { Manrope, Open_Sans } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import Footer from '@/components/footer';
 import Header from '@/components/header/Header';
 
@@ -10,23 +9,19 @@ const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-manrope',
 });
-const openSans = Open_Sans({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-openSans',
-});
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'SoftOcean',
-  description: '',
+  description: 'Development of software products',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${openSans.className}  bg-white`}>
-        <div className="mx-auto flex min-h-screen flex-col 2xl:container">
+      <body className={`${manrope.className} bg-bg-main text-text-primary`}>
+        <div className="3xl:container mx-auto flex flex-col px-4 lg:px-16">
           <Header />
-          <main className="mt-10">{children}</main>
+          <main>{children}</main>
           <Footer />
         </div>
       </body>

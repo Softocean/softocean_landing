@@ -5,10 +5,10 @@ import Avatar from '@/components/avatar';
 
 function Feedback({ children }: { children: React.ReactNode }) {
   return (
-    <section className="mt-10 md:mt-[100px]">
-      <p className="text-center text-base-24 lg:text-xl font-bold text-lightdark">Отзывы</p>
+    <section className="mt-32 md:mt-48">
+      <p className="text-center text-base-24 font-bold text-lightdark lg:text-xl">Отзывы</p>
       <>{children}</>
-      <div className="px-4 mx-auto mt-4 lg:mt-[32px] flex w-fit flex-row items-center  gap-4 lg:gap-[140px]">
+      <div className="mx-auto mt-4 flex w-fit flex-row items-center gap-4 px-4  lg:mt-[32px] lg:gap-[140px]">
         <Avatar
           type="temp"
           name="КРАСИВУЮ КАРТИНКУ СЮДА"
@@ -17,7 +17,7 @@ function Feedback({ children }: { children: React.ReactNode }) {
           blurDataURL={lowqualityTempCHEL.src}
         />
         <div className="lg:py-10">
-          <p className="w-fit lg:w-[784px] text-sm lg:text-base leading-[125%]">
+          <p className="w-fit text-sm leading-[125%] lg:w-[784px] lg:text-base">
             We provide a full cycle of startup support - from software product development to
             successful completion of the investment phase. Our professional teams of engineers and
             developers ensure quality work on your projects, guaranteeing technical expertise and
