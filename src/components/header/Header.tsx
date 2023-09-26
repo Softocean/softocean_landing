@@ -47,7 +47,7 @@ export default function Header() {
             );
           })}
         </ul>
-        <ul className="ml-auto hidden gap-3 p-0 lg:flex">
+        {/* <ul className="ml-auto hidden gap-3 p-0 lg:flex">
           <li className="list-none text-sm">
             <Link
               href="/briefing"
@@ -82,7 +82,7 @@ export default function Header() {
               </defs>
             </svg>
           </li>
-        </ul>
+        </ul> */}
         <button
           onClick={toggleMenu}
           className="visible ml-auto block cursor-pointer md:invisible md:hidden">
