@@ -14,7 +14,7 @@ export default function Home() {
       />
       <Projects />
 
-      <Feedback>{}</Feedback>
+      {/* <Feedback>{}</Feedback> */}
       <section className="mb-[100px] mt-10 px-4 sm:px-0 md:mt-[150px]">
         <SmallForm />
       </section>

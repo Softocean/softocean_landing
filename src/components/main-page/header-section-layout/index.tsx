@@ -24,7 +24,7 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
   }
   return (
     <section className="relative mb-[200px] mt-[125px] lg:mb-[240px] lg:mt-[200px]">
-      <div className="fixed -top-[20px] -z-10 mx-auto -translate-x-4 overflow-hidden 2xl:container">
+      <div className="fixed -top-[20px] -z-10 mx-auto -translate-x-4 overflow-hidden 3xl:container lg:-translate-x-16">
         <Image
           id="main-bg"
           src={mainBg}

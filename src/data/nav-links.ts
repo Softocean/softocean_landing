@@ -3,7 +3,7 @@ export const navLinks = [
     id: 1,
     title: 'Кто мы',
     link: '/about',
-    isActive: true,
+    isActive: false,
   },
   {
     id: 2,
@@ -15,13 +15,13 @@ export const navLinks = [
     id: 3,
     title: 'Блог',
     link: '/blog',
-    isActive: true,
+    isActive: false,
   },
   {
     id: 4,
     title: 'Партнерам',
     link: '/partners',
-    isActive: true,
+    isActive: false,
   },
   {
     id: 5,
@@ -33,6 +33,6 @@ export const navLinks = [
     id: 6,
     title: 'Команда',
     link: '/team',
-    isActive: true,
+    isActive: false,
   },
 ];

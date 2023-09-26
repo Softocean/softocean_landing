@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className="mt-auto flex flex-col pb-4 pt-16">
       <div className="mx-auto flex w-full justify-center gap-x-20 md:justify-between">
-        <Link href="/" className="text-[1vw]">
+        {/* <Link href="/" className="text-[1vw]">
           <Image
             src={logo}
             alt="логотип"
@@ -20,8 +20,8 @@ function Footer() {
             height={68}
             className="duration-300 ease-in hover:opacity-50"
           />
-        </Link>
-        <div className="flex-column justify-end">
+        </Link> */}
+        {/* <div className="flex-column justify-end">
           <p
             className="text-[24px] font-medium 
             leading-[32px] hover:opacity-50">
@@ -34,9 +34,9 @@ function Footer() {
             font-medium leading-[21px] text-transparent hover:opacity-50">
             Заполнить бриф
           </Link>
-        </div>
+        </div> */}
       </div>
-      <div className="mx-auto mt-10 flex w-full flex-col items-center justify-center gap-x-6 md:flex-row">
+      {/* <div className="mx-auto mt-10 flex w-full flex-col items-center justify-center gap-x-6 md:flex-row">
         {navLinks.map((item) => {
           return (
             <div key={item.id}>
@@ -54,17 +54,22 @@ function Footer() {
             </div>
           );
         })}
+      </div> */}
+      {/* <div className="mt-[35px] flex w-full flex-row items-center justify-center gap-[45px]"> */}
+      {/* <div className="w-full border-b-2 border-b-[#E5E5E580] duration-300 ease-in hover:border-black" /> */}
+      <div className="flex flex-col items-center text-body-2-mobile text-text-secondary md:text-body-2">
+        <p className="duration-300 ease-in hover:text-black">
+          Softocean {new Date().getFullYear()} ©
+        </p>
+        <Link href="/privacy-policy" className="hover:text-black">
+          Privacy Policy
+        </Link>
       </div>
-      <div className="mt-[35px] flex w-full flex-row items-center justify-center gap-[45px]">
-        <div className="w-full border-b-2 border-b-[#E5E5E580] duration-300 ease-in hover:border-black" />
-        <div className="flex w-[182px] flex-col justify-center text-center text-[12px] font-normal text-[#B6B6B6] duration-300 ease-in hover:text-black">
-          Softocean 2022 Privacy Policy
-        </div>
-        <div
+      {/* <div
           className="w-full border-b-2 border-b-[#E5E5E580] 
           duration-300 ease-in hover:border-black "
-        />
-      </div>
+        /> */}
+      {/* </div> */}
     </footer>
   );
 }
