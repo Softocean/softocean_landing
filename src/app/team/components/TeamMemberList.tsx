@@ -1,10 +1,11 @@
 import TeamMember from '@/app/team/components/TeamMember';
+import { teamInfo } from '@/data/team';
 
 const TeamMemberList = () => {
   return (
-    <ul className="msx-w-xl md:max-w-3xl xl:max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between xl:justify-normal gap-8 lg:gap-12 xl:gap-x-20 2xl:gap-x-36 xl:gap-y-14 2xl:gap-y-16">
-      {Array.from({ length: 10 }).map((member, index) => (
-        <TeamMember key={index} />
+    <ul className="msx-w-xl mx-auto flex flex-wrap justify-center gap-8 md:max-w-3xl md:justify-between  xl:max-w-4xl ">
+      {teamInfo.map((member) => (
+        <TeamMember key={member.id} member={member} />
       ))}
     </ul>
   );

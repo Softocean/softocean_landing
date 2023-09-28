@@ -2,7 +2,7 @@ import TeamMemberList from '@/app/team/components/TeamMemberList';
 
 const Team = () => {
   return (
-    <section className="flex flex-col gap-8 px-5 pb-12 lg:gap-10 lg:px-36 xl:px-[315px] xl:pb-24 xl:pt-10">
+    <section className="flex flex-col gap-8 px-5 pb-12 lg:gap-10 lg:px-24 xl:px-[260px] xl:pb-24 xl:pt-10">
       <div className="mx-auto flex max-w-lg flex-col gap-7 lg:max-w-xl lg:gap-9">
         <h2 className="max-w-xs text-base-24 font-bold text-lightdark md:max-w-md md:text-lg lg:max-w-xl lg:text-xl">
           Наши люди - это то, что нас отличает
