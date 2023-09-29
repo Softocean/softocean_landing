@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { contactsMock } from '@/data/contacts';
 import { navLinks } from '@/data/nav-links';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
@@ -10,6 +11,7 @@ import { NavLink } from '../nav-link';
 export default function Header() {
   const pathname = usePathname();
   const [isOpened, setIsOpened] = useState(false);
+
   function toggleMenu() {
     setIsOpened(!isOpened);
   }
@@ -125,7 +127,7 @@ export default function Header() {
             </li>
             <li>
               <Link className="hover:text-purple-400 text-purple-500 block py-2 md:p-4" href="/">
-                +7 (978) 93 444 96
+                {typeof contactsMock[0].value === 'string' && contactsMock[0].value}
               </Link>
             </li>
             <li>
