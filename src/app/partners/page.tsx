@@ -1,31 +1,5 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import PartnersContent from '@/components/partnersContent';
+import PartnersContent from '../../components/partners/partnersContent';
 
 export default function Partners() {
-  const InfoData = {
-    title: 'Основы визуальных коммуникации\nбрендов',
-    description:
-      'Речь пойдет про основы позиционирования бренда посредством визуальных коммуникаций. Также затронуты темы сущности айдентики и его составляющих.',
-    textButton: 'Подробнее',
-  };
-
-  const router = useRouter();
-  const pathname = usePathname();
-
-  useEffect(() => {
-    if (pathname === '/partners') {
-      router.push('/partners/events');
-    }
-  }, []);
-
-  return (
-    <PartnersContent
-      title={InfoData.title}
-      description={InfoData.description}
-      textButton={InfoData.textButton}
-    />
-  );
+  return <PartnersContent />;
 }
