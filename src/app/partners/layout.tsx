@@ -1,6 +1,11 @@
 import { ReactNode } from 'react';
-import NavBar from '@/components/navBar';
+import Navigation from '../../components/partners/partnersNavigation';
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
-  return <NavBar>{children}</NavBar>;
+  return (
+    <section className="my-4 flex flex-col items-center gap-4">
+      <Navigation />
+      {children}
+    </section>
+  );
 }
