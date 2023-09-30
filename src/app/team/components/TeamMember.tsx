@@ -1,23 +1,16 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { socialLinks } from '@/app/team/utils/constants';
-import partner from '../../../../assets/partner.png';
+import { TeamInfoType } from '@/data/team';
 
-const TeamMember = () => {
+type TeamMemberProps = {
+  member: TeamInfoType;
+};
+
+const TeamMember = ({ member }: TeamMemberProps) => {
   return (
     <li className="flex flex-col gap-2">
-      <Image src={partner} alt="partner" className="rounded-full " />
-      <ul className="flex gap-4">
-        {socialLinks.map((link) => (
-          <li key={link.id}>
-            <Link href={link.href}>
-              <Image src={link.icon} alt={link.label} />
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <h3 className="text-sm-16 lg:text-base text-lightdark font-medium text-center">
-        Кирилл Кирилов
+      <Image src={member.img} alt={member.name} className="rounded-full " />
+      <h3 className="text-center text-sm-16 font-medium text-lightdark lg:text-base">
+        {member.name}
       </h3>
     </li>
   );
