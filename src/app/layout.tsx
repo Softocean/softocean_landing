@@ -19,9 +19,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${manrope.className} bg-bg-main text-text-primary`}>
-        <div className="3xl:container mx-auto flex flex-col px-4 lg:px-16">
+        <div className="mx-auto flex flex-col px-4 3xl:container lg:px-16">
           <Header />
-          <main>{children}</main>
+          <main className="relative">{children}</main>
           <Footer />
         </div>
       </body>
