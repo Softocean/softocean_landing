@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -83,6 +82,7 @@ const config: Config = {
       },
       screens: {
         '3xl': '1900px',
+        xs: '375px',
       },
     },
   },
