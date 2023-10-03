@@ -25,8 +25,27 @@ function SmallForm() {
     resolver: zodResolver(MainPageFormValidationScheme),
   });
 
-  const onSubmit: SubmitHandler<MainPageFormDataType> = (data) => {
-    console.log(data);
+ const onSubmit: SubmitHandler<MainPageFormDataType> = async (data) => {
+    const apiUrl = 'http://38.242.194.155:8000/api/v1/send/bot/';
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const responseData = await response.json();
+      console.log(responseData);
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
   };
 
   return (

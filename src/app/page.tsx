@@ -1,5 +1,5 @@
 import Feedback from '@/components/feedback';
-import { HeaderSectionLayout, Projects, SmallForm } from '@/components/main-page';
+import { HeaderSectionLayout, Projects, SmallForm, Products } from '@/components/main-page';
 
 export const metadata = {
   title: 'Homepage | SoftOcean',
@@ -12,6 +12,11 @@ export default function Home() {
         title="Development of software"
         subText="Effective business problem solving with digital technologies"
       />
+      <Products />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Projects />
 
       {/* <Feedback>{}</Feedback> */}

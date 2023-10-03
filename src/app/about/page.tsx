@@ -14,23 +14,13 @@ export default function About() {
     <section className="m-auto flex flex-col items-center gap-10">
       <div className="m-auto flex max-w-[768px] flex-col items-center justify-center lg:max-w-[950px]">
         <h1 className="text-[24px] font-bold text-[center] md:text-[36px] lg:text-[48px]">
-          <span className="text-[#551DB0]">Sonus space</span> - Мир без копирайта
+          <span className="text-[#551DB0]">SOFTOCEAN</span> - Мир без копирайта
         </h1>
         <h3 className="mt-[10px] max-w-[450px] text-[9px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
           Авторское право препятствует развитию общества, потому что юридически ограничивает
           желающих улучшить или усовершенствовать продукт.
         </h3>
       </div>
-
-      <Image
-        src={logo}
-        alt="логотип"
-        width={1280}
-        height={431}
-        blurDataURL=""
-        style={{ objectFit: 'contain' }}
-        className="max-w-[450px] duration-300 ease-in hover:opacity-50 md:max-w-[768px] lg:max-w-[950px]"
-      />
 
       <div className="flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-8">
         <h2 className="text-[18px] font-bold text-[#4E4E4E] text-[center] md:text-[24px] lg:text-[36px]">
@@ -125,45 +115,10 @@ export default function About() {
                 className="duration-300 ease-in hover:opacity-50"
               />
             </div>
-            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
-              <Image
-                src={icon}
-                alt="логотип"
-                width={64}
-                height={64}
-                blurDataURL=""
-                className="duration-300 ease-in hover:opacity-50"
-              />
-            </div>
-            <div className="h-[32px] w-[32px] md:h-[64px] md:w-[64px]">
-              <Image
-                src={dzen}
-                alt="логотип"
-                width={64}
-                height={64}
-                blurDataURL=""
-                className="duration-300 ease-in hover:opacity-50"
-              />
-            </div>
           </div>
         </div>
       </div>
-      <div className="flex w-[90%] flex-row justify-between">
-        <Link
-          href="/"
-          className=" text-[9px] font-light leading-[21px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]">
-          {' '}
-          &#171; Предыдущий проект
-        </Link>
 
-        <Button>Перейти</Button>
-
-        <Link
-          className=" text-[9px] font-light leading-[21px] text-[#B6B6B6] hover:opacity-50 md:text-[18px]"
-          href="/">
-          Следующий проект &#187;
-        </Link>
-      </div>
     </section>
   );
 }
