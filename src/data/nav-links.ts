@@ -18,22 +18,4 @@ export const navLinks = [
     link: '/contacts',
     isActive: true,
   },
-  {
-    id: 3,
-    title: 'Команда',
-    link: '/team',
-    isActive: false,
-  },
-  {
-    id: 4,
-    title: 'Блог',
-    link: '/blog',
-    isActive: false,
-  },
-  {
-    id: 5,
-    title: 'Партнерам',
-    link: '/partners',
-    isActive: false,
-  },
 ];
