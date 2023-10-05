@@ -1,15 +1,10 @@
 'use client';
 import React from 'react';
-import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Link from 'next/link';
-import MailIcon from '@/../assets/icons/email.svg';
-import PersonIcon from '@/../assets/icons/person.svg';
-import PhoneIcon from '@/../assets/icons/phone.svg';
-import { Button } from '@/components/ui';
+import { useRouter } from 'next/navigation';
 import { MainPageFormDataType } from '@/types/types';
 import { MainPageFormValidationScheme } from '@/utils';
-import SmallFormInput from './input';
 
 function SmallForm() {
   const {
@@ -20,12 +15,13 @@ function SmallForm() {
     defaultValues: {
       name: '',
       email: '',
-      phone: '',
+      telephone: '',
+      text: '',
     },
     resolver: zodResolver(MainPageFormValidationScheme),
   });
-
- const onSubmit: SubmitHandler<MainPageFormDataType> = async (data) => {
+  const router = useRouter();
+  const onSubmit: SubmitHandler<MainPageFormDataType> = async (data) => {
     const apiUrl = 'http://38.242.194.155:8000/api/v1/send/bot/';
 
     try {
@@ -43,6 +39,7 @@ function SmallForm() {
 
       const responseData = await response.json();
       console.log(responseData);
+      router.push('/success');
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }
@@ -50,47 +47,86 @@ function SmallForm() {
 
   return (
     <div className="mt-[200px]">
-      <h2 className="text-h2-mobile md:text-h2 font-[700] uppercase">Contact us</h2>
+      <h2 className="text-h2-mobile font-[700] uppercase md:text-h2">Contact us</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="mt-20 flex flex-col gap-y-8">
         <div className="flex w-full flex-col items-center md:flex-row">
-          <label htmlFor="name" className="text-h4-mobile md:text-h4 pb-2 pr-2 font-[700]">
+          <label
+            htmlFor="name"
+            className="w-full max-w-[280px] self-start pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
             Hi! My name is
           </label>
-          <input
-            type="text"
-            id="name"
-            {...register('name')}
-            placeholder={'type here'}
-            className="text-body-1-mobile md:text-body-1 text-text-primary w-full flex-1 border-b bg-transparent px-2 pb-1 font-[800] outline-none focus:border-b-2"
-          />
+          <div className="flex w-full flex-col">
+            <input
+              type="text"
+              id="name"
+              {...register('name')}
+              placeholder={'type here'}
+              className="w-full flex-1 border-b bg-transparent px-2 pb-1 text-body-1-mobile font-[800] text-text-primary outline-none focus:border-b-2 md:text-body-1"
+            />
+            <span className="body-2-mobile self-start text-error-color">
+              {errors.name?.message}
+            </span>
+          </div>
         </div>
-        <div className="flex flex-col gap-y-8 xl:flex-row">
-          <div className="flex w-full flex-col items-center gap-4 md:flex-row">
-            <label htmlFor="email" className="text-h4-mobile md:text-h4 pb-2 pr-2 font-[700]">
+        <div className="flex flex-col gap-x-2 gap-y-8 xl:flex-row">
+          <div className="flex w-full flex-col items-center md:flex-row">
+            <label
+              htmlFor="email"
+              className="w-full max-w-[340px] pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
               Here are my e-mail
             </label>
-            <input
-              type="text"
-              id="email"
-              {...register('email')}
-              placeholder={'type here'}
-              className="text-body-1-mobile md:text-body-1 text-text-primary w-full flex-1 border-b bg-transparent px-2 pb-1 font-[800] outline-none focus:border-b-2"
-            />
+            <div className="flex w-full flex-col">
+              <input
+                type="email"
+                id="email"
+                {...register('email')}
+                placeholder={'type here'}
+                className="w-full flex-1 border-b bg-transparent px-2 pb-1 text-body-1-mobile font-[800] text-text-primary outline-none focus:border-b-2 md:text-body-1"
+              />
+              <span className="body-2-mobile self-start text-error-color">
+                {errors.email?.message}
+              </span>
+            </div>
           </div>
-          <div className="flex w-full flex-col items-center gap-4 md:flex-row">
-            <label htmlFor="email" className="text-h4-mobile md:text-h4 pb-2 pr-2 font-[700]">
+          <div className="flex w-full flex-col items-center md:flex-row">
+            <label
+              htmlFor="email"
+              className="w-full max-w-[340px] pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
               and phone number
             </label>
-            <input
-              type="text"
-              id="phone"
-              {...register('phone')}
-              placeholder={'type here'}
-              className="text-body-1-mobile md:text-body-1 text-text-primary w-full flex-1 border-b bg-transparent px-2 pb-1 font-[800] outline-none focus:border-b-2"
-            />
+            <div className="flex w-full flex-col">
+              <input
+                type="text"
+                id="telephone"
+                {...register('telephone')}
+                placeholder={'type here'}
+                className="w-full flex-1 border-b bg-transparent px-2 pb-1 text-body-1-mobile font-[800] text-text-primary outline-none focus:border-b-2 md:text-body-1"
+              />
+              <span className="body-2-mobile self-start text-error-color">
+                {errors.telephone?.message}
+              </span>
+            </div>
           </div>
         </div>
-
+        <div className="flex hidden w-full flex-col items-center md:flex-row">
+          <label
+            htmlFor="email"
+            className="w-full max-w-[340px] pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
+            and message
+          </label>
+          <div className="flex w-full flex-col">
+            <input
+              type="text"
+              id="text"
+              {...register('text')}
+              placeholder={'type here'}
+              className="w-full flex-1 border-b bg-transparent px-2 pb-1 text-body-1-mobile font-[800] text-text-primary outline-none focus:border-b-2 md:text-body-1"
+            />
+            <span className="body-2-mobile self-start text-error-color">
+              {errors.text?.message}
+            </span>
+          </div>
+        </div>
         <button
           type="submit"
           className="self-center rounded-xl border-2 px-16 py-4 hover:shadow-lg active:scale-[.99]">
