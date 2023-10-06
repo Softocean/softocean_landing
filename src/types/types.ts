@@ -3,7 +3,8 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export interface MainPageFormDataType {
   name: string;
   email: string;
-  phone?: string;
+  telephone: string;
+  text?: string;
 }
 
 export interface PortfolioSlideProps {
