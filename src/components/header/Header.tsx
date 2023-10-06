@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { contactsMock } from '@/data/contacts';
+// import { contactsMock } from '@/data/contacts';
 import { navLinks } from '@/data/nav-links';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
@@ -108,7 +108,7 @@ export default function Header() {
             isOpened ? 'visible w-full md:flex md:w-auto md:items-center' : 'invisible hidden'
           }
           id="menu">
-          <ul className="text-gray-700 pt-4 text-base md:flex md:justify-between md:pt-0">
+          <ul className="text-gray-700 pt-4 text-base flex flex-col justify-between md:invisible md:hidden">
             {navLinks.map((item) => {
               return (
                 <li key={item.id}>
@@ -118,7 +118,7 @@ export default function Header() {
                 </li>
               );
             })}
-            <li>
+            {/* <li>
               <Link
                 className="text-purple-400 text-purple-500 block bg-gradient-main from-deep-sky-blue to-rebecca-purple bg-clip-text py-2 text-transparent md:p-4"
                 href="/">
@@ -155,7 +155,7 @@ export default function Header() {
                   </defs>
                 </svg>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
