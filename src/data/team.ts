@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import partner from '../../assets/partner.png';
+import partner from '../../assets/social-icons/email.png';
 import email from '../../assets/social-icons/email.png';
 import fc from '../../assets/social-icons/facebook.png';
 import ld from '../../assets/social-icons/linkedIn.png';
