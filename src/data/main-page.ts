@@ -1,7 +1,13 @@
 import { PortfolioSlideProps } from '@/types/types';
-import backbar from '../../assets/projects/backbar.png';
+import backbar from '../../assets/projects/logo_backbar.png';
+import onetask from '../../assets/projects/logo_onetask.png';
+import datalorian from '../../assets/projects/logo_datalorian.png';
 import lks from '../../assets/projects/lks.png';
-import onetask from '../../assets/projects/onetask.png';
+import reeder from '../../assets/projects/reeder.png';
+import votetime from '../../assets/projects/votetime.png';
+import incosplay_lite from '../../assets/projects/incosplay_lite.png';
+import heromatch_lite from '../../assets/projects/heromatch_lite.png';
+import tailbook from '../../assets/projects/partner_tailbook.png';
 
 // Наши проекты (для слайдера)
 export const slides_products: PortfolioSlideProps[] = [
@@ -25,30 +31,63 @@ export const slides_products: PortfolioSlideProps[] = [
     id: 2,
     type: 'Soft',
     title: 'Datalorean',
-    subtitle: 'Data for analytics',
-    link: 'https://Datalorean.com',
-    image: onetask,
+    subtitle: 'Data analytics',
+    link: 'https://datalorean.com',
+    image: datalorian,
   },
 ];
 
 
 // Наши проекты (для слайдера)
 export const slides_projects: PortfolioSlideProps[] = [
+
   {
-    id: 0,
-    type: 'Blog',
-    title: 'Little Knits Story',
-    image: lks,
-    subtitle: 'Blog and shop about knitting',
-    link: '',
-  },
-  {
-    id: 2,
+    id: 1,
     type: 'Social Media Platform',
     title: 'INCOSPLAY',
     subtitle: 'Task manager',
     link: 'https://INCOSPLAY.top',
-    image: onetask,
+    image: incosplay_lite,
+  },
+  {
+    id: 6,
+    type: 'E-commerce',
+    title: 'Little Knits Story',
+    subtitle: 'Blog and shop about knitting',
+    link: '',
+    image: lks,
+  },
+  {
+    id: 2,
+    type: 'Social Technology',
+    title: 'TAILBOOK',
+    subtitle: 'Stray animal service',
+    link: 'https://tailbook.me/en',
+    image: tailbook,
+  },
+  {
+    id: 3,
+    type: 'Social Media Platform',
+    title: 'REEDER',
+    subtitle: 'Feed for TG channels',
+    link: 'https://www.reeeder.app',
+    image: reeder,
+  },
+  {
+    id: 4,
+    type: 'App',
+    title: 'HEROMATCH',
+    subtitle: 'Productivity tool, Entertaimant',
+    link: 'https://INCOSPLAY.top',
+    image: heromatch_lite,
+  },
+  {
+    id: 5,
+    type: 'b2b',
+    title: 'VOTETIME',
+    subtitle: 'Task manager',
+    link: 'https://INCOSPLAY.top',
+    image: votetime,
   },
 
 ];

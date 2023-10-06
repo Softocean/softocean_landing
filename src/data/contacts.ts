@@ -40,7 +40,7 @@ export const socialLinks: SocialLinksType[] = [
   {
     id: 4,
     icon: ld,
-    href: '',
+    href: 'https://www.linkedin.com/company/softoceangmbh/',
     label: 'linkedin',
   },
   {
@@ -54,7 +54,7 @@ export const socialLinks: SocialLinksType[] = [
 export const contactsMock: ContactsDataType[] = [
   {
     id: 1,
-    label: 'phone',
+    label: 'Phone',
     value: '+7 (978) 93 444 96',
   },
   {
@@ -64,7 +64,7 @@ export const contactsMock: ContactsDataType[] = [
   },
   {
     id: 3,
-    label: 'Социальные сети',
+    label: 'Social Network',
     value: socialLinks,
   },
 ];
