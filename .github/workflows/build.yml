@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.USERNAME_DOCKER_HUB }}
           password: ${{ secrets.PASSWORD_DOCKER_HUB }}
           tags: "${{ steps.meta.outputs.tags }}"
-          dockerfile: .docker/Dockerfile
+          dockerfile: Dockerfile
