@@ -1,0 +1,22 @@
+name: Publish to Registry
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@v4
+        env:
+          NEXT_PUBLIC_API_BASE_URL: http://dev.backend.littleknitsstory.com:26363/api/v1
+        with:
+          name: 63phc/socom
+          username: ${{ secrets.USERNAME_DOCKER_HUB }}
+          password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+          tags: "${{ steps.meta.outputs.tags }}"
+          dockerfile: .docker/Dockerfile
