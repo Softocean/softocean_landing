@@ -1,10 +1,12 @@
-import React from 'react';
-import ContactsData from '@/components/contacts/contactsData';
+import { OrganizationContacts, OrganizationInfo } from '@/components/contacts';
 
 export default function Contacts() {
   return (
-    <section className="flex w-full flex-col gap-10 py-5 md:flex-row md:py-10">
-      <ContactsData />
+    <section className="flex w-full flex-col gap-10 pt-12 lg:pt-36">
+      <OrganizationContacts />
+      <div>
+        <OrganizationInfo />
+      </div>
     </section>
   );
 }

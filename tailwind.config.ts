@@ -47,13 +47,13 @@ const config: Config = {
       'sm-10': ['10px', 'normal'],
       'sm-12': ['12px', 'normal'],
       sm: ['14px', 'normal'],
-      'sm-16': ['16px', 'normal'],
+      'sm-16': ['16px', 'normal'], //заменить
       base: ['18px', 'normal'],
-      'base-21': ['21px', 'normal'],
+      'base-21': ['21px', 'normal'], //заменить
       'base-24': ['24px', 'normal'],
-      'lg-18': ['18px', 'normal'],
-      lg: ['36px', 'normal'],
-      xl: ['48px', 'normal'],
+      'lg-18': ['18px', 'normal'], //заменить
+      lg: ['36px', 'normal'], //заменить
+      xl: ['48px', 'normal'], //заменить
       'not-found': ['144px', 'normal'],
 
       // Tablet
@@ -73,6 +73,7 @@ const config: Config = {
       fontFamily: {
         manrope: ['var(--font-manrope)'],
         openSans: ['var(--font-openSans)'],
+        nunito: ['var(---font-nunito)'],
       },
       boxShadow: {
         card: '0px 3px 16px 0px rgba(0, 0, 0, 0.1)',
