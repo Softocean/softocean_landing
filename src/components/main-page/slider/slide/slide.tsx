@@ -14,7 +14,7 @@ function PortfolioSlide({
 }: PortfolioSlideProps) {
   return (
     <>
-      <div className="bg-bg-main mb-6 rounded-3xl p-16 opacity-75 shadow-sm lg:p-20">
+      <div className="mb-6 flex min-h-[225px] items-center rounded-3xl bg-bg-main px-16 opacity-75 shadow-sm lg:p-20">
         <Image
           src={image ?? PortfolioPlaceholder}
           alt={alt ?? `One of SoftOcean Project - ${title}`}
@@ -25,7 +25,7 @@ function PortfolioSlide({
 
       <div className="flex max-w-xs flex-col ">
         <p className="text-body-2-mobile md:text-body-2">{`${type}*`}</p>
-        <h4 className="text-h4-mobile md:text-h4 font-[700]">{title}</h4>
+        <h4 className="text-h4-mobile font-[700] md:text-h4">{title}</h4>
         <p className="text-body-1-mobile md:text-body-1">{subtitle}</p>
       </div>
     </>
