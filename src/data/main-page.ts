@@ -35,9 +35,16 @@ export const slides_products: PortfolioSlideProps[] = [
     link: 'https://datalorean.com',
     image: datalorian,
   },
+  {
+    id: 4,
+    type: 'Social Technology',
+    title: 'TAILBOOK',
+    subtitle: 'Stray animal service',
+    link: 'https://tailbook.me/en',
+    image: tailbook,
+  },
 ];
 
-// Наши проекты (для слайдера)
 export const slides_projects: PortfolioSlideProps[] = [
   {
     id: 1,
@@ -54,14 +61,6 @@ export const slides_projects: PortfolioSlideProps[] = [
     subtitle: 'Blog and shop about knitting',
     link: '',
     image: lks,
-  },
-  {
-    id: 2,
-    type: 'Social Technology',
-    title: 'TAILBOOK',
-    subtitle: 'Stray animal service',
-    link: 'https://tailbook.me/en',
-    image: tailbook,
   },
   {
     id: 3,
@@ -88,3 +87,6 @@ export const slides_projects: PortfolioSlideProps[] = [
     image: votetime,
   },
 ];
+
+
+export const slides_partners: PartnerSlideProps[] = [];

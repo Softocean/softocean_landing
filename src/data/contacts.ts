@@ -21,19 +21,13 @@ export const socialLinks: SocialLinksType[] = [
   {
     id: 1,
     icon: tg,
-    href: '',
+    href: 'https://t.me/softocean_ak',
     label: 'telegram',
-  },
-  {
-    id: 2,
-    icon: vk,
-    href: '',
-    label: 'vkontakte',
   },
   {
     id: 3,
     icon: fc,
-    href: '',
+    href: 'https://www.facebook.com/softoceangmbh',
     label: 'facebook',
   },
   {
@@ -48,12 +42,12 @@ export const contactsMock: ContactsDataType[] = [
   {
     id: 1,
     label: 'Phone',
-    value: '+7 (978) 93 444 96',
+    value: '+49 152 07915501',
   },
   {
     id: 2,
     label: 'E-mail',
-    value: 'info@cactus.vision',
+    value: 'sales@softocean.com',
   },
   {
     id: 3,
@@ -63,20 +57,21 @@ export const contactsMock: ContactsDataType[] = [
 ];
 
 export const organizationData = [
+
   {
-    label: 'Название',
-    value: 'ООО «Кактус Вижн»',
+    label: 'Name',
+    value: 'Softocean GmbH',
   },
   {
     label: 'КПП',
-    value: '920101001',
+    value: '(3. Hof, 4.TRH, 1. OG)',
   },
   {
     label: 'ОГРН',
-    value: '1189204003878',
+    value: 'Urbanstraße 71',
   },
   {
     label: 'ИНН',
-    value: '9201525163',
+    value: 'D-10967 Berlin',
   },
 ];
