@@ -1,13 +1,13 @@
 import { PortfolioSlideProps } from '@/types/types';
-import backbar from '../../assets/projects/logo_backbar.png';
-import onetask from '../../assets/projects/logo_onetask.png';
-import datalorian from '../../assets/projects/logo_datalorian.png';
+import heromatch_lite from '../../assets/projects/heromatch_lite.png';
+import incosplay_lite from '../../assets/projects/incosplay_lite.png';
 import lks from '../../assets/projects/lks.png';
+import backbar from '../../assets/projects/logo_backbar.png';
+import datalorian from '../../assets/projects/logo_datalorian.png';
+import onetask from '../../assets/projects/logo_onetask.png';
+import tailbook from '../../assets/projects/partner_tailbook.png';
 import reeder from '../../assets/projects/reeder.png';
 import votetime from '../../assets/projects/votetime.png';
-import incosplay_lite from '../../assets/projects/incosplay_lite.png';
-import heromatch_lite from '../../assets/projects/heromatch_lite.png';
-import tailbook from '../../assets/projects/partner_tailbook.png';
 
 // Наши проекты (для слайдера)
 export const slides_products: PortfolioSlideProps[] = [
@@ -28,7 +28,7 @@ export const slides_products: PortfolioSlideProps[] = [
     image: onetask,
   },
   {
-    id: 2,
+    id: 3,
     type: 'Soft',
     title: 'Datalorean',
     subtitle: 'Data analytics',
@@ -37,10 +37,8 @@ export const slides_products: PortfolioSlideProps[] = [
   },
 ];
 
-
 // Наши проекты (для слайдера)
 export const slides_projects: PortfolioSlideProps[] = [
-
   {
     id: 1,
     type: 'Social Media Platform',
@@ -89,5 +87,4 @@ export const slides_projects: PortfolioSlideProps[] = [
     link: 'https://INCOSPLAY.top',
     image: votetime,
   },
-
 ];

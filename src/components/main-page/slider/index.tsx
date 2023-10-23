@@ -47,9 +47,7 @@ export const Slider = ({ slides }: SwiperProps) => {
       },
       watchOverflow: true,
       grabCursor: true,
-      pagination: {
-        clickable: true,
-      },
+      navigation: true,
       module: [Navigation],
     };
 
@@ -59,7 +57,7 @@ export const Slider = ({ slides }: SwiperProps) => {
 
   return (
     <div className="w-full">
-      <swiper-container ref={swiperElRef} navigation="true" pagination="false" init="false">
+      <swiper-container ref={swiperElRef} init="false">
         {slides.map((slide) => (
           <swiper-slide key={slide.id}>
             <Slide {...slide} />
