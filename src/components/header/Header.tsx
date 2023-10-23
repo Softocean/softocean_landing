@@ -29,9 +29,9 @@ export default function Header() {
           />
         </Link>
         <ul className="hidden justify-between gap-x-5 p-0 md:flex">
-          {navLinks.map((item) => {
+          {navLinks.map((item, ind) => {
             return (
-              <div key={item.id}>
+              <div key={`nav-link-${ind}`}>
                 {item.isActive && (
                   <li className="list-none">
                     <NavLink
@@ -108,10 +108,10 @@ export default function Header() {
             isOpened ? 'visible w-full md:flex md:w-auto md:items-center' : 'invisible hidden'
           }
           id="menu">
-          <ul className="text-gray-700 pt-4 text-base flex flex-col justify-between md:invisible md:hidden">
-            {navLinks.map((item) => {
+          <ul className="text-gray-700 flex flex-col justify-between pt-4 text-base md:invisible md:hidden">
+            {navLinks.map((item, ind) => {
               return (
-                <li key={item.id}>
+                <li key={`nav-link-${ind}`}>
                   <Link className="hover:text-purple-400 block py-2 md:p-4" href={item.link}>
                     {item.title}
                   </Link>

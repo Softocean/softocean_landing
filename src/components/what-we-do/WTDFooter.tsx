@@ -6,7 +6,7 @@ const WTDFooter = () => {
     <section className="mt-20 flex items-center justify-between md:mt-40">
       <Logo />
       <div className="flex flex-col items-center gap-5 md:flex-row">
-        <h4 className="text-body-2 font-bold text-text-primary md:text-body-1 md:text-h4">
+        <h4 className="text-body-2 font-bold text-text-primary md:text-body-1">
           Are you ready to start?
         </h4>
         <Link

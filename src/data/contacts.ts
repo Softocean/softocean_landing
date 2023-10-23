@@ -1,13 +1,12 @@
-import { StaticImageData } from 'next/image';
-import email from '../../assets/social-icons/email.png';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import fc from '../../assets/social-icons/facebook.png';
 import ld from '../../assets/social-icons/linkedIn.png';
 import tg from '../../assets/social-icons/telegram.png';
-import vk from '../../assets/social-icons/vkontakte.png';
+import vk from '../../assets/social-icons/vk.png';
 
 type SocialLinksType = {
   id: number;
-  icon: StaticImageData;
+  icon: StaticImport;
   href: string;
   label: string;
 };
@@ -43,12 +42,6 @@ export const socialLinks: SocialLinksType[] = [
     href: 'https://www.linkedin.com/company/softoceangmbh/',
     label: 'linkedin',
   },
-  {
-    id: 5,
-    icon: email,
-    href: '',
-    label: 'email',
-  },
 ];
 
 export const contactsMock: ContactsDataType[] = [
@@ -66,5 +59,24 @@ export const contactsMock: ContactsDataType[] = [
     id: 3,
     label: 'Social Network',
     value: socialLinks,
+  },
+];
+
+export const organizationData = [
+  {
+    label: 'Название',
+    value: 'ООО «Кактус Вижн»',
+  },
+  {
+    label: 'КПП',
+    value: '920101001',
+  },
+  {
+    label: 'ОГРН',
+    value: '1189204003878',
+  },
+  {
+    label: 'ИНН',
+    value: '9201525163',
   },
 ];
