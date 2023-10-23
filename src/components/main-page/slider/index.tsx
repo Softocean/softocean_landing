@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import { Navigation } from 'swiper/modules';
 import { Slide, SlideProps } from './slide';
+import Link from 'next/link';
 
 interface SwiperProps {
   slides: Array<SlideProps>;
@@ -60,7 +61,9 @@ export const Slider = ({ slides }: SwiperProps) => {
       <swiper-container ref={swiperElRef} init="false">
         {slides.map((slide) => (
           <swiper-slide key={slide.id}>
-            <Slide {...slide} />
+            <Link href={slide.link} target="_blank">
+              <Slide {...slide} />
+            </Link>
           </swiper-slide>
         ))}
       </swiper-container>
