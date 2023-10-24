@@ -16,7 +16,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'BackBar',
     subtitle: 'HORECA crm',
-    link: 'https://backbar.site',
+    link: '/products/backbar',
     image: backbar,
   },
   {
@@ -24,7 +24,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'One task',
     subtitle: 'Task manager',
-    link: 'https://onetask.team',
+    link: '/products/one-task',
     image: onetask,
   },
   {
@@ -32,7 +32,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'Datalorean',
     subtitle: 'Data analytics',
-    link: 'https://datalorean.com',
+    link: '/products/datalorian',
     image: datalorian,
   },
   {
@@ -40,7 +40,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Social Technology',
     title: 'TAILBOOK',
     subtitle: 'Stray animal service',
-    link: 'https://tailbook.me/en',
+    link: '/products/tailbook',
     image: tailbook,
   },
 ];
@@ -51,7 +51,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'INCOSPLAY',
     subtitle: 'Task manager',
-    link: 'https://INCOSPLAY.top',
+    link: '/projects/incosplay',
     image: incosplay_lite,
   },
   {
@@ -59,7 +59,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'E-commerce',
     title: 'Little Knits Story',
     subtitle: 'Blog and shop about knitting',
-    link: '',
+    link: '/projects/little-knits-story',
     image: lks,
   },
   {
@@ -67,7 +67,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'REEDER',
     subtitle: 'Feed for TG channels',
-    link: 'https://www.reeeder.app',
+    link: '/projects/reeder',
     image: reeder,
   },
   {
@@ -75,7 +75,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'App',
     title: 'HEROMATCH',
     subtitle: 'Productivity tool, Entertaimant',
-    link: 'https://INCOSPLAY.top',
+    link: '/projects/heromatch',
     image: heromatch_lite,
   },
   {
@@ -83,7 +83,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'b2b',
     title: 'VOTETIME',
     subtitle: 'Task manager',
-    link: 'https://INCOSPLAY.top',
+    link: '/projects/votetime',
     image: votetime,
   },
 ];
