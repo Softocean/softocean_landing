@@ -14,13 +14,13 @@ export default function About() {
         <h1 className="text-[24px] font-bold text-[center] md:text-[36px] lg:text-[48px]">
           <span className="text-[#551DB0]">SOFTOCEAN</span>
         </h1>
-        <h3 className="mt-[10px] max-w-[450px] text-[9px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
+        <h3 className="mt-[10px] max-w-[450px] text-[14px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:text-[16px] lg:max-w-[950px] lg:text-[18px]">
           Since 2018, we have specialized in attracting investments for startups, assisting young and promising projects in finding their niche in the market. Our expertise and professionalism led us to begin developing our own products in 2020, with standout creations like BACKBAR, ONETASK, and DATALORIAN.
         </h3>
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-8">
-        <div className="flex max-w-[450px] flex-col gap-6 text-[9px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:gap-3 md:text-[12px] lg:max-w-[950px] lg:text-[18px]">
+        <div className="flex max-w-[450px] flex-col gap-6 text-[14px] font-light text-[#4C4C4C] text-[center] md:max-w-[768px] md:gap-3 md:text-[16px] lg:max-w-[950px] lg:text-[18px]">
           <p>
            In 2023, riding the wave of success and growth, we expanded our horizons by venturing into the outsourcing domain. Our team of 30 highly skilled professionals is proficient in technologies such as Python, React, Next, Go, and PostgreSQL. We actively incorporate artificial intelligence in our development processes, ensuring we remain at the cutting edge of technological advancement.
           </p>
