@@ -8,11 +8,22 @@ import { navLinks } from '@/data/nav-links';
 import logo from '../../../assets/logo-footer.png';
 import { NavLink } from '../nav-link';
 
+const notVisibleOn = ['products', 'projects', 'services'];
+
 function Footer() {
   const pathname = usePathname();
+  const isVisible = () => {
+    let visible = true;
+    notVisibleOn.forEach((page) => {
+      if (pathname.includes(page)) {
+        visible = false;
+      }
+    });
+    return visible;
+  };
 
   return (
-    <footer className="mt-auto flex flex-col gap-10 pb-4 lg:gap-24">
+    <footer className={`mt-auto flex flex-col gap-10 pb-4 lg:gap-24 ${!isVisible() && 'hidden'}`}>
       {/* <div className="mx-auto flex w-full justify-center gap-x-20 md:justify-between">
         <Link href="/" className="text-[1vw]">
           <Image
