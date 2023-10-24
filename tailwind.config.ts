@@ -35,6 +35,7 @@ const config: Config = {
       'grey-as-stone': '#767575',
       greyDark: '#727377',
       'dark-white': '#F8F8F8',
+      'ball-blue': '#34E8DD',
     },
     fontSize: {
       // Desktop
