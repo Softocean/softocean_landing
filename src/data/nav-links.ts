@@ -25,4 +25,10 @@ export const navLinks = [
     link: '/contacts',
     isActive: true,
   },
+  {
+    id: 4,
+    title: 'Privacy',
+    link: '/privacy',
+    isActive: true,
+  },
 ];
