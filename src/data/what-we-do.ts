@@ -34,7 +34,7 @@ export const whatWeDoData: WhatWeDoDataType[] = [
     title: 'Revolutionize Your Business with AI',
     description:
       "Dive into a world where tasks are automated, insights are deep, and user engagement is at its peak. Let's redefine what's possible with AI.  We use ai every day in development , it helps us get rid of routine , also we are happy to implement ai in any product , as we have done with client littleknitsstory.com and with all our own products",
-    href: '',
+    href: '/projects/little-knits-story',
     label: 'Show all',
     img: erp,
   },
@@ -43,7 +43,7 @@ export const whatWeDoData: WhatWeDoDataType[] = [
     title: 'ERP-Systems',
     description:
       'Systems for managing labor resources, production, finances, and assets. Harness the power of real-time data, streamline processes, and make decisions that propel your business forward. We have a lot of experience in developing different ERP-Systems, we have also developed our own closed system DATALORIAN for our own products.',
-    href: '',
+    href: '/products/datalorian',
     label: 'Show all',
     img: webDesign,
   },
@@ -52,7 +52,7 @@ export const whatWeDoData: WhatWeDoDataType[] = [
     title: 'CRM-Systems',
     description:
       'Customer Relationship Management systems tailored to nurture and expand your client base. Deepen relationships, understand your customers, and drive loyalty. Our CRM solutions put your customers at the heart of your business. Still no unique CRM has been created, and almost every product has its own CRM-Systems, uniquely customised for them, also we have developed our own BACKBAR.site our own brand of co-working ITBRANCH.HOUSE',
-    href: '',
+    href: '/products/backbar',
     label: 'Show all',
     img: webServices,
   },
@@ -98,7 +98,7 @@ export const whatWeDoData: WhatWeDoDataType[] = [
     title: 'SOCIAL TECH',
     description:
       ' our team has done several social media for healthtech and edtech, our expertise helped our client INCOSPLAY.TOP to get a quick start and reach the first rounds of investments',
-    href: '',
+    href: '/projects/incosplay',
     label: 'Show all',
     img: marketplace,
   },
