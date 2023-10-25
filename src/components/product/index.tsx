@@ -1,12 +1,11 @@
 import React from 'react';
-import Tag from '../tag';
-import { Button } from '../ui';
 import Link from 'next/link';
+import Tag from '../tag';
 
 interface ProductProps {
   text: string;
   name: string;
-  tags: string[];
+  tags?: string[];
   imgSrc?: string;
   demoHref?: string;
   seeMoreHref?: string;
@@ -17,9 +16,7 @@ function Product({ text, name, tags, imgSrc, demoHref = '', seeMoreHref = '' }: 
     <>
       <div className="flex flex-col gap-6">
         <div className="flex flex-wrap gap-4">
-          {tags.map((tag, ind) => (
-            <Tag label={tag} key={`tag-${ind}`} />
-          ))}
+          {tags?.map((tag, ind) => <Tag label={tag} key={`tag-${ind}`} />)}
         </div>
         <div className="flex max-w-[520px] flex-col gap-5">
           <p className="font-manrope text-h2 font-bold uppercase">{name}</p>
