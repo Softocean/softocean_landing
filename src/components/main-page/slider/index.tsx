@@ -2,10 +2,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { register } from 'swiper/element/bundle';
 import { Navigation } from 'swiper/modules';
 import { Slide, SlideProps } from './slide';
-import Link from 'next/link';
 
 interface SwiperProps {
   slides: Array<SlideProps>;

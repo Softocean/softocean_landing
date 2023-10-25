@@ -52,7 +52,7 @@ function SmallForm() {
         <div className="flex w-full flex-col items-center md:flex-row">
           <label
             htmlFor="name"
-            className="w-full max-w-[280px] self-start pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
+            className="w-full max-w-[340px] self-start pb-2 pr-2 text-h4-mobile font-[700] md:text-h4">
             Hi! My name is
           </label>
           <div className="flex w-full flex-col">
@@ -68,7 +68,7 @@ function SmallForm() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-x-2 gap-y-8 xl:flex-row">
+        <div className="flex flex-col gap-x-2 gap-y-8 lg:gap-8 xl:flex-row">
           <div className="flex w-full flex-col items-center md:flex-row">
             <label
               htmlFor="email"
