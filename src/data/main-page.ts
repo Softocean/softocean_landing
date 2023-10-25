@@ -88,5 +88,4 @@ export const slides_projects: PortfolioSlideProps[] = [
   },
 ];
 
-
-export const slides_partners: PartnerSlideProps[] = [];
+/* export const slides_partners: PartnerSlideProps[] = []; */
