@@ -78,7 +78,7 @@ function Footer() {
         <p className="duration-300 ease-in hover:text-black">
           Softocean GmbH {new Date().getFullYear()} ©
         </p>
-        <Link href="/privacy-policy" className="hover:text-black">
+        <Link href="/privacy" className="hover:text-black">
           Privacy Policy
         </Link>
       </div>
