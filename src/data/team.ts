@@ -1,10 +1,8 @@
 import { StaticImageData } from 'next/image';
-import partner from '../../assets/social-icons/email.png';
-import email from '../../assets/social-icons/email.png';
 import fc from '../../assets/social-icons/facebook.png';
 import ld from '../../assets/social-icons/linkedIn.png';
 import tg from '../../assets/social-icons/telegram.png';
-import vk from '../../assets/social-icons/vkontakte.png';
+import vk from '../../assets/social-icons/vk.png';
 
 export type TeamInfoType = {
   id: number;
@@ -23,7 +21,7 @@ type MemberSocialLinksType = {
 export const teamInfo: TeamInfoType[] = [
   {
     id: 1,
-    img: partner,
+    img: vk,
     name: 'Кирилл Кирилов',
     socialLinks: [
       {
@@ -52,7 +50,7 @@ export const teamInfo: TeamInfoType[] = [
       },
       {
         id: 5,
-        icon: email,
+        icon: vk,
         href: '',
         label: 'email',
       },
@@ -60,17 +58,17 @@ export const teamInfo: TeamInfoType[] = [
   },
   {
     id: 2,
-    img: partner,
+    img: vk,
     name: 'Кирилл Кирилов',
   },
   {
     id: 3,
-    img: partner,
+    img: vk,
     name: 'Кирилл Кирилов',
   },
   {
     id: 4,
-    img: partner,
+    img: vk,
     name: 'Кирилл Кирилов',
   },
 ];
