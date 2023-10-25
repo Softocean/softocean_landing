@@ -17,11 +17,6 @@ const WTDProjectCard = ({ card }: CardProps) => {
         <p className="mb-2 w-full max-w-md text-body-2  md:text-body-1 lg:leading-8">
           {description}
         </p>
-        <Link
-          href={href}
-          className="self-start text-body-2 font-extrabold leading-8 text-text-primary hover:bg-gradient-main hover:from-deep-sky-blue hover:to-rebecca-purple hover:bg-clip-text hover:text-transparent md:text-body-1">
-          {label}
-        </Link>
       </div>
       <Image
         src={img}
