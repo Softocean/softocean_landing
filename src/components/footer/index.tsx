@@ -23,7 +23,8 @@ function Footer() {
   };
 
   return (
-    <footer className={`mt-auto flex flex-col gap-10 pb-4 lg:gap-24 ${!isVisible() && 'hidden'}`}>
+    <footer
+      className={`mt-auto flex flex-col gap-10 pb-4 lg:gap-24 ${!isVisible() && 'hidden'} z-[5]`}>
       {/* <div className="mx-auto flex w-full justify-center gap-x-20 md:justify-between">
         <Link href="/" className="text-[1vw]">
           <Image

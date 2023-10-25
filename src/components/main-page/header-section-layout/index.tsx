@@ -36,7 +36,7 @@ function HeaderSectionLayout({ title, subText }: HeaderSectionLayoutProps) {
         />
       </div>
       <div className="flex flex-col">
-        <h1 className="text-h1-mobile font-[700] text-text-primary md:text-h1-tablet xl:text-h1">
+        <h1 className="text-h4-mobile font-bold text-text-primary sm:text-h1-mobile md:text-h1-tablet xl:text-h1">
           {title.toUpperCase()}
         </h1>
         <p className="text-body-1-mobile font-[500] md:text-body-1">{subText}</p>

@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         className={`${manrope.className} ${nunito.className} ${openSans.className} bg-bg-main text-text-primary`}>
         <div className="mx-auto flex flex-col px-4 3xl:container lg:px-16">
           <Header />
-          <main className="relative">{children}</main>
+          <main className="relative z-[1]">{children}</main>
           <Footer />
         </div>
       </body>

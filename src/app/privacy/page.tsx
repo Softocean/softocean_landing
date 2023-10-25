@@ -4,7 +4,7 @@ import { privacyData } from '@/data/privacy';
 
 export default function Privacy() {
   return (
-    <section className=" scrollbar-hide ml-8 flex max-h-[80vh] max-w-[750px] flex-col gap-4 overflow-y-auto font-medium md:gap-6">
+    <section className=" mx-auto flex max-h-[80vh] max-w-[750px] flex-col gap-4 overflow-y-auto font-medium scrollbar-hide md:gap-6">
       <h1 className="text-[18px] text-[#4C4C4C] md:text-[24px]">Privacy Policy</h1>
       <p className="text-[14px] text-[#222222] md:text-[16px]">
         This Privacy Policy discloses the privacy practices for First Line Software, Inc. and our
