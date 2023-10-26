@@ -16,7 +16,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'BackBar',
     subtitle: 'HORECA crm',
-    link: '/',
+    link: '/products/backbar/',
     image: backbar,
   },
   {
@@ -24,7 +24,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'One task',
     subtitle: 'Task manager',
-    link: '/',
+    link: '/products/backbar/',
     image: onetask,
   },
   {
@@ -32,7 +32,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'Datalorean',
     subtitle: 'Data analytics',
-    link: '/',
+    link: '/products/backbar/',
     image: datalorian,
   }
 ];
@@ -43,7 +43,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'INCOSPLAY',
     subtitle: 'Task manager',
-    link: '/',
+    link: 'https://incosplay.top',
     image: incosplay_lite,
   },
   {
@@ -51,7 +51,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'E-commerce',
     title: 'Little Knits Story',
     subtitle: 'Blog and shop about knitting',
-    link: '/',
+    link: '/products/backbar/',
     image: lks,
   },
   {
@@ -59,7 +59,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'REEDER',
     subtitle: 'Feed for TG channels',
-    link: '/',
+    link: 'https://reeeder.app/',
     image: reeder,
   },
   {
@@ -67,7 +67,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'App',
     title: 'HEROMATCH',
     subtitle: 'Productivity tool, Entertaimant',
-    link: '/',
+    link: '/products/backbar/',
     image: heromatch_lite,
   },
   {
@@ -75,7 +75,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'b2b',
     title: 'VOTETIME',
     subtitle: 'Task manager',
-    link:  '/',
+    link:  '/products/backbar/',
     image: votetime,
   },
   {
@@ -83,7 +83,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Technology',
     title: 'TAILBOOK',
     subtitle: 'Stray animal service',
-    link: '/',
+    link: 'https://tailbook.me/en/',
     image: tailbook,
   }
 ];

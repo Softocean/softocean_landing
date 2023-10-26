@@ -2,9 +2,9 @@ import React from 'react';
 import Product from '@/components/product';
 
 const BackBarInfo = {
-  tags: ['E-commerce', 'SAAS'],
-  name: 'backbar',
-  text: 'Системы для управления трудовыми ресурсами, производством, финансами, активами. Цель – оптимизация и администрирование деятельности.',
+  tags: ['', ''],
+  name: 'The section is in the process of being filled',
+  text: '',
 };
 
 function BackbarPage() {

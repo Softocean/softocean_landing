@@ -16,7 +16,7 @@ export const projectsInfoData: ProjectsDataType[] = [
   },
   {
     id: 1,
-    title: 'backbar',
+    title: 'Section in progress',
     description: 
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at.\n
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at.`,
