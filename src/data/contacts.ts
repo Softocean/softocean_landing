@@ -42,7 +42,7 @@ export const contactsMock: ContactsDataType[] = [
   {
     id: 2,
     label: 'E-mail',
-    value: 'ak@softocean.com',
+    value: 'sales.team@softocean.com',
   },
   {
     id: 3,
