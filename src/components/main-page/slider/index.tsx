@@ -61,7 +61,7 @@ export const Slider = ({ slides }: SwiperProps) => {
       <swiper-container ref={swiperElRef} init="false">
         {slides.map((slide) => (
           <swiper-slide key={slide.id}>
-            <Link href={slide.link} target="_blank">
+            <Link href={slide.link}>
               <Slide {...slide} />
             </Link>
           </swiper-slide>

@@ -8,7 +8,6 @@ export default function WhatWeDo() {
     <>
       <WTDHeader />
       <WTDProjectCardList />
-      <WTDReviewCardList />
     </>
   );
 }

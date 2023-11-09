@@ -22,7 +22,7 @@ function SmallForm() {
   });
   const router = useRouter();
   const onSubmit: SubmitHandler<MainPageFormDataType> = async (data) => {
-    const apiUrl = 'http://38.242.194.155:8000/api/v1/send/bot/';
+    const apiUrl = 'http://softocean.com:8000/api/v1/send/bot/';
 
     try {
       const response = await fetch(apiUrl, {

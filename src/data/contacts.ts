@@ -40,14 +40,9 @@ export const socialLinks: SocialLinksType[] = [
 
 export const contactsMock: ContactsDataType[] = [
   {
-    id: 1,
-    label: 'Phone',
-    value: '+49 152 07915501',
-  },
-  {
     id: 2,
     label: 'E-mail',
-    value: 'sales@softocean.com',
+    value: 'sales.team@softocean.com',
   },
   {
     id: 3,
@@ -64,14 +59,14 @@ export const organizationData = [
   },
   {
     label: 'КПП',
-    value: '(3. Hof, 4.TRH, 1. OG)',
+    value: 'Fehrbelliner Strasse',
   },
   {
     label: 'ОГРН',
-    value: 'Urbanstraße 71',
+    value: '47 F',
   },
   {
     label: 'ИНН',
-    value: 'D-10967 Berlin',
+    value: '10119 Berlin, Germany',
   },
 ];

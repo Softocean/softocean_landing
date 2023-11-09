@@ -16,7 +16,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'BackBar',
     subtitle: 'HORECA crm',
-    link: '/products/backbar',
+    link: '/products/backbar/',
     image: backbar,
   },
   {
@@ -24,7 +24,7 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'One task',
     subtitle: 'Task manager',
-    link: '/products/one-task',
+    link: '/products/backbar/',
     image: onetask,
   },
   {
@@ -32,17 +32,9 @@ export const slides_products: PortfolioSlideProps[] = [
     type: 'Soft',
     title: 'Datalorean',
     subtitle: 'Data analytics',
-    link: '/products/datalorian',
+    link: '/products/backbar/',
     image: datalorian,
-  },
-  {
-    id: 4,
-    type: 'Social Technology',
-    title: 'TAILBOOK',
-    subtitle: 'Stray animal service',
-    link: '/products/tailbook',
-    image: tailbook,
-  },
+  }
 ];
 
 export const slides_projects: PortfolioSlideProps[] = [
@@ -51,7 +43,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'INCOSPLAY',
     subtitle: 'Task manager',
-    link: '/projects/incosplay',
+    link: 'https://incosplay.top',
     image: incosplay_lite,
   },
   {
@@ -59,7 +51,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'E-commerce',
     title: 'Little Knits Story',
     subtitle: 'Blog and shop about knitting',
-    link: '/projects/little-knits-story',
+    link: '/products/backbar/',
     image: lks,
   },
   {
@@ -67,7 +59,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'Social Media Platform',
     title: 'REEDER',
     subtitle: 'Feed for TG channels',
-    link: '/projects/reeder',
+    link: 'https://reeeder.app/',
     image: reeder,
   },
   {
@@ -75,7 +67,7 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'App',
     title: 'HEROMATCH',
     subtitle: 'Productivity tool, Entertaimant',
-    link: '/projects/heromatch',
+    link: '/products/backbar/',
     image: heromatch_lite,
   },
   {
@@ -83,9 +75,17 @@ export const slides_projects: PortfolioSlideProps[] = [
     type: 'b2b',
     title: 'VOTETIME',
     subtitle: 'Task manager',
-    link: '/projects/votetime',
+    link:  '/products/backbar/',
     image: votetime,
   },
+  {
+    id: 4,
+    type: 'Social Technology',
+    title: 'TAILBOOK',
+    subtitle: 'Stray animal service',
+    link: 'https://tailbook.me/en/',
+    image: tailbook,
+  }
 ];
 
 /* export const slides_partners: PartnerSlideProps[] = []; */

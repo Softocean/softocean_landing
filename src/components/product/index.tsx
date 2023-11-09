@@ -26,12 +26,6 @@ function Product({ text, name, tags, imgSrc, demoHref = '', seeMoreHref = '' }: 
         </div>
       </div>
       <div className="mt-10 flex items-center gap-12 text-body-1-mobile md:text-body-1">
-        <Link href={demoHref}>
-          <button className="self-center rounded-xl border-2 px-4 py-4 hover:shadow-lg active:scale-[.99] md:px-12">
-            I want demo
-          </button>
-        </Link>
-        <Link href={seeMoreHref}>See more</Link>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import ConsultingHigh from '@/../assets/what-we-do-page/consultingHigh.png';
 import Service from '@/components/service';
 
 const ConsultingInfo = {
-  name: 'Consulting',
+  name: 'Revolutionize Your Business with AI',
   text: 'Системы для управления трудовыми ресурсами, производством, финансами, активами. Цель – оптимизация и администрирование деятельности.',
 };
 
