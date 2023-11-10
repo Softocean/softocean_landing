@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import { OrganizationContacts, OrganizationInfo } from '@/components/contacts';
+
+export const metadata: Metadata = {
+  title: 'Brief | SoftOcean',
+  description: 'SoftOcean social links and contacts',
+};
 
 export default function Contacts() {
   return (

@@ -1,6 +1,12 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { privacyData } from '@/data/privacy';
+
+export const metadata: Metadata = {
+  title: 'Privacy | SoftOcean',
+  description: 'Information about SoftOcean privacy policies',
+};
 
 export default function Privacy() {
   return (
