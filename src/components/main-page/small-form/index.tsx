@@ -22,7 +22,9 @@ function SmallForm() {
   });
   const router = useRouter();
   const onSubmit: SubmitHandler<MainPageFormDataType> = async (data) => {
-    const apiUrl = 'http://softocean.com:8000/api/v1/send/bot/';
+    console.log(data)
+    // const apiUrl = 'http://softocean.com:8000/api/v1/send/bot/';
+    const apiUrl = 'http://localhost:3000/api/telegram/'
 
     try {
       const response = await fetch(apiUrl, {
