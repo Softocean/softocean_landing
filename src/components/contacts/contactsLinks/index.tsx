@@ -11,8 +11,8 @@ const ContactsData = () => {
             key={`contacts-item-${ind}`}
             className="flex flex-col items-center gap-2 last:justify-between lg:items-start">
             <h4
-              className="font-nunito relative whitespace-nowrap
-                text-left text-body-2 font-semibold max-sm:text-sm">
+              className="relative whitespace-nowrap text-left
+                font-nunito text-body-2 font-semibold max-sm:text-sm">
               <div>{info.label}</div>
             </h4>
             {typeof info.value === 'string' ? (
@@ -25,7 +25,7 @@ const ContactsData = () => {
               <ul className="flex gap-6">
                 {info.value.map((link, ind) => (
                   <li key={`social-link-${ind}`}>
-                    <Link href={link.href}>
+                    <Link href={link.href} target="_blank">
                       <Image src={link.icon} alt={link.label} />
                     </Link>
                   </li>

@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import TeamMemberList from '@/app/team/components/TeamMemberList';
+
+export const metadata: Metadata = {
+  title: 'Our Team | SoftOcean',
+  description: 'Information about SoftOcean Team',
+};
 
 const Team = () => {
   return (
